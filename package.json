@@ -1,0 +1,46 @@
+{
+  "name": "@yaroshdev/monorepo",
+  "version": "0.1.0",
+  "description": "yarosh.dev site monorepo",
+  "private": true,
+  "type": "module",
+  "packageManager": "yarn@4.7.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuriy-yarosh/yuriy-yarosh.github.io"
+  },
+  "authors": [
+    {
+      "name": "Yuriy Yarosh",
+      "email": "yuriy@yarosh.dev"
+    }
+  ],
+  "scripts": {
+    "i18n-extract": "turbo run i18n-extract --parallel --no-color --ui tui",
+    "i18n-compile": "turbo run i18n-compile --parallel --no-color --ui tui",
+    "generate": "turbo run generate --parallel --no-color",
+    "format": "turbo run format --parallel --no-color --ui tui",
+    "build": "turbo run build --parallel --no-color --ui tui",
+    "lint": "turbo run lint --parallel --no-color --ui tui",
+    "test": "turbo run test --parallel --no-color --ui tui",
+    "watch": "turbo run watch --parallel --no-color --ui tui",
+    "update-snapshots": "turbo run update-snapshots --parallel --no-color --ui tui",
+    "postinstall": "husky install .husky --no-color"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "^2.29.4",
+    "@vitest/coverage-v8": "^3.2.3",
+    "husky": "^9.1.7",
+    "lint-staged": "16.1.1",
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.3"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

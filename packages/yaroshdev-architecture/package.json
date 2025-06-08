@@ -1,0 +1,61 @@
+{
+  "name": "@yaroshdev/architecture",
+  "version": "0.1.0",
+  "description": "yarosh.dev architecture",
+  "private": true,
+  "type": "module",
+  "packageManager": "yarn@4.7.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuriy-yarosh/yuriy-yarosh.github.io"
+  },
+  "authors": [
+    {
+      "name": "Yuriy Yarosh",
+      "email": "yuriy@yarosh.dev"
+    }
+  ],
+  "scripts": {
+    "generate": "",
+    "format": "biome format --fix",
+    "lint": "biome lint --fix --unsafe",
+    "test": "vitest run",
+    "build": "",
+    "watch": "",
+    "update-snapshots": "vitest run -u"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.121.2",
+    "@tanstack/react-router-devtools": "^1.121.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.5",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.10",
+    "typescript": "~5.8.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24"
+  }
+}

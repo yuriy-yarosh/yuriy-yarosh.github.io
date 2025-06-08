@@ -1,0 +1,91 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "i18n-extract": {
+      "dependsOn": [
+        "^i18n-extract"
+      ],
+      "outputLogs": "errors-only"
+    },
+    "i18n-compile": {
+      "dependsOn": [
+        "i18n-extract",
+        "^i18n-compile"
+      ],
+      "outputLogs": "errors-only"
+    },
+    "generate": {
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "dependsOn": [
+        "^generate",
+        "i18n-compile",
+        "i18n-extract"
+      ],
+      "outputLogs": "new-only"
+    },
+    "format": {
+      "dependsOn": [
+        "^format",
+        "generate"
+      ],
+      "outputLogs": "errors-only"
+    },
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ],
+      "outputLogs": "errors-only"
+    },
+    "build": {
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "dependsOn": [
+        "^build",
+        "lint",
+        "generate"
+      ],
+      "outputLogs": "new-only",
+      "outputs": [
+        "build/**"
+      ]
+    },
+    "test": {
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "outputs": [
+        "coverage/**"
+      ],
+      "dependsOn": [
+        "^test",
+        "build"
+      ],
+      "outputLogs": "errors-only"
+    },
+    "watch": {
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "persistent": true,
+      "dependsOn": [
+        "^watch",
+        "build"
+      ],
+      "outputLogs": "errors-only"
+    },
+    "update-snapshots": {
+      "dependsOn": [
+        "build",
+        "^update-snapshots"
+      ],
+      "cache": false
+    }
+  }
+}
