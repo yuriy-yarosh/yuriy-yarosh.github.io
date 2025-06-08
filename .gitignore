@@ -1,0 +1,25 @@
+.vscode
+.vscode/**
+
+.DS_Store
+
+# Node
+.husky/
+.yarn/
+node_modules/**/*
+node_modules/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.tsbuildinfo
+.turbo
+.turbo/**
+
+# Build
+build/
+dist/
+coverage/
+reports/
+
+# Tanstack Route
+RouteTree.gen.ts

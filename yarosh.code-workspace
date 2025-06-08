@@ -1,0 +1,70 @@
+{
+  "folders": [
+    {
+      "name": "🏠 Project Root",
+      "path": "."
+    },
+    {
+      "name": "🏗️ Architecture",
+      "path": "packages/yaroshdev-architecture"
+    },
+    {
+      "name": "✍️ Blog",
+      "path": "packages/yaroshdev-blog"
+    },
+    {
+      "name": "🛬 Landing",
+      "path": "packages/yaroshdev-landing"
+    },
+    {
+      "name": "🧩 Components",
+      "path": "packages/yaroshdev-components"
+    }
+  ],
+  "settings": {
+    "terminal.integrated.cwd": ".",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": {
+      "quickfix.biome": "explicit"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "files.readonlyInclude": {
+      "**/routeTree.gen.ts": true
+    },
+    "files.watcherExclude": {
+      "**/routeTree.gen.ts": true
+    },
+    "search.exclude": {
+      "**/routeTree.gen.ts": true
+    },
+    "cSpell.language": "en",
+    "cSpell.words": ["cyclonedx", "dependi", "pkief", "ryanluker", "yarosh", "yaroshdev", "Yuriy"],
+    "workbench.iconTheme": "material-icon-theme"
+  },
+  "extensions": {
+    "recommendations": [
+      "editorconfig.editorconfig",
+      "biomejs.biome",
+      "ms-vscode.vscode-typescript-next",
+      "fill-labs.dependi",
+      "ms-playwright.playwright",
+      "ryanluker.vscode-coverage-gutters",
+      "ms-vscode.js-debug",
+      "redhat.vscode-yaml",
+      "streetsidesoftware.code-spell-checker",
+      "pkief.material-icon-theme"
+    ]
+  }
+}

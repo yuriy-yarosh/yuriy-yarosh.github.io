@@ -1,0 +1,8 @@
+nodejs 24.1.0
+python 3.13.2
+pipx 1.7.1
+
+k6 0.57.0
+trivy 0.60.0
+syft 1.21.0
+grype 0.90.0
