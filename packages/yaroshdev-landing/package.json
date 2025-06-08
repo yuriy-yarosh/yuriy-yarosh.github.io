@@ -1,0 +1,84 @@
+{
+	"name": "@yaroshdev/landing",
+	"version": "0.1.0",
+	"description": "yarosh.dev landing page",
+	"private": true,
+	"homepage": "./",
+	"type": "module",
+	"packageManager": "yarn@4.7.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yuriy-yarosh/yuriy-yarosh.github.io"
+	},
+	"authors": [
+		{
+			"name": "Yuriy Yarosh",
+			"email": "yuriy@yarosh.dev"
+		}
+	],
+	"scripts": {
+		"dev": "vite --port 3000",
+		"start": "vite --port 3000",
+		"generate": "tsr generate",
+		"format": "biome format --fix",
+		"lint": "biome lint --fix --unsafe",
+		"test": "vitest run",
+		"build": "vite build && tsc",
+		"watch": "vite preview",
+		"update-snapshots": "vitest run -u"
+	},
+	"dependencies": {
+		"@react-three/drei": "^10.3.0",
+		"@react-three/fiber": "^9.1.2",
+		"@react-three/postprocessing": "^3.0.4",
+		"@tanstack/react-router": "^1.121.34",
+		"@tanstack/react-router-devtools": "^1.121.34",
+		"@tanstack/router-plugin": "^1.121.34",
+		"@tanstack/virtual-file-routes": "^1.121.21",
+		"class-variance-authority": "^0.7.1",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"three": "^0.177.0",
+		"web-vitals": "^5.0.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.0.5",
+		"@mdx-js/rollup": "^3.1.0",
+		"@tailwindcss/postcss": "^4.1.10",
+		"@tailwindcss/vite": "^4.1.10",
+		"@tanstack/router-cli": "^1.121.34",
+		"@types/node": "^24.0.4",
+		"@types/prop-types": "^15.7.15",
+		"@types/react": "^19.1.8",
+		"@types/react-dom": "^19.1.6",
+		"@types/three": "^0.177.0",
+		"@vitejs/plugin-react": "^4.6.0",
+		"autoprefixer": "^10.4.21",
+		"postcss": "^8.5.6",
+		"rollup": "^4.44.0",
+		"tailwind-merge": "^3.3.1",
+		"tailwindcss": "^4.1.10",
+		"typescript": "~5.8.3",
+		"vite": "^7.0.0",
+		"vite-tsconfig-paths": "^5.1.4",
+		"vitest": "^3.2.4"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"files": [
+		"dist"
+	],
+	"engines": {
+		"node": ">=24"
+	}
+}

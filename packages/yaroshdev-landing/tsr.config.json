@@ -1,0 +1,48 @@
+{
+  "routesDirectory": "./src",
+  "virtualRouteConfig": {
+    "type": "root",
+    "file": "Layout.tsx",
+    "children": [
+      {
+        "type": "index",
+        "file": "Pages/Home.tsx"
+      },
+      {
+        "type": "route",
+        "file": "Pages/About.tsx",
+        "path": "/about"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Blog.tsx",
+        "path": "/blog"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Contacts.tsx",
+        "path": "/contacts"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Events.tsx",
+        "path": "/events"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire.tsx",
+        "path": "/hire"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Legal.tsx",
+        "path": "/legal"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Projects.tsx",
+        "path": "/projects"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+tsconfig.json       linguist-language=JSON5
+jsconfig.json       linguist-language=JSON5
+*.code-workspace    linguist-language=JSON5
+
+*.zip    binary linguist-generated=true linguist-vendored=true
+
+* text=auto

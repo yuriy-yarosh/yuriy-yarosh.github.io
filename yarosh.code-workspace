@@ -1,0 +1,96 @@
+{
+	"folders": [
+		{
+			"name": "🏠 Project Root",
+			"path": "."
+		},
+		{
+			"name": "🏗️ Architecture",
+			"path": "packages/yaroshdev-architecture"
+		},
+		{
+			"name": "✍️ Blog",
+			"path": "packages/yaroshdev-blog"
+		},
+		{
+			"name": "🛬 Landing",
+			"path": "packages/yaroshdev-landing"
+		}
+	],
+	"settings": {
+		"terminal.integrated.cwd": ".",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+		"editor.codeActionsOnSave": {
+			"quickfix.biome": "explicit"
+		},
+		"files.watcherExclude": {
+			"**/routeTree.gen.ts": true
+		},
+		"search.exclude": {
+			"**/routeTree.gen.ts": true
+		},
+		"files.readonlyInclude": {
+			"**/routeTree.gen.ts": true
+		},
+		"[javascript]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[javascriptreact]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[typescript]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[typescriptreact]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[json]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[jsonc]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[css]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"cSpell.language": "en",
+		"cSpell.words": [
+			"bokeh",
+			"Castoro",
+			"CHRM",
+			"Chrom",
+			"CIELAB",
+			"cyclonedx",
+			"dependi",
+			"eskil",
+			"extralight",
+			"lerp",
+			"metalness",
+			"nitropack",
+			"pkgroll",
+			"pkief",
+			"ryanluker",
+			"tsrouter",
+			"TTFB",
+			"yarosh",
+			"yaroshdev",
+			"Yuriy"
+		],
+		"workbench.iconTheme": "material-icon-theme"
+	},
+	"extensions": {
+		"recommendations": [
+			"editorconfig.editorconfig",
+			"biomejs.biome",
+			"ms-vscode.vscode-typescript-next",
+			"fill-labs.dependi",
+			"ryanluker.vscode-coverage-gutters",
+			"ms-vscode.js-debug",
+			"redhat.vscode-yaml",
+			"streetsidesoftware.code-spell-checker",
+			"pkief.material-icon-theme",
+			"bradlc.vscode-tailwindcss"
+		]
+	}
+}
