@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "IBM Plex Sans", sans-serif;
+  --font-title: Monoton, sans-serif;
+  --font-secondary-title: Doto, sans-serif;
+
+  --color-primary: var(--color-primary);
+  --color-secondary-accent: var(--color-secondary-accent);
+  --color-content: var(--color-content);
+  --color-accent: var(--color-accent);
+  --color-neutral: var(--color-neutral);
+  --color-border: var(--color-border);
+  --color-card-background: var(--color-card-background);
+}

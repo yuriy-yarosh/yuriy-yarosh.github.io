@@ -1,0 +1,181 @@
+{
+  "extensions": {
+    "recommendations": [
+      "editorconfig.editorconfig",
+      "biomejs.biome",
+      "ms-vscode.vscode-typescript-next",
+      "fill-labs.dependi",
+      "ryanluker.vscode-coverage-gutters",
+      "ms-vscode.js-debug",
+      "redhat.vscode-yaml",
+      "streetsidesoftware.code-spell-checker",
+      "pkief.material-icon-theme",
+      "bradlc.vscode-tailwindcss"
+    ]
+  },
+  "folders": [
+    {
+      "name": "🏠 Project Root",
+      "path": "."
+    },
+    {
+      "name": "🛬 Landing",
+      "path": "packages/yaroshdev-landing"
+    }
+  ],
+  "settings": {
+    "[css]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "cSpell.language": "en",
+    "cSpell.words": [
+      "Agentic",
+      "Autoresizer",
+      "BDSG",
+      "beamforming",
+      "bitsnap",
+      "bokeh",
+      "Bottlerocket",
+      "Castoro",
+      "CCPA",
+      "CDKTF",
+      "CFTC",
+      "Chainalysis",
+      "CHRM",
+      "Chrom",
+      "CIELAB",
+      "Citus",
+      "CNPG",
+      "Coraza",
+      "CRNA",
+      "cyclonedx",
+      "Datafusion",
+      "DDPG",
+      "demikernels",
+      "dependi",
+      "Descheduler",
+      "Distroless",
+      "distros",
+      "Doto",
+      "DPDK",
+      "drei",
+      "DVIR",
+      "DWDM",
+      "edtech",
+      "eskil",
+      "ETSI",
+      "extralight",
+      "Falco",
+      "FCAPS",
+      "fintech",
+      "Flink",
+      "FMCSA",
+      "frameloop",
+      "Gitea",
+      "GSMA",
+      "Highload",
+      "Inferentia",
+      "Kamailio",
+      "Karpenter",
+      "KMDF",
+      "Kolmogorov",
+      "Kubescape",
+      "Kyverno",
+      "lerp",
+      "libos",
+      "mesoscopic",
+      "metaiconicity",
+      "metalness",
+      "microcontrollers",
+      "miltech",
+      "MIMO",
+      "MISP",
+      "MPLS",
+      "Multiphysics",
+      "NAPI",
+      "NCCL",
+      "nitropack",
+      "Nsight",
+      "Nutt",
+      "OLAP",
+      "OPNFV",
+      "pgvector",
+      "pkgroll",
+      "pkief",
+      "Prost",
+      "rcna",
+      "reactroot",
+      "Refinitiv",
+      "ROADM",
+      "Rollouts",
+      "runbooks",
+      "ryanluker",
+      "sandboxing",
+      "Seastar",
+      "SIEM",
+      "Sigstore",
+      "SLSA",
+      "Solopreneur",
+      "SPDK",
+      "SSDLC",
+      "Stackgres",
+      "Strimzi",
+      "Sumi",
+      "sumicare",
+      "targetting",
+      "Tekton",
+      "Theia",
+      "thenplan",
+      "Topo",
+      "Traininum",
+      "Trainium",
+      "tsrouter",
+      "TTFB",
+      "Turnitin",
+      "Typelevel",
+      "UEBA",
+      "uikits",
+      "UMDF",
+      "Velero",
+      "yarosh",
+      "Yarosh",
+      "yaroshdev",
+      "Yuriy"
+    ],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.biome": "explicit",
+      "source.organizeImports.biome": "explicit"
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "files.readonlyInclude": {
+      "**/routeTree.gen.ts": true
+    },
+    "files.watcherExclude": {
+      "**/routeTree.gen.ts": true
+    },
+    "search.exclude": {
+      "**/routeTree.gen.ts": true
+    },
+    "terminal.integrated.cwd": ".",
+    "workbench.iconTheme": "material-icon-theme"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "name": "@yaroshdev/landing",
+  "version": "0.1.0",
+  "description": "yarosh.dev landing page",
+  "private": true,
+  "homepage": "./",
+  "type": "module",
+  "packageManager": "yarn@4.7.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuriy-yarosh/yuriy-yarosh.github.io"
+  },
+  "authors": [
+    {
+      "name": "Yuriy Yarosh",
+      "email": "yuriy@yarosh.dev"
+    }
+  ],
+  "scripts": {
+    "dev": "vite --port 3000",
+    "start": "vite --port 3000",
+    "generate": "tsr generate",
+    "format": "biome format --fix",
+    "lint": "biome lint --fix --unsafe",
+    "test": "vitest run",
+    "build": "vite build && tsc",
+    "watch": "vite preview",
+    "update-snapshots": "vitest run -u"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.4.0",
+    "@react-three/postprocessing": "^3.0.4",
+    "@tanstack/react-router": "^1.139.3",
+    "@tanstack/react-router-devtools": "^1.139.3",
+    "@tanstack/router-core": "^1.139.3",
+    "@tanstack/router-plugin": "^1.139.3",
+    "@tanstack/virtual-file-routes": "^1.139.0",
+    "class-variance-authority": "^0.7.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "three": "^0.181.2",
+    "web-vitals": "^5.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.7",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@tailwindcss/vite": "^4.1.17",
+    "@tanstack/router-cli": "^1.139.3",
+    "@types/node": "^24.10.1",
+    "@types/prop-types": "^15.7.15",
+    "@types/react": "^19.2.6",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.181.0",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss": "^4.1.17",
+    "tsx": "^4.20.6",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^4.0.13"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24"
+  }
+}

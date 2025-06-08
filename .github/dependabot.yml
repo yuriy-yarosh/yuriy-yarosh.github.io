@@ -1,0 +1,99 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 3
+    target-branch: "master"
+    labels:
+      - "root"
+      - "dependencies"
+      - "javascript"
+    versioning-strategy: "auto"
+    rebase-strategy: "auto"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yaroshdev-landing"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 3
+    labels:
+      - "landing"
+      - "dependencies"
+      - "javascript"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yaroshdev-blog"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 3
+    labels:
+      - "blog"
+      - "dependencies"
+      - "javascript"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yaroshdev-components"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 3
+    labels:
+      - "components"
+      - "dependencies"
+      - "javascript"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yaroshdev-architecture"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 3
+    labels:
+      - "architecture"
+      - "dependencies"
+      - "javascript"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 1
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "ci"
+      include: "scope"

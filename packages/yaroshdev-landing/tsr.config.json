@@ -1,0 +1,75 @@
+{
+  "routesDirectory": "./src",
+  "virtualRouteConfig": {
+    "children": [
+      {
+        "file": "Pages/Home.tsx",
+        "type": "index"
+      },
+      {
+        "file": "Pages/About.tsx",
+        "path": "/about",
+        "type": "route"
+      },
+      {
+        "children": [
+          {
+            "file": "Pages/Blog.tsx",
+            "type": "index"
+          },
+          {
+            "file": "Pages/Blog/0_Initial.tsx",
+            "path": "initial",
+            "type": "route"
+          }
+        ],
+        "file": "Pages/BlogLayout.tsx",
+        "path": "/blog",
+        "type": "route"
+      },
+      {
+        "file": "Pages/Contacts.tsx",
+        "path": "/contacts",
+        "type": "route"
+      },
+      {
+        "file": "Pages/Hire.tsx",
+        "path": "/hire",
+        "type": "route"
+      },
+      {
+        "file": "Pages/Legal.tsx",
+        "path": "/legal",
+        "type": "route"
+      },
+      {
+        "children": [
+          {
+            "file": "Pages/Projects.tsx",
+            "type": "index"
+          },
+          {
+            "file": "Pages/Projects/Sumicare.tsx",
+            "path": "sumicare",
+            "type": "route"
+          },
+          {
+            "file": "Pages/Projects/RCNA.tsx",
+            "path": "rcna",
+            "type": "route"
+          }
+        ],
+        "file": "Pages/ProjectsLayout.tsx",
+        "path": "/projects",
+        "type": "route"
+      },
+      {
+        "file": "Pages/Shift.tsx",
+        "path": "/shift",
+        "type": "route"
+      }
+    ],
+    "file": "Layout.tsx",
+    "type": "root"
+  }
+}
