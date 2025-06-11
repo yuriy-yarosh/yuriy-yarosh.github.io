@@ -11,10 +11,14 @@
 
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/about')({
-  component: About
+export const Route = createFileRoute('/legal')({
+  component: Index
 })
 
-function About() {
-  return <div className='p-2'>Hello from About!</div>
+function Index() {
+  return (
+    <div className='p-2'>
+      <h3>Legal</h3>
+    </div>
+  )
 }

@@ -10,19 +10,26 @@
 
 // Import Routes
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as AboutImport } from './routes/about'
-import { Route as IndexImport } from './routes/index'
+import { Route as rootRoute } from './Layout'
+import { Route as PagesLegalImport } from './Pages/Legal'
+import { Route as PagesContactsImport } from './Pages/Contacts'
+import { Route as PagesHomeImport } from './Pages/Home'
 
 // Create/Update Routes
 
-const AboutRoute = AboutImport.update({
-  id: '/about',
-  path: '/about',
+const PagesLegalRoute = PagesLegalImport.update({
+  id: '/legal',
+  path: '/legal',
   getParentRoute: () => rootRoute,
 } as any)
 
-const IndexRoute = IndexImport.update({
+const PagesContactsRoute = PagesContactsImport.update({
+  id: '/contacts',
+  path: '/contacts',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const PagesHomeRoute = PagesHomeImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRoute,
@@ -36,14 +43,21 @@ declare module '@tanstack/react-router' {
       id: '/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexImport
+      preLoaderRoute: typeof PagesHomeImport
       parentRoute: typeof rootRoute
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutImport
+    '/contacts': {
+      id: '/contacts'
+      path: '/contacts'
+      fullPath: '/contacts'
+      preLoaderRoute: typeof PagesContactsImport
+      parentRoute: typeof rootRoute
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof PagesLegalImport
       parentRoute: typeof rootRoute
     }
   }
@@ -52,38 +66,43 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/': typeof PagesHomeRoute
+  '/contacts': typeof PagesContactsRoute
+  '/legal': typeof PagesLegalRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/': typeof PagesHomeRoute
+  '/contacts': typeof PagesContactsRoute
+  '/legal': typeof PagesLegalRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/': typeof PagesHomeRoute
+  '/contacts': typeof PagesContactsRoute
+  '/legal': typeof PagesLegalRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about'
+  fullPaths: '/' | '/contacts' | '/legal'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about'
-  id: '__root__' | '/' | '/about'
+  to: '/' | '/contacts' | '/legal'
+  id: '__root__' | '/' | '/contacts' | '/legal'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
+  PagesHomeRoute: typeof PagesHomeRoute
+  PagesContactsRoute: typeof PagesContactsRoute
+  PagesLegalRoute: typeof PagesLegalRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
+  PagesHomeRoute: PagesHomeRoute,
+  PagesContactsRoute: PagesContactsRoute,
+  PagesLegalRoute: PagesLegalRoute,
 }
 
 export const routeTree = rootRoute
@@ -94,17 +113,21 @@ export const routeTree = rootRoute
 {
   "routes": {
     "__root__": {
-      "filePath": "__root.tsx",
+      "filePath": "Layout.tsx",
       "children": [
         "/",
-        "/about"
+        "/contacts",
+        "/legal"
       ]
     },
     "/": {
-      "filePath": "index.tsx"
+      "filePath": "Pages/Home.tsx"
     },
-    "/about": {
-      "filePath": "about.tsx"
+    "/contacts": {
+      "filePath": "Pages/Contacts.tsx"
+    },
+    "/legal": {
+      "filePath": "Pages/Legal.tsx"
     }
   }
 }

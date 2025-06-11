@@ -1,0 +1,23 @@
+{
+  "routesDirectory": "./src",
+  "virtualRouteConfig": {
+    "type": "root",
+    "file": "Layout.tsx",
+    "children": [
+      {
+        "type": "index",
+        "file": "Pages/Home.tsx"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Contacts.tsx",
+        "path": "/contacts"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Legal.tsx",
+        "path": "/legal"
+      }
+    ]
+  }
+}
