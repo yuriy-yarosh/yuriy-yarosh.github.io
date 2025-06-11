@@ -7,33 +7,48 @@
   "packageManager": "yarn@4.7.0",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/yuriy-yarosh/yuriy-yarosh.github.io"
   },
-  "authors": [],
+  "authors": [
+    {
+      "name": "Yuriy Yarosh",
+      "email": "yuriy@yarosh.dev"
+    }
+  ],
   "scripts": {
-    "generate": "",
+    "dev": "vite --port 3000",
+    "start": "vite --port 3000",
+    "generate": "tsr generate",
     "format": "biome format --fix",
     "lint": "biome lint --fix --unsafe",
     "test": "vitest run",
-    "build": "",
-    "watch": "",
+    "build": "vite build && tsc",
+    "watch": "vite preview",
     "update-snapshots": "vitest run -u"
   },
   "dependencies": {
-    "@tanstack/react-router": "^1.120.18",
-    "@tanstack/react-router-devtools": "^1.120.18",
-    "@tanstack/react-start": "^1.120.18",
+    "@tanstack/react-router": "^1.120.19",
+    "@tanstack/react-router-devtools": "^1.120.19",
+    "@tanstack/router-plugin": "^1.120.19",
+    "@yaroshdev/components": "workspace:*",
+    "class-variance-authority": "^0.7.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "web-vitals": "^5.0.2"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@mdx-js/rollup": "^3.1.0",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@tailwindcss/vite": "^4.1.8",
+    "@tanstack/router-cli": "^1.120.19",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.4",
+    "rollup": "^4.42.0",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.8",
     "typescript": "~5.8.3",
-    "vinxi": "0.5.6",
+    "vite": "^6.3.5",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.2"
   },

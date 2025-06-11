@@ -1,0 +1,49 @@
+{
+  "name": "@yaroshdev/tsrouter-ssg",
+  "version": "0.1.0",
+  "description": "yarosh.dev simple tanstack router ssg",
+  "private": true,
+  "type": "module",
+  "packageManager": "yarn@4.7.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuriy-yarosh/yuriy-yarosh.github.io"
+  },
+  "authors": [
+    {
+      "name": "Yuriy Yarosh",
+      "email": "yuriy@yarosh.dev"
+    }
+  ],
+  "scripts": {
+    "format": "biome format --fix",
+    "lint": "biome lint --fix --unsafe",
+    "test": "vitest run",
+    "build": "pkgroll build",
+    "watch": "pkgroll -w",
+    "update-snapshots": "vitest run -u"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "pkgroll": "^2.12.2",
+    "typescript": "~5.8.3",
+    "vitest": "^3.2.2"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "exports": {
+    "require": {
+      "types": "./dist/SSG.d.cts",
+      "default": "./dist/SSG.cjs"
+    },
+    "import": {
+      "types": "./dist/SSG.d.mts",
+      "default": "./dist/SSG.mjs"
+    }
+  }
+}

@@ -7,34 +7,41 @@
   "packageManager": "yarn@4.7.0",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/yuriy-yarosh/yuriy-yarosh.github.io"
   },
-  "authors": [],
+  "authors": [
+    {
+      "name": "Yuriy Yarosh",
+      "email": "yuriy@yarosh.dev"
+    }
+  ],
   "scripts": {
     "generate": "",
     "format": "biome format --fix",
     "lint": "biome lint --fix --unsafe",
     "test": "vitest run",
-    "build": "",
-    "watch": "",
+    "build:ts": "pkgroll build",
+    "build:css": "tailwindcss -i ./src/Input.css -o ./dist/Components.css",
+    "build": "run-p build:ts build:css",
+    "watch": "pkgroll -w",
     "update-snapshots": "vitest run -u"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.120.18",
     "@tanstack/react-router-devtools": "^1.120.18",
-    "@tanstack/react-start": "^1.120.18",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@tailwindcss/cli": "4.1.8",
     "autoprefixer": "^10.4.21",
+    "npm-run-all": "^4.1.5",
+    "pkgroll": "^2.12.2",
     "postcss": "^8.5.4",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.8",
     "typescript": "~5.8.3",
-    "vinxi": "0.5.6",
-    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.2"
   },
   "browserslist": {
@@ -50,9 +57,19 @@
     ]
   },
   "files": [
-    "dist"
+    "dist/Components.*"
   ],
   "engines": {
     "node": ">=24"
+  },
+  "exports": {
+    "require": {
+      "types": "./dist/Components.d.cts",
+      "default": "./dist/Components.cjs"
+    },
+    "import": {
+      "types": "./dist/Components.d.mts",
+      "default": "./dist/Components.mjs"
+    }
   }
 }

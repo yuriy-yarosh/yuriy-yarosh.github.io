@@ -28,6 +28,15 @@
     "editor.codeActionsOnSave": {
       "quickfix.biome": "explicit"
     },
+    "files.watcherExclude": {
+      "**/routeTree.gen.ts": true
+    },
+    "search.exclude": {
+      "**/routeTree.gen.ts": true
+    },
+    "files.readonlyInclude": {
+      "**/routeTree.gen.ts": true
+    },
     "[javascript]": {
       "editor.defaultFormatter": "biomejs.biome"
     },
@@ -40,17 +49,17 @@
     "[typescriptreact]": {
       "editor.defaultFormatter": "biomejs.biome"
     },
-    "files.readonlyInclude": {
-      "**/routeTree.gen.ts": true
+    "[json]": {
+      "editor.defaultFormatter": "biomejs.biome"
     },
-    "files.watcherExclude": {
-      "**/routeTree.gen.ts": true
+    "[jsonc]": {
+      "editor.defaultFormatter": "biomejs.biome"
     },
-    "search.exclude": {
-      "**/routeTree.gen.ts": true
+    "[css]": {
+      "editor.defaultFormatter": "biomejs.biome"
     },
     "cSpell.language": "en",
-    "cSpell.words": ["cyclonedx", "dependi", "pkief", "ryanluker", "yarosh", "yaroshdev", "Yuriy"],
+    "cSpell.words": ["cyclonedx", "dependi", "nitropack", "pkgroll", "pkief", "ryanluker", "tsrouter", "yarosh", "yaroshdev", "Yuriy"],
     "workbench.iconTheme": "material-icon-theme"
   },
   "extensions": {

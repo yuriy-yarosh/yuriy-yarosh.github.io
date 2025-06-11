@@ -1,6 +1,3 @@
-/**
-        Copyright (c) 2025 Elifsina
-*/
 
 import { defineConfig } from 'vitest/config'
 

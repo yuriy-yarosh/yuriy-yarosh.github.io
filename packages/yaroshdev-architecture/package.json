@@ -7,9 +7,14 @@
   "packageManager": "yarn@4.7.0",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/yuriy-yarosh/yuriy-yarosh.github.io"
   },
-  "authors": [],
+  "authors": [
+    {
+      "name": "Yuriy Yarosh",
+      "email": "yuriy@yarosh.dev"
+    }
+  ],
   "scripts": {
     "generate": "",
     "format": "biome format --fix",
@@ -22,7 +27,6 @@
   "dependencies": {
     "@tanstack/react-router": "^1.120.18",
     "@tanstack/react-router-devtools": "^1.120.18",
-    "@tanstack/react-start": "^1.120.18",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

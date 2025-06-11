@@ -14,12 +14,14 @@ yarn-error.*
 *.tsbuildinfo
 .turbo
 .turbo/**
+yarn.lock
 
 # Build
 build/
 dist/
 coverage/
 reports/
+public/build/
 
 # Tanstack Route
 RouteTree.gen.ts
