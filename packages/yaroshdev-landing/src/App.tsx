@@ -34,11 +34,11 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <StrictMode>
-      <div className='absolute w-full h-screen overflow-hidden inset-0 z-0'>
+      <div className='absolute inset-0 z-0 h-screen w-full overflow-hidden'>
         <Scene />
       </div>
 
-      <div className='relative overflow-hidden inset-0 z-1'>
+      <div className='relative inset-0 z-1 overflow-hidden'>
         <RouterProvider router={router} />
       </div>
     </StrictMode>

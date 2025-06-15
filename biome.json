@@ -39,8 +39,7 @@
     "rules": {
       "recommended": true,
       "nursery": {
-        "useSortedClasses": "error",
-        "useImportRestrictions": "error"
+        "useSortedClasses": "error"
       }
     }
   },
