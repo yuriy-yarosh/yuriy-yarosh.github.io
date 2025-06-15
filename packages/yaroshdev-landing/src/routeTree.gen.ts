@@ -8,127 +8,142 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-// Import Routes
+import { Route as rootRouteImport } from './Layout'
+import { Route as PagesLegalRouteImport } from './Pages/Legal'
+import { Route as PagesHireRouteImport } from './Pages/Hire'
+import { Route as PagesContactsRouteImport } from './Pages/Contacts'
+import { Route as PagesBlogRouteImport } from './Pages/Blog'
+import { Route as PagesAboutRouteImport } from './Pages/About'
+import { Route as PagesHomeRouteImport } from './Pages/Home'
 
-import { Route as rootRoute } from './Layout'
-import { Route as PagesLegalImport } from './Pages/Legal'
-import { Route as PagesContactsImport } from './Pages/Contacts'
-import { Route as PagesHomeImport } from './Pages/Home'
-
-// Create/Update Routes
-
-const PagesLegalRoute = PagesLegalImport.update({
+const PagesLegalRoute = PagesLegalRouteImport.update({
   id: '/legal',
   path: '/legal',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const PagesContactsRoute = PagesContactsImport.update({
+const PagesHireRoute = PagesHireRouteImport.update({
+  id: '/hire',
+  path: '/hire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesContactsRoute = PagesContactsRouteImport.update({
   id: '/contacts',
   path: '/contacts',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const PagesHomeRoute = PagesHomeImport.update({
+const PagesBlogRoute = PagesBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesAboutRoute = PagesAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHomeRoute = PagesHomeRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
 
-// Populate the FileRoutesByPath interface
+export interface FileRoutesByFullPath {
+  '/': typeof PagesHomeRoute
+  '/about': typeof PagesAboutRoute
+  '/blog': typeof PagesBlogRoute
+  '/contacts': typeof PagesContactsRoute
+  '/hire': typeof PagesHireRoute
+  '/legal': typeof PagesLegalRoute
+}
+export interface FileRoutesByTo {
+  '/': typeof PagesHomeRoute
+  '/about': typeof PagesAboutRoute
+  '/blog': typeof PagesBlogRoute
+  '/contacts': typeof PagesContactsRoute
+  '/hire': typeof PagesHireRoute
+  '/legal': typeof PagesLegalRoute
+}
+export interface FileRoutesById {
+  __root__: typeof rootRouteImport
+  '/': typeof PagesHomeRoute
+  '/about': typeof PagesAboutRoute
+  '/blog': typeof PagesBlogRoute
+  '/contacts': typeof PagesContactsRoute
+  '/hire': typeof PagesHireRoute
+  '/legal': typeof PagesLegalRoute
+}
+export interface FileRouteTypes {
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/' | '/about' | '/blog' | '/contacts' | '/hire' | '/legal'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/about' | '/blog' | '/contacts' | '/hire' | '/legal'
+  id: '__root__' | '/' | '/about' | '/blog' | '/contacts' | '/hire' | '/legal'
+  fileRoutesById: FileRoutesById
+}
+export interface RootRouteChildren {
+  PagesHomeRoute: typeof PagesHomeRoute
+  PagesAboutRoute: typeof PagesAboutRoute
+  PagesBlogRoute: typeof PagesBlogRoute
+  PagesContactsRoute: typeof PagesContactsRoute
+  PagesHireRoute: typeof PagesHireRoute
+  PagesLegalRoute: typeof PagesLegalRoute
+}
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof PagesHomeImport
-      parentRoute: typeof rootRoute
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof PagesLegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hire': {
+      id: '/hire'
+      path: '/hire'
+      fullPath: '/hire'
+      preLoaderRoute: typeof PagesHireRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/contacts': {
       id: '/contacts'
       path: '/contacts'
       fullPath: '/contacts'
-      preLoaderRoute: typeof PagesContactsImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof PagesContactsRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/legal': {
-      id: '/legal'
-      path: '/legal'
-      fullPath: '/legal'
-      preLoaderRoute: typeof PagesLegalImport
-      parentRoute: typeof rootRoute
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof PagesBlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof PagesAboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof PagesHomeRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
-}
-
-// Create and export the route tree
-
-export interface FileRoutesByFullPath {
-  '/': typeof PagesHomeRoute
-  '/contacts': typeof PagesContactsRoute
-  '/legal': typeof PagesLegalRoute
-}
-
-export interface FileRoutesByTo {
-  '/': typeof PagesHomeRoute
-  '/contacts': typeof PagesContactsRoute
-  '/legal': typeof PagesLegalRoute
-}
-
-export interface FileRoutesById {
-  __root__: typeof rootRoute
-  '/': typeof PagesHomeRoute
-  '/contacts': typeof PagesContactsRoute
-  '/legal': typeof PagesLegalRoute
-}
-
-export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contacts' | '/legal'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contacts' | '/legal'
-  id: '__root__' | '/' | '/contacts' | '/legal'
-  fileRoutesById: FileRoutesById
-}
-
-export interface RootRouteChildren {
-  PagesHomeRoute: typeof PagesHomeRoute
-  PagesContactsRoute: typeof PagesContactsRoute
-  PagesLegalRoute: typeof PagesLegalRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   PagesHomeRoute: PagesHomeRoute,
+  PagesAboutRoute: PagesAboutRoute,
+  PagesBlogRoute: PagesBlogRoute,
   PagesContactsRoute: PagesContactsRoute,
+  PagesHireRoute: PagesHireRoute,
   PagesLegalRoute: PagesLegalRoute,
 }
-
-export const routeTree = rootRoute
+export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-/* ROUTE_MANIFEST_START
-{
-  "routes": {
-    "__root__": {
-      "filePath": "Layout.tsx",
-      "children": [
-        "/",
-        "/contacts",
-        "/legal"
-      ]
-    },
-    "/": {
-      "filePath": "Pages/Home.tsx"
-    },
-    "/contacts": {
-      "filePath": "Pages/Contacts.tsx"
-    },
-    "/legal": {
-      "filePath": "Pages/Legal.tsx"
-    }
-  }
-}
-ROUTE_MANIFEST_END */

@@ -59,7 +59,7 @@
       "editor.defaultFormatter": "biomejs.biome"
     },
     "cSpell.language": "en",
-    "cSpell.words": ["cyclonedx", "dependi", "nitropack", "pkgroll", "pkief", "ryanluker", "tsrouter", "yarosh", "yaroshdev", "Yuriy"],
+    "cSpell.words": ["cyclonedx", "dependi", "extralight", "nitropack", "pkgroll", "pkief", "ryanluker", "tsrouter", "yarosh", "yaroshdev", "Yuriy"],
     "workbench.iconTheme": "material-icon-theme"
   },
   "extensions": {
@@ -73,7 +73,8 @@
       "ms-vscode.js-debug",
       "redhat.vscode-yaml",
       "streetsidesoftware.code-spell-checker",
-      "pkief.material-icon-theme"
+      "pkief.material-icon-theme",
+      "bradlc.vscode-tailwindcss"
     ]
   }
 }

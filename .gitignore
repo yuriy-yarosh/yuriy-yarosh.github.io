@@ -25,3 +25,5 @@ public/build/
 
 # Tanstack Route
 RouteTree.gen.ts
+
+.tanstack/

@@ -10,6 +10,21 @@
       },
       {
         "type": "route",
+        "file": "Pages/About.tsx",
+        "path": "/about"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Blog.tsx",
+        "path": "/blog"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire.tsx",
+        "path": "/hire"
+      },
+      {
+        "type": "route",
         "file": "Pages/Contacts.tsx",
         "path": "/contacts"
       },

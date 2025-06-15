@@ -9,16 +9,18 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, CatchBoundary } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/legal')({
-  component: Index
-})
-
-function Index() {
+export const Legal = () => {
   return (
-    <div className='p-2'>
-      <h3>Legal</h3>
-    </div>
+    <CatchBoundary getResetKey={() => 'legal'} onCatch={(error) => console.error(error)}>
+      <div className='p-2'>
+        <h3>Legal</h3>
+      </div>
+    </CatchBoundary>
   )
 }
+
+export const Route = createFileRoute('/legal')({
+  component: Legal
+})

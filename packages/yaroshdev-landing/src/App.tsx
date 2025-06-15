@@ -13,6 +13,8 @@ import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 
+import { Scene } from './components/canvas/Scene'
+
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
 
@@ -32,7 +34,13 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <StrictMode>
-      <RouterProvider router={router} />
+      <div className='absolute w-full h-screen overflow-hidden inset-0 z-0'>
+        <Scene />
+      </div>
+
+      <div className='relative overflow-hidden inset-0 z-1'>
+        <RouterProvider router={router} />
+      </div>
     </StrictMode>
   )
 }

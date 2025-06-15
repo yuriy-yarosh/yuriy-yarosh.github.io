@@ -11,16 +11,16 @@
 
 import { createFileRoute, CatchBoundary } from '@tanstack/react-router'
 
-export const Home = () => {
+export const Blog = () => {
   return (
-    <CatchBoundary getResetKey={() => 'home'} onCatch={(error) => console.error(error)}>
-      <>
-        {/* TODO */} <br />
-      </>
+    <CatchBoundary getResetKey={() => 'blog'} onCatch={(error) => console.error(error)}>
+      <div className='p-2'>
+        <h3>Blog</h3>
+      </div>
     </CatchBoundary>
   )
 }
 
-export const Route = createFileRoute('/')({
-  component: Home
+export const Route = createFileRoute('/blog')({
+  component: Blog
 })
