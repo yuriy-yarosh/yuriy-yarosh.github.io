@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xxs': '240px',
+        xxs: '240px'
       },
       fontFamily: {
         monoton: ['Monoton', 'sans-serif'],
-        lato: ['Lato', 'sans-serif']
+        castoro: ['Castoro', 'sans-serif']
       },
       animation: {
-        'fadeInBg': 'fadeInBg 1.5s ease-in-out forwards'
+        fadeInBg: 'fadeInBg 1.5s ease-in-out forwards'
       },
       keyframes: {
         fadeInBg: {

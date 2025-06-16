@@ -1,14 +1,21 @@
 @import "tailwindcss";
 
-* {
-  font-family: "Lato", sans-serif;
+a {
+  font-family: "Castoro", sans-serif;
 }
 
-h1,
-h2,
+p {
+  font-family: "Castoro", sans-serif;
+}
+
 h3,
 h4,
 h5,
 h6 {
+  font-family: "Castoro", sans-serif;
+}
+
+h1,
+h2 {
   font-family: "Monoton", sans-serif;
 }

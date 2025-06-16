@@ -9,151 +9,210 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { useRef, useMemo, useState, useCallback } from 'react'
+import React, { useRef, useMemo, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { OrbitControls, Environment } from '@react-three/drei'
+import { Environment } from '@react-three/drei'
 import * as THREE from 'three'
 
 // Import the mouse position context
-import { useMousePosition } from '../../context/MouseContext'
+import { useAnimationState } from '../../hooks/useAnimationState'
+import { useResponsiveGridSize } from '../../hooks/useResponsiveBoxGridSize'
+import useDarkMode from '../../hooks/useDarkMode'
 
 // import { EffectComposer, Bloom, ChromaticAberration, Noise, Vignette } from '@react-three/postprocessing'
 // import { AnimatedGlitch } from './effects/AnimatedGlitch'
 
-// Create a simple component for a single box in the grid
-const Box = ({ position, color, scale }: { position: [number, number, number]; color: THREE.Color; scale: number }) => {
+interface BoxProps extends BoxData {
+  isAdditionallyScaled?: boolean
+}
+
+const Box = ({ id, position, color, scale, isAdditionallyScaled = false }: BoxProps) => {
   const meshRef = useRef<THREE.Mesh>(null)
-  const [hovered, setHovered] = useState(false)
+  const { isAnimating, animationClock, continuousClock } = useAnimationState()
 
-  const { normalizedPosition } = useMousePosition()
-
-  const { camera } = useThree()
-
-  const isNearMouse = useCallback(() => {
-    if (!meshRef.current) return false
-
-    const boxPosition = new THREE.Vector3()
-    meshRef.current.getWorldPosition(boxPosition)
-
-    const tempV = boxPosition.clone()
-    tempV.project(camera)
-
-    const distance = Math.sqrt((tempV.x - normalizedPosition.x) ** 2 + (tempV.y - normalizedPosition.y) ** 2)
-
-    return distance < 0.1
-  }, [normalizedPosition, camera])
-
-  useFrame((state) => {
+  useFrame(() => {
     if (meshRef.current) {
       const x = position[0]
       const y = position[1]
       const z = position[2]
 
-      const mouseNearby = isNearMouse()
-      if (mouseNearby !== hovered) {
-        setHovered(mouseNearby)
+      // Use continuous clock for base sinusoidal animation if main animation is paused
+      const sinusoidalElapsedTime = isAnimating ? animationClock.getElapsedTime() : continuousClock.getElapsedTime()
+
+      const baseAnimFactorX = 0.8 + Math.sin(sinusoidalElapsedTime * 0.5 + x * 0.5) * 0.2
+      const baseAnimFactorY = 0.8 + Math.sin(sinusoidalElapsedTime * 0.5 + y * 0.5) * 0.2
+      const baseAnimFactorZ = 0.8 + Math.sin(sinusoidalElapsedTime * 0.5 + z * 0.5) * 0.2
+
+      let scaleMultiplier = 0.8
+      // This part of the animation (making boxes larger) should still respect the main animation state
+      if (isAdditionallyScaled && isAnimating) {
+        scaleMultiplier = 1.8 // Make additionally scaled boxes larger
       }
 
-      let targetScaleX = scale * (0.8 + Math.sin(state.clock.elapsedTime * 0.5 + x * 0.5) * 0.2)
-      let targetScaleY = scale * (0.8 + Math.sin(state.clock.elapsedTime * 0.5 + y * 0.5) * 0.2)
-      let targetScaleZ = scale * (0.8 + Math.sin(state.clock.elapsedTime * 0.5 + z * 0.5) * 0.2)
+      const finalTargetScaleX = scale * baseAnimFactorX * scaleMultiplier
+      const finalTargetScaleY = scale * baseAnimFactorY * scaleMultiplier
+      const finalTargetScaleZ = scale * baseAnimFactorZ * scaleMultiplier
 
-      if (hovered) {
-        targetScaleX *= 1.0 + Math.sin(state.clock.elapsedTime * 0.2 + x * 0.2)
-        targetScaleY *= 1.0 + Math.sin(state.clock.elapsedTime * 0.2 + y * 0.2)
-        targetScaleZ *= 1.0 + Math.sin(state.clock.elapsedTime * 0.2 + z * 0.2)
-      }
-
-      meshRef.current.scale.x = THREE.MathUtils.lerp(meshRef.current.scale.x, targetScaleX, 0.1)
-      meshRef.current.scale.y = THREE.MathUtils.lerp(meshRef.current.scale.y, targetScaleY, 0.1)
-      meshRef.current.scale.z = THREE.MathUtils.lerp(meshRef.current.scale.z, targetScaleZ, 0.1)
+      meshRef.current.scale.x = THREE.MathUtils.lerp(meshRef.current.scale.x, finalTargetScaleX, 0.1)
+      meshRef.current.scale.y = THREE.MathUtils.lerp(meshRef.current.scale.y, finalTargetScaleY, 0.1)
+      meshRef.current.scale.z = THREE.MathUtils.lerp(meshRef.current.scale.z, finalTargetScaleZ, 0.1)
     }
   })
 
   return (
-    <mesh ref={meshRef} position={position}>
+    <mesh ref={meshRef} position={position} userData={{ id }}>
       <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={color} emissive={hovered ? color : new THREE.Color(0, 0, 0)} emissiveIntensity={hovered ? 0.5 : 0} />
+      <meshStandardMaterial color={color} />
     </mesh>
   )
 }
 
-// Create the BoxGrid component
-const BoxGrid = () => {
-  const gridSize = 8 // Reduced from 16 to 8 for better performance
-  const spacing = 0.15 // Increased spacing for better visibility
-  const boxSize = 0.05 // Increased box size for better visibility
-  const groupRef = useRef<THREE.Group>(null)
+interface BoxData {
+  id: string
+  position: [number, number, number]
+  color: THREE.Color // Assuming THREE is imported, e.g., import * as THREE from 'three';
+  scale: number
+}
 
-  // Generate positions and colors for each box in the grid
+const isInternal = (x: number, y: number, z: number, gridSize: number) => x > 0 && x < gridSize - 1 && y > 0 && y < gridSize - 1 && z > 0 && z < gridSize - 1
+
+const BoxGrid = () => {
+  const gridSize = useResponsiveGridSize()
+  const spacing = 0.15
+  const boxSize = 0.07
+  const groupRef = useRef<THREE.Group>(null)
+  const { camera } = useThree()
+  const [additionallyScaledBoxIds, setAdditionallyScaledBoxIds] = useState(new Set<string>())
+  const lastSelectionTimeRef = useRef(0)
+  const selectionInterval = 3 // seconds
+
   const boxes = useMemo(() => {
-    const boxes = []
     const offset = ((gridSize - 1) * spacing) / 2
 
-    // Only create boxes on the outer shell to improve performance
-    for (let x = 0; x < gridSize; x++) {
-      for (let y = 0; y < gridSize; y++) {
-        for (let z = 0; z < gridSize; z++) {
-          // Only create boxes on the outer shell or randomly inside (for a less dense grid)
-          if (x === 0 || x === gridSize - 1 || y === 0 || y === gridSize - 1 || z === 0 || z === gridSize - 1 || Math.random() < 0.1) {
-            // 10% chance for interior boxes
+    const coordinates = Array.from({ length: gridSize }, (_, i) => i)
 
-            // Calculate position
-            const position: [number, number, number] = [x * spacing - offset, y * spacing - offset, z * spacing - offset]
+    return coordinates.flatMap((x) =>
+      coordinates.flatMap(
+        (y) =>
+          coordinates
+            .map((z) => {
+              // Create boxes only on the external shell. Skip internal boxes.
 
-            // Generate a color based on position
-            const color = new THREE.Color(
-              0.5 + 0.5 * Math.sin((x / gridSize) * Math.PI),
-              0.5 + 0.5 * Math.sin((y / gridSize) * Math.PI),
-              0.5 + 0.5 * Math.sin((z / gridSize) * Math.PI)
-            )
+              if (isInternal(x, y, z, gridSize)) {
+                return null // This is an internal box, skip it.
+              }
 
-            // Vary the scale slightly for visual interest
-            const scale = boxSize * (0.8 + Math.random() * 0.4)
+              const position: [number, number, number] = [x * spacing - offset, y * spacing - offset, z * spacing - offset]
 
-            // Create a unique ID for each box
-            const id = `box-${x}-${y}-${z}-${Math.random().toString(36).substr(2, 9)}`
+              const color = new THREE.Color(
+                // Assuming THREE is imported
+                0.5 + 0.5 * Math.sin((x / gridSize) * Math.PI),
+                0.5 + 0.5 * Math.sin((y / gridSize) * Math.PI),
+                0.5 + 0.5 * Math.sin((z / gridSize) * Math.PI)
+              )
 
-            boxes.push({ id, position, color, scale })
-          }
-        }
-      }
+              const scale = boxSize * (0.8 + Math.random() * 0.4)
+              const id = `box-${x}-${y}-${z}`
+
+              return { id, position, color, scale }
+            })
+            .filter((box): box is BoxData => box !== null) // Filter out nulls (skipped boxes) and assert type
+      )
+    )
+  }, [gridSize]) // Only gridSize is a reactive dependency here
+
+  const { isAnimating, animationClock } = useAnimationState()
+
+  useFrame(() => {
+    // Only animate when isAnimating is true
+    if (!isAnimating) return
+
+    // Use our custom animation clock that properly handles pausing
+    const elapsedTime = animationClock.getElapsedTime()
+
+    // Grid rotation animation
+    if (groupRef.current) {
+      groupRef.current.rotation.y = elapsedTime * 0.1
+      groupRef.current.rotation.x = Math.sin(elapsedTime * 0.05) * 0.2
     }
 
-    return boxes
-  }, [])
+    // Periodically select front-facing boxes for additional scaling
+    if (elapsedTime - lastSelectionTimeRef.current > selectionInterval) {
+      lastSelectionTimeRef.current = elapsedTime
 
-  // Animation for the entire grid
-  useFrame((state) => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y = state.clock.elapsedTime * 0.1
-      groupRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.05) * 0.2
+      if (groupRef.current && camera) {
+        const frontFacingBoxMeshes: THREE.Object3D[] = []
+        const tempWorldPos = new THREE.Vector3()
+
+        for (const child of groupRef.current.children) {
+          child.getWorldPosition(tempWorldPos)
+          // Consider a box front-facing if its world Z is towards the camera (positive Z)
+          if (tempWorldPos.z > 0.1) {
+            frontFacingBoxMeshes.push(child)
+          }
+        }
+
+        const numToSelect = 9
+        // Shuffle the array of front-facing meshes (Fisher-Yates shuffle)
+        for (let i = frontFacingBoxMeshes.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1))
+          ;[frontFacingBoxMeshes[i], frontFacingBoxMeshes[j]] = [frontFacingBoxMeshes[j], frontFacingBoxMeshes[i]]
+        }
+
+        const selectedMeshes = frontFacingBoxMeshes.slice(0, Math.min(numToSelect, frontFacingBoxMeshes.length))
+        const newSelectedIds = new Set(selectedMeshes.map((mesh) => mesh.userData.id as string))
+        setAdditionallyScaledBoxIds(newSelectedIds)
+      }
     }
   })
 
   return (
     <group ref={groupRef}>
       {boxes.map((box) => (
-        <Box key={box.id} position={box.position} color={box.color} scale={box.scale} />
+        <Box key={box.id} {...box} isAdditionallyScaled={additionallyScaledBoxIds.has(box.id)} />
       ))}
     </group>
   )
 }
 
-export const Scene = () => {
+// Camera controller that responds to animation state
+const CameraController = () => {
+  const { isAnimating } = useAnimationState()
+  const { camera } = useThree()
+
+  useFrame(() => {
+    const targetPosition = isAnimating ? new THREE.Vector3(0, 0, 2.5) : new THREE.Vector3(0, 0, 3)
+
+    // Smoothly animate camera to target position
+    camera.position.lerp(targetPosition, 0.05)
+  })
+
+  return null
+}
+
+export const Scene = React.memo(() => {
+  const { isDark } = useDarkMode()
   // const [hasBadPerformance, degradePerformance] = useState(false)
   // const goodPerformance = () => degradePerformance(false)
   // const badPerformance = () => degradePerformance(true)
 
-  return (
-    <Canvas camera={{ position: [0, 0, 3], fov: 60 }} fallback={<div>Sorry no WebGL supported!</div>}>
-      {/* <PerformanceMonitor onDecline={badPerformance} onIncline={goodPerformance}> */}
-      <color attach='background' args={['#f2f2f2']} />
-      <fog attach='fog' args={['#f0f0f0', 1, 3]} />
+  // Dark/light theme settings
+  const background = isDark ? '#18181b' : '#f2f2f2'
+  const fogColor = isDark ? '#18181b' : '#f0f0f0'
+  const ambientIntensity = isDark ? 0.45 : 0.3
+  const pointLightIntensity = isDark ? 1.3 : 1
+  const accentLightIntensity = isDark ? 0.7 : 0.5
 
-      <ambientLight intensity={0.3} />
-      <pointLight position={[1, 1, 1]} intensity={1} />
-      <pointLight position={[1, -1, 1]} color='#0ff' intensity={0.5} />
+  return (
+    <Canvas camera={{ position: [0, 0, 2.5], fov: 60 }} fallback={<div>Sorry no WebGL supported!</div>}>
+      <CameraController />
+      {/* <PerformanceMonitor onDecline={badPerformance} onIncline={goodPerformance}> */}
+      <color attach='background' args={[background]} />
+      <fog attach='fog' args={[fogColor, 1, 3]} />
+
+      <ambientLight intensity={ambientIntensity} />
+      <pointLight position={[1, 1, 1]} intensity={pointLightIntensity} />
+      <pointLight position={[1, -1, 1]} color='#0ff' intensity={accentLightIntensity} />
 
       <BoxGrid />
 
@@ -185,8 +244,8 @@ export const Scene = () => {
           <UI />
         </Suspense> */}
 
-      <OrbitControls enableZoom={true} enablePan={true} />
+      {/* <OrbitControls enableZoom={true} enablePan={true} /> */}
       {/* </PerformanceMonitor> */}
     </Canvas>
   )
-}
+})

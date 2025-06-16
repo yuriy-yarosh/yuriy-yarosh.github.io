@@ -10,13 +10,25 @@
  */
 
 import { Link, Outlet, createRootRoute } from '@tanstack/react-router'
+import { useAnimationState } from './hooks/useAnimationState'
 
 const FooterLink = ({ to, children }: { to: string; children: React.ReactNode }) => {
+  const { pauseAnimation } = useAnimationState()
   return (
     <Link
       to={to}
+      onClick={pauseAnimation}
       className='border-transparent border-b-1 p-2 font-["Monoton"] text-xs hover:border-slate-900 hover:border-b-1 md:text-sm [&.active]:border-slate-900 [&.active]:border-b-2 [&.active]:font-bold [&.active]:text-slate-800'>
       {children}
+    </Link>
+  )
+}
+
+const HomeLink = () => {
+  const { resumeAnimation } = useAnimationState()
+  return (
+    <Link to='/' onClick={resumeAnimation} className=' border-transparent border-b-3 hover:border-slate-900 hover:border-b-3 hover:text-slate-800 [&.active]:text-slate-800'>
+      <h1 className='text-xl md:text-2xl lg:text-5xl'>Yuriy Yarosh</h1>
     </Link>
   )
 }
@@ -52,15 +64,24 @@ const LinkedIn = () => (
   </a>
 )
 
+import { useEffect } from 'react'
+
 export const Route = createRootRoute({
   component: () => {
+    useEffect(() => {
+      console.log('RootRoute component mounted')
+      return () => console.log('RootRoute component unmounted')
+    }, [])
+
+    useEffect(() => {
+      console.log('RootRoute component re-rendered')
+    }) // No dependency array, runs on every render
+
     const year = new Date().getFullYear()
     return (
-      <div className='flex min-h-screen min-w-[240px] flex-col text-slate-600'>
+      <div className='relative z-1 flex min-h-screen min-w-[240px] flex-col text-slate-600'>
         <header className='flex flex-row items-center justify-between p-6'>
-          <Link to='/' className=' border-transparent border-b-3 hover:border-slate-900 hover:border-b-3 hover:text-slate-800 [&.active]:text-slate-800'>
-            <h1 className='text-xl md:text-2xl lg:text-5xl'>Yuriy Yarosh</h1>
-          </Link>
+          <HomeLink />
 
           <div className='flex items-center justify-end gap-2 max-[360px]:hidden md:gap-4'>
             <Github />

@@ -1,4 +1,4 @@
-## [Yuriy Yarosh](https://www.linkedin.com/in/yuriy-yarosh-171ba3b9/)'s Reference Cloud Native Architecture
+## [ꪗꪊ᥅꠸ꪗ ꪗꪖ᥅ꪮᦓꫝ](https://www.linkedin.com/in/yuriy-yarosh-171ba3b9/)'sReference Cloud Native Architecture
 
 
 
