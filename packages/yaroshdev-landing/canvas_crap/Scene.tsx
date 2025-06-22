@@ -16,7 +16,7 @@ import { FloatingBoxes } from './FloatingBoxes'
 
 import { Crystal } from './Crystal'
 import { ParticleSystem } from './ParticleSystem'
-import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
+import { usePrefersReducedMotion } from 'Landing/Hooks'
 import { EffectComposer, Bloom, ChromaticAberration, Noise, Vignette } from '@react-three/postprocessing'
 import { AnimatedGlitch } from './effects/AnimatedGlitch'
 import { Physics, CuboidCollider } from '@react-three/rapier'

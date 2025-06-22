@@ -9,13 +9,20 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './Layout'
+import { Route as PagesProjectsRouteImport } from './Pages/Projects'
 import { Route as PagesLegalRouteImport } from './Pages/Legal'
 import { Route as PagesHireRouteImport } from './Pages/Hire'
+import { Route as PagesEventsRouteImport } from './Pages/Events'
 import { Route as PagesContactsRouteImport } from './Pages/Contacts'
 import { Route as PagesBlogRouteImport } from './Pages/Blog'
 import { Route as PagesAboutRouteImport } from './Pages/About'
 import { Route as PagesHomeRouteImport } from './Pages/Home'
 
+const PagesProjectsRoute = PagesProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PagesLegalRoute = PagesLegalRouteImport.update({
   id: '/legal',
   path: '/legal',
@@ -24,6 +31,11 @@ const PagesLegalRoute = PagesLegalRouteImport.update({
 const PagesHireRoute = PagesHireRouteImport.update({
   id: '/hire',
   path: '/hire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesEventsRoute = PagesEventsRouteImport.update({
+  id: '/events',
+  path: '/events',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PagesContactsRoute = PagesContactsRouteImport.update({
@@ -52,16 +64,20 @@ export interface FileRoutesByFullPath {
   '/about': typeof PagesAboutRoute
   '/blog': typeof PagesBlogRoute
   '/contacts': typeof PagesContactsRoute
+  '/events': typeof PagesEventsRoute
   '/hire': typeof PagesHireRoute
   '/legal': typeof PagesLegalRoute
+  '/projects': typeof PagesProjectsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof PagesHomeRoute
   '/about': typeof PagesAboutRoute
   '/blog': typeof PagesBlogRoute
   '/contacts': typeof PagesContactsRoute
+  '/events': typeof PagesEventsRoute
   '/hire': typeof PagesHireRoute
   '/legal': typeof PagesLegalRoute
+  '/projects': typeof PagesProjectsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -69,15 +85,42 @@ export interface FileRoutesById {
   '/about': typeof PagesAboutRoute
   '/blog': typeof PagesBlogRoute
   '/contacts': typeof PagesContactsRoute
+  '/events': typeof PagesEventsRoute
   '/hire': typeof PagesHireRoute
   '/legal': typeof PagesLegalRoute
+  '/projects': typeof PagesProjectsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/blog' | '/contacts' | '/hire' | '/legal'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contacts'
+    | '/events'
+    | '/hire'
+    | '/legal'
+    | '/projects'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/blog' | '/contacts' | '/hire' | '/legal'
-  id: '__root__' | '/' | '/about' | '/blog' | '/contacts' | '/hire' | '/legal'
+  to:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contacts'
+    | '/events'
+    | '/hire'
+    | '/legal'
+    | '/projects'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contacts'
+    | '/events'
+    | '/hire'
+    | '/legal'
+    | '/projects'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -85,12 +128,21 @@ export interface RootRouteChildren {
   PagesAboutRoute: typeof PagesAboutRoute
   PagesBlogRoute: typeof PagesBlogRoute
   PagesContactsRoute: typeof PagesContactsRoute
+  PagesEventsRoute: typeof PagesEventsRoute
   PagesHireRoute: typeof PagesHireRoute
   PagesLegalRoute: typeof PagesLegalRoute
+  PagesProjectsRoute: typeof PagesProjectsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof PagesProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/legal': {
       id: '/legal'
       path: '/legal'
@@ -103,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/hire'
       fullPath: '/hire'
       preLoaderRoute: typeof PagesHireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof PagesEventsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contacts': {
@@ -141,8 +200,10 @@ const rootRouteChildren: RootRouteChildren = {
   PagesAboutRoute: PagesAboutRoute,
   PagesBlogRoute: PagesBlogRoute,
   PagesContactsRoute: PagesContactsRoute,
+  PagesEventsRoute: PagesEventsRoute,
   PagesHireRoute: PagesHireRoute,
   PagesLegalRoute: PagesLegalRoute,
+  PagesProjectsRoute: PagesProjectsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

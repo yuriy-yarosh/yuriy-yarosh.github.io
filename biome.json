@@ -54,6 +54,9 @@
           "style": {
             "useImportType": "off",
             "useNodejsImportProtocol": "off"
+          },
+          "complexity": {
+            "noForEach": "off"
           }
         }
       }

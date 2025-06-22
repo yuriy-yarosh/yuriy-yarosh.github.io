@@ -13,12 +13,10 @@ import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 
-import { DarkModeProvider } from './hooks/useDarkMode'
-import { AnimationProvider } from './hooks/useAnimationState'
+import { AnimationProvider, ColorsProvider } from 'Landing/Hooks'
+import { Scene } from 'Landing/Components'
 
 import { routeTree } from './routeTree.gen'
-import { Scene } from './components/canvas/Scene'
-
 
 const router = createRouter({ routeTree })
 
@@ -35,13 +33,13 @@ if (!rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <AnimationProvider>
-        <DarkModeProvider>
+        <ColorsProvider>
           <div className='absolute inset-0 z-0 h-screen w-full overflow-hidden'>
             <Scene />
           </div>
 
           <RouterProvider router={router} />
-        </DarkModeProvider>
+        </ColorsProvider>
       </AnimationProvider>
     </StrictMode>
   )

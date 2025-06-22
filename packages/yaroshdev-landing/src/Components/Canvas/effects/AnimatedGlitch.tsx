@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber'
 import { Glitch } from '@react-three/postprocessing'
 import { GlitchMode } from 'postprocessing'
 import { Vector2 } from 'three'
-import { usePrefersReducedMotion } from '../../../hooks/usePrefersReducedMotion'
+import { usePrefersReducedMotion } from 'Landing/Hooks'
 
 export function AnimatedGlitch() {
   const [active, setActive] = useState(false)

@@ -15,9 +15,7 @@ import { Environment } from '@react-three/drei'
 import * as THREE from 'three'
 
 // Import the mouse position context
-import { useAnimationState } from '../../hooks/useAnimationState'
-import { useResponsiveGridSize } from '../../hooks/useResponsiveBoxGridSize'
-import useDarkMode from '../../hooks/useDarkMode'
+import { useAnimationState, useResponsiveGridSize, useColors } from 'Landing/Hooks'
 
 // import { EffectComposer, Bloom, ChromaticAberration, Noise, Vignette } from '@react-three/postprocessing'
 // import { AnimatedGlitch } from './effects/AnimatedGlitch'
@@ -191,7 +189,7 @@ const CameraController = () => {
 }
 
 export const Scene = React.memo(() => {
-  const { isDark } = useDarkMode()
+  const { isDark } = useColors()
   // const [hasBadPerformance, degradePerformance] = useState(false)
   // const goodPerformance = () => degradePerformance(false)
   // const badPerformance = () => degradePerformance(true)

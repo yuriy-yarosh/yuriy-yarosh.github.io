@@ -5,7 +5,7 @@ import { Float, Trail } from '@react-three/drei'
 // eslint-disable-next-line import/no-unassigned-import
 import './NebulaBackground'
 import type { Mesh } from 'three'
-import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
+import { usePrefersReducedMotion } from 'Landing/Hooks'
 
 export function Crystal() {
   const mesh = useRef<Mesh>(null)

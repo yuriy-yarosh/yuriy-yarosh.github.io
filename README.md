@@ -1,4 +1,4 @@
-## [ꪗꪊ᥅꠸ꪗ ꪗꪖ᥅ꪮᦓꫝ](https://www.linkedin.com/in/yuriy-yarosh-171ba3b9/)'spersonal site
+## [ꪗꪊ᥅꠸ꪗ ꪗꪖ᥅ꪮᦓꫝ](https://www.linkedin.com/in/yuriy-yarosh-171ba3b9/)'s personal site
 
 
 

@@ -12,16 +12,16 @@
 import { createFileRoute, CatchBoundary } from '@tanstack/react-router'
 import { NavigateBack } from 'Landing/Components'
 
-export const Hire = () => {
+export const Events = () => {
   return (
-    <CatchBoundary getResetKey={() => 'hire'} onCatch={(error) => console.error(error)}>
+    <CatchBoundary getResetKey={() => 'events'} onCatch={(error) => console.error(error)}>
       <article>
-        <NavigateBack title='Hire' />
+        <NavigateBack title='Events' />
       </article>
     </CatchBoundary>
   )
 }
 
-export const Route = createFileRoute('/hire')({
-  component: Hire
+export const Route = createFileRoute('/events')({
+  component: Events
 })

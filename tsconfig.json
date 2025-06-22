@@ -31,10 +31,9 @@
     "declarationMap": false,
     "typeRoots": ["./node_modules/@types"],
     "paths": {
-      "landing/*": ["packages/yaroshdev-landing/*"],
-      "blog/*": ["packages/yaroshdev-blog/*"],
-      "architecture/*": ["packages/yaroshdev-architecture/*"],
-      "components/*": ["packages/yaroshdev-components/*"]
+      "Landing/*": ["packages/yaroshdev-landing/src/*"],
+      "Blog/*": ["packages/yaroshdev-blog/src/*"],
+      "Architecture/*": ["packages/yaroshdev-architecture/src/*"]
     }
   }
 }

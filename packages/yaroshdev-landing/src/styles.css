@@ -19,3 +19,11 @@ h1,
 h2 {
   font-family: "Monoton", sans-serif;
 }
+
+h1 > a {
+  font-family: "Monoton", sans-serif;
+}
+
+h2 > a {
+  font-family: "Monoton", sans-serif;
+}

@@ -15,10 +15,6 @@
     {
       "name": "🛬 Landing",
       "path": "packages/yaroshdev-landing"
-    },
-    {
-      "name": "🧩 Components",
-      "path": "packages/yaroshdev-components"
     }
   ],
   "settings": {
@@ -59,7 +55,23 @@
       "editor.defaultFormatter": "biomejs.biome"
     },
     "cSpell.language": "en",
-    "cSpell.words": ["Castoro", "cyclonedx", "dependi", "extralight", "lerp", "nitropack", "pkgroll", "pkief", "ryanluker", "tsrouter", "yarosh", "yaroshdev", "Yuriy"],
+    "cSpell.words": [
+      "Castoro",
+      "CIELAB",
+      "cyclonedx",
+      "dependi",
+      "extralight",
+      "lerp",
+      "nitropack",
+      "pkgroll",
+      "pkief",
+      "ryanluker",
+      "tsrouter",
+      "TTFB",
+      "yarosh",
+      "yaroshdev",
+      "Yuriy"
+    ],
     "workbench.iconTheme": "material-icon-theme"
   },
   "extensions": {

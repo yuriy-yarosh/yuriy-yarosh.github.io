@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Float, Text } from '@react-three/drei'
 import type { Mesh } from 'three'
-import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
+import { usePrefersReducedMotion } from 'Landing/Hooks'
 
 interface FloatingTextProps {
   children: React.ReactNode

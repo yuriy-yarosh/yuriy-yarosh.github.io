@@ -11,11 +11,13 @@
 
 import { createFileRoute, CatchBoundary } from '@tanstack/react-router'
 
+import { NavigateBack } from 'Landing/Components'
+
 export const About = () => {
   return (
     <CatchBoundary getResetKey={() => 'about'} onCatch={(error) => console.error(error)}>
-      <article className='flex flex-col items-center justify-between p-2'>
-        <h3 className='flex-row text-xl'>About</h3>
+      <article>
+        <NavigateBack title='About' />
       </article>
     </CatchBoundary>
   )

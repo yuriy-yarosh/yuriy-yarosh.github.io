@@ -1,7 +1,7 @@
 import { useRef, useMemo } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Points, Color, BufferGeometry, BufferAttribute, AdditiveBlending } from 'three'
-import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
+import { usePrefersReducedMotion } from 'Landing/Hooks'
 
 export function ParticleSystem() {
   const count = 2000
