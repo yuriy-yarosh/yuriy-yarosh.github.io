@@ -189,14 +189,14 @@ const CameraController = () => {
 }
 
 export const Scene = React.memo(() => {
-  const { isDark } = useColors()
+  const { isDark, colors } = useColors()
   // const [hasBadPerformance, degradePerformance] = useState(false)
   // const goodPerformance = () => degradePerformance(false)
   // const badPerformance = () => degradePerformance(true)
 
   // Dark/light theme settings
-  const background = isDark ? '#18181b' : '#f2f2f2'
-  const fogColor = isDark ? '#18181b' : '#f0f0f0'
+  const background = colors.rgb.primary
+  const fogColor = colors.rgb.background
   const ambientIntensity = isDark ? 0.45 : 0.3
   const pointLightIntensity = isDark ? 1.3 : 1
   const accentLightIntensity = isDark ? 0.7 : 0.5

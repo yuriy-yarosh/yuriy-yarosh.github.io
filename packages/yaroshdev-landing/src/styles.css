@@ -1,29 +1,16 @@
 @import "tailwindcss";
 
-a {
-  font-family: "Castoro", sans-serif;
-}
+@theme {
+  --font-display: Castoro, sans-serif;
+  --font-title: Monoton, sans-serif;
 
-p {
-  font-family: "Castoro", sans-serif;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Castoro", sans-serif;
-}
-
-h1,
-h2 {
-  font-family: "Monoton", sans-serif;
-}
-
-h1 > a {
-  font-family: "Monoton", sans-serif;
-}
-
-h2 > a {
-  font-family: "Monoton", sans-serif;
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-background: var(--color-background);
+  --color-content: var(--color-content);
+  --color-accent: var(--color-accent);
+  --color-neutral: var(--color-neutral);
+  --color-title: var(--color-title);
+  --color-border: var(--color-border);
+  --color-card-background: var(--color-card-background);
 }

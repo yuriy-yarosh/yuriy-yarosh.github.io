@@ -16,9 +16,9 @@ import { useEffect } from 'react'
 const ArrowIcon = ({ title }: { title: string }) => (
   <svg className='h-5 w-5 md:h-7 md:w-7 lg:h-8 lg:w-8' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='1' strokeLinecap='round' strokeLinejoin='round'>
     <title>{title}</title>
-    <path d='m13 17-5-5 5-5' className='animate-pulse delay-900' />
-    <path d='m15 17-5-5 5-5' className='animate-pulse delay-600' />
-    <path d='m17 17-5-5 5-5' className='animate-pulse delay-300' />
+    <path d='m13 17-5-5 5-5' className='animate-pulse delay-600' />
+    <path d='m15 17-5-5 5-5' className='animate-pulse delay-400' />
+    <path d='m17 17-5-5 5-5' className='animate-pulse delay-200' />
     <path d='m19 17-5-5 5-5' className='animate-pulse' />
   </svg>
 )
@@ -46,7 +46,7 @@ export const NavigateBack = ({ title }: { title: string }) => {
       }}
       className='flex transition-colors hover:text-slate-400'>
       {title && (
-        <h2 className='flex items-center hover:animate-pulse md:text-xl lg:text-2xl'>
+        <h2 className='flex items-center font-title hover:animate-pulse md:text-xl lg:text-2xl'>
           <ArrowIcon title={title} />
           {title}
         </h2>

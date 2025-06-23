@@ -15,13 +15,12 @@ import useAnimationState from 'Landing/Hooks/useAnimationState'
 export const NavbarHomeLink = () => {
   const { resumeAnimation } = useAnimationState()
   return (
-    <Link
-      to='/'
-      onClick={resumeAnimation}
-      className=' border-transparent border-b-3 transition-colors hover:border-slate-900 hover:border-b-3 hover:text-slate-800 [&.active]:text-slate-800'>
-      <h1 className='text-xl md:text-2xl lg:text-5xl'>Yuriy Yarosh</h1>
+    <Link to='/' onClick={resumeAnimation} className='border-transparent border-b-3 transition-colors hover:border-slate-900 hover:border-b-3 hover:text-slate-80'>
+      <h1 className='font-title text-xl md:text-2xl lg:text-5xl'>Yuriy Yarosh</h1>
     </Link>
   )
 }
+
+      // className='border-transparent border-b-3 transition-colors hover:border-slate-900 hover:border-b-3 hover:text-slate-800 [&.active]:text-slate-800'>
 
 export default NavbarHomeLink

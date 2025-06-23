@@ -10,20 +10,22 @@
  */
 
 import { Outlet, createRootRoute } from '@tanstack/react-router'
-import { FooterLink, NavbarHomeLink, Github, Facebook, LinkedIn } from 'Landing/Components'
+import { FooterLink, NavbarHomeLink, GithubLink, FacebookLink, LinkedInLink, TimeOfDay } from 'Landing/Components'
 
 export const Route = createRootRoute({
   component: () => {
     const year = new Date().getFullYear()
     return (
-      <div className='relative z-1 mx-auto flex min-h-screen w-full min-w-[240px] max-w-[1280px] flex-col p-6 text-slate-600'>
+      <div className='relative z-1 mx-auto flex min-h-screen w-full min-w-[240px] max-w-[1280px] flex-col p-6 font-display text-neutral transition-all duration-100'>
         <header className='flex flex-row items-center justify-between pb-2 lg:pb-4'>
           <NavbarHomeLink />
 
+          <TimeOfDay />
+
           <div className='flex items-center justify-end gap-2 max-[360px]:hidden md:gap-4 xl:gap-6'>
-            <Github />
-            <Facebook />
-            <LinkedIn />
+            <GithubLink />
+            <FacebookLink />
+            <LinkedInLink />
           </div>
         </header>
 

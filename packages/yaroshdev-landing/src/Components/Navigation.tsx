@@ -12,3 +12,4 @@
 export * from 'Landing/Components/Navigation/NavigateBack'
 export * from 'Landing/Components/Navigation/FooterLink'
 export * from 'Landing/Components/Navigation/NavbarHomeLink'
+export * from 'Landing/Components/Navigation/TimeOfDay'

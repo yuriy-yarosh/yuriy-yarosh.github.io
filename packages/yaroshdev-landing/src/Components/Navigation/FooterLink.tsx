@@ -18,7 +18,7 @@ export const FooterLink = ({ to, children }: { to: string; children: React.React
     <Link
       to={to}
       onClick={pauseAnimation}
-      className='border-transparent border-b-1 p-2 font-["Monoton"] text-xs transition-colors hover:border-slate-900 hover:border-b-1 md:text-sm [&.active]:border-slate-900 [&.active]:border-b-2 [&.active]:font-bold [&.active]:text-slate-800'>
+      className='border-transparent border-b-1 p-2 text-xs transition-colors hover:border-slate-900 hover:border-b-1 md:text-sm [&.active]:border-slate-900 [&.active]:border-b-2 [&.active]:font-bold [&.active]:text-slate-800'>
       {children}
     </Link>
   )
