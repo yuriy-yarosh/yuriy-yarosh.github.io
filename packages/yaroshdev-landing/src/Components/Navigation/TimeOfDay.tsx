@@ -9,7 +9,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useColors } from 'Landing/Hooks'
 import type { TimeOfDay as TimeOfDayType } from 'Landing/Hooks'
 import { TimeOfDayIcons } from 'Landing/Components'
