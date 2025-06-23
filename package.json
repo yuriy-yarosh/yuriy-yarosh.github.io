@@ -28,7 +28,7 @@
     "postinstall": "husky install .husky --no-color"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.0.4",
     "@changesets/cli": "^2.29.4",
     "@vitest/coverage-v8": "^3.2.3",
     "husky": "^9.1.7",
