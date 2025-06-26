@@ -1,34 +1,17 @@
-import tailwindcss from '@tailwindcss/vite'
-import { tanstackRouter } from '@tanstack/router-plugin/vite'
-import viteReact from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import mdx from '@mdx-js/rollup'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
-import { resolve } from 'node:path'
+import mdx from '@mdx-js/rollup'
 
 export default defineConfig({
   plugins: [
     tsconfigPaths(),
-    {
-      enforce: 'pre',
-      ...mdx({
-        /* jsxImportSource: …, otherOptions… */
-      })
-    },
-    tanstackRouter({ target: 'react', autoCodeSplitting: true }),
-    viteReact(),
-    tailwindcss()
   ],
   build: {
     rollupOptions: {
       output: {
         manualChunks: {
           react: ['react', 'react-dom'],
-          'three-core': ['three'],
-          'three-fiber': ['@react-three/fiber'],
-          'three-drei': ['@react-three/drei'],
-          'three-postprocessing': ['@react-three/postprocessing']
         }
       },
       treeshake: {
@@ -37,6 +20,6 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: ['three', 'react', 'react-dom', '@react-three/fiber', '@react-three/drei', '@react-three/postprocessing']
+    include: ['react', 'react-dom']
   }
 })

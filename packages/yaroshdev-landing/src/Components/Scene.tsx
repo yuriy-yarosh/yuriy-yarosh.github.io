@@ -336,9 +336,6 @@ export const Scene = React.memo(() => {
 			fallback={<div>Sorry no WebGL supported!</div>}
 		>
 			<PerformanceMonitor
-				onIncline={() => {
-					setPerformanceLevel("high");
-				}}
 				onDecline={() => {
 					setPerformanceLevel("low");
 				}}
