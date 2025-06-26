@@ -9,8 +9,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { createFileRoute, CatchBoundary, Link } from '@tanstack/react-router'
 import { useAnimationState } from 'Landing/Hooks'
+import { CatchBoundary, createFileRoute, Link } from '@tanstack/react-router'
 
 export const HomeLink = ({ title, to }: { title: string; to: string }) => {
   const { pauseAnimation } = useAnimationState()
@@ -30,7 +30,7 @@ export const HomeLink = ({ title, to }: { title: string; to: string }) => {
 export const Home = () => {
   return (
     <CatchBoundary getResetKey={() => 'home'} onCatch={(error) => console.error(error)}>
-      <nav className='flex flex-row justify-center gap-6 p-4 md:p-6 lg:flex-col lg:justify-start lg:p-8 xl:p-12'>
+      <nav className='flex flex-row justify-center gap-6 p-4 max-[360px]:gap-3 md:gap-5 md:p-6 lg:flex-col lg:justify-start lg:p-8 xl:p-12'>
         <HomeLink title='Projects' to='/projects' />
         <HomeLink title='Events' to='/events' />
         <HomeLink title='For Hire' to='/hire' />

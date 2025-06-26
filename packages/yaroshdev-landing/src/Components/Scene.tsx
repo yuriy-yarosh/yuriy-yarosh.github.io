@@ -79,8 +79,10 @@ interface BoxData {
 
 const isInternal = (x: number, y: number, z: number, gridSize: number) => x > 0 && x < gridSize - 1 && y > 0 && y < gridSize - 1 && z > 0 && z < gridSize - 1
 
-const BoxGrid = () => {
-  const gridSize = useResponsiveGridSize()
+const BoxGrid = ({ performance = 'high' }: { performance: 'high' | 'low' }) => {
+  let gridSize = useResponsiveGridSize()
+  gridSize = performance === 'high' ? gridSize : gridSize - 2
+
   const spacing = 0.15
   const boxSize = 0.07
   const groupRef = useRef<Group>(null)
@@ -255,6 +257,7 @@ export const Scene = React.memo(() => {
     <Canvas camera={{ position: [0, 0, 2.5], fov: 60 }} gl={{ antialias: true, powerPreference: 'low-power' }} fallback={<div>Sorry no WebGL supported!</div>}>
       <PerformanceMonitor
         onDecline={() => {
+          console.log('Performance dropped')
           setPerformanceLevel('low')
         }}
       />
@@ -263,7 +266,7 @@ export const Scene = React.memo(() => {
 
       <color attach='background' args={[colors.rgb.primary]} />
 
-      <BoxGrid />
+      <BoxGrid performance={performanceLevel} />
 
       <EffectComposer>
         {shouldVignette ? <Vignette eskil={false} offset={0} darkness={0.7} /> : <></>}

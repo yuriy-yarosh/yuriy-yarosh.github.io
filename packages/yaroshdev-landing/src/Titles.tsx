@@ -11,6 +11,25 @@
 
 export const getTitleFor = (pathname: string) =>
   [
+    ['/blog/modern-control-theory', 'Censored'],
+    ['/blog/simulation', 'Censored'],
+    ['/blog/self-organizing-control', 'Censored'],
+    ['/blog/ai-in-telecom', 'Censored'],
+    ['/blog/telecom', 'Censored'],
+    ['/blog/career', '| Career Framework'],
+
+    ['/blog/aws', '| AWS'],
+    ['/blog/azure', '| Azure'],
+    ['/blog/gcp', '| GCP'],
+    ['/blog/rcna', '| RCNA'],
+    ['/blog/architecture', '| Solution Architecture'],
+    ['/blog/discovery', '| Solution Discovery'],
+    ['/blog/logistics', '| Logistics'],
+    ['/blog/ml-kernels', '| ML Kernels'],
+    ['/blog/frontend-apis', '| Frontend APIs'],
+    ['/blog/control-manufacturing', '| Additive Control'],
+    ['/blog/autoscaling', '| Predictive Autoscaling'],
+
     ['/about', 'Yuriy Yarosh | About'],
     ['/contacts', 'Yuriy Yarosh | Contacts'],
     ['/legal', 'Yuriy Yarosh | Legal'],

@@ -1,11 +1,9 @@
+import mdx from '@mdx-js/rollup'
 import tailwindcss from '@tailwindcss/vite'
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
 import viteReact from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import mdx from '@mdx-js/rollup'
 import tsconfigPaths from 'vite-tsconfig-paths'
-
-import { resolve } from 'node:path'
 
 export default defineConfig({
   plugins: [

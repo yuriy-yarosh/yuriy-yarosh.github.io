@@ -33,7 +33,7 @@ if (!rootElement.innerHTML) {
     <StrictMode>
       <AnimationProvider>
         <ColorsProvider>
-          <div className='absolute inset-0 z-0 h-screen w-full overflow-hidden'>
+          <div className='fixed inset-0 z-0 h-screen w-screen'>
             <Scene />
           </div>
 

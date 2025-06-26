@@ -15,8 +15,99 @@
       },
       {
         "type": "route",
-        "file": "Pages/Blog.tsx",
-        "path": "/blog"
+        "file": "Pages/BlogLayout.tsx",
+        "path": "/blog",
+        "children": [
+          {
+            "type": "index",
+            "file": "Pages/Blog.tsx"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/0_CareerFramework.tsx",
+            "path": "career"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/1_AWS.tsx",
+            "path": "aws"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/2_RCNA.tsx",
+            "path": "rcna"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/3_Azure.tsx",
+            "path": "azure"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/4_GCP.tsx",
+            "path": "gcp"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/5_SolutionArchitecture.tsx",
+            "path": "architecture"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/6_SolutionDiscovery.tsx",
+            "path": "discovery"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/7_Logistics.tsx",
+            "path": "logistics"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/8_ModernControlTheory.tsx",
+            "path": "modern-control-theory"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/9_VisualControlAndSimulations.tsx",
+            "path": "simulation"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/10_AgentsInControlSystems.tsx",
+            "path": "self-organizing-control"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/11_AIInTelecom.tsx",
+            "path": "ai-in-telecom"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/12_TelecomApps.tsx",
+            "path": "telecom"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/13_MLKernels.tsx",
+            "path": "ml-kernels"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/14_FrontendAPI.tsx",
+            "path": "frontend-apis"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/15_ModernControlInAdditive.tsx",
+            "path": "control-manufacturing"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Blog/16_PredictiveAutoscaling.tsx",
+            "path": "autoscaling"
+          }
+        ]
       },
       {
         "type": "route",
@@ -25,13 +116,170 @@
       },
       {
         "type": "route",
-        "file": "Pages/Events.tsx",
-        "path": "/events"
+        "file": "Pages/EventsLayout.tsx",
+        "path": "/events",
+        "children": [
+          {
+            "type": "index",
+            "file": "Pages/Events.tsx"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Events/ThenPlanDemo.tsx",
+            "path": "thenplan"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Events/BitsnapDemo.tsx",
+            "path": "bitsnap"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Events/RCNADemo.tsx",
+            "path": "rcna"
+          }
+        ]
       },
       {
         "type": "route",
-        "file": "Pages/Hire.tsx",
-        "path": "/hire"
+        "file": "Pages/HireLayout.tsx",
+        "path": "/hire",
+        "children": [
+          {
+            "type": "index",
+            "file": "Pages/Hire.tsx"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Backend.tsx",
+            "path": "backend"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Compilers.tsx",
+            "path": "compilers"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Databases.tsx",
+            "path": "databases"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/DeviceDrivers.tsx",
+            "path": "drivers"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Devops.tsx",
+            "path": "devops"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Embedded.tsx",
+            "path": "embedded"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Frontend.tsx",
+            "path": "frontend"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Highload.tsx",
+            "path": "highload"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Languages.tsx",
+            "path": "languages"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/MachineLearning.tsx",
+            "path": "ml"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Simulation.tsx",
+            "path": "simulation"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/CAE.tsx",
+            "path": "cae"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Domain/EdTech.tsx",
+            "path": "edtech"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Domain/FinTech.tsx",
+            "path": "fintech"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Domain/Logistics.tsx",
+            "path": "logistics"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Domain/Research.tsx",
+            "path": "research"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Domain/Security.tsx",
+            "path": "security"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Domain/Telecom.tsx",
+            "path": "telecom"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Activities/Architecture.tsx",
+            "path": "architecture"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Activities/AWS.tsx",
+            "path": "aws"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Activities/Azure.tsx",
+            "path": "azure"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Activities/Career.tsx",
+            "path": "career"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Activities/Discovery.tsx",
+            "path": "discovery"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Activities/GCP.tsx",
+            "path": "gcp"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Activities/Kubernetes.tsx",
+            "path": "kubernetes"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Hire/Activities/Sales.tsx",
+            "path": "sales"
+          }
+        ]
       },
       {
         "type": "route",
@@ -40,8 +288,34 @@
       },
       {
         "type": "route",
-        "file": "Pages/Projects.tsx",
-        "path": "/projects"
+        "file": "Pages/ProjectsLayout.tsx",
+        "path": "/projects",
+        "children": [
+          {
+            "type": "index",
+            "file": "Pages/Projects.tsx"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Projects/ThenPlan.tsx",
+            "path": "thenplan"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Projects/Bitsnap.tsx",
+            "path": "bitsnap"
+          },
+          {
+            "type": "route",
+            "file": "Pages/Projects/RCNA.tsx",
+            "path": "rcna"
+          }
+        ]
+      },
+      {
+        "type": "route",
+        "file": "Pages/Shift.tsx",
+        "path": "/shift"
       }
     ]
   }

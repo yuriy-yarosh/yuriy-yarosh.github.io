@@ -9,19 +9,39 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { createFileRoute, CatchBoundary } from '@tanstack/react-router'
-import { NavigateBack } from 'Landing/Components'
+import { ContentCard, ContentLink, Heading, Paragraph } from 'Landing/Components'
+import { createFileRoute } from '@tanstack/react-router'
+
+const LegalLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) => ContentLink({ ...params, from: '/legal' })
 
 export const Legal = () => {
   return (
-    <CatchBoundary getResetKey={() => 'legal'} onCatch={(error) => console.error(error)}>
-      <article className='flex p-4 md:p-6 lg:p-8 xl:p-12'>
-        <NavigateBack title='Legal' />
-      </article>
-    </CatchBoundary>
+    <ContentCard backTitle='Legal' catchBoundary='legal' to='/' from='/legal'>
+      <div className='space-y-2 px-4 md:px-12 lg:space-y-4'>
+        <Heading>Legal</Heading>
+        <Paragraph>Yuriy Yarosh © 2016-2025.</Paragraph>
+        <Paragraph>Yuriy is a Ukrainian Private Entrepreneur (PE).</Paragraph>
+        <Paragraph>
+          📝 All written and media content on this site is licensed under the <br />
+          <LegalLink to='https://creativecommons.org/licenses/by-nc-nd/4.0/' className='text-wrap' external>
+            Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+          </LegalLink>{' '}
+          (CC BY-NC-ND 4.0) license.
+        </Paragraph>
+        <Paragraph>
+          💻 The site&#39;s codebase is released under the{' '}
+          <LegalLink to='https://www.mozilla.org/en-US/MPL/2.0/' external>
+            Mozilla Public License 2.0.
+          </LegalLink>
+        </Paragraph>
+      </div>
+    </ContentCard>
   )
 }
 
 export const Route = createFileRoute('/legal')({
   component: Legal
 })
+
+
+

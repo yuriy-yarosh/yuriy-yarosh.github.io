@@ -13,11 +13,12 @@ import { useEffect, useState } from 'react'
 
 // Define BoxData interface
 // Custom hook to determine gridSize based on screen width
-export const useResponsiveGridSize = (mdBreakpoint = 768, xlBreakpoint = 1280, sizeSmall = 8, sizeMedium = 10, sizeLarge = 12): number => {
+export const useResponsiveGridSize = (smBreakpoint = 360, mdBreakpoint = 768, xlBreakpoint = 1280, sizeMicro = 6, sizeSmall = 8, sizeMedium = 10, sizeLarge = 12): number => {
   const [gridSize, setGridSize] = useState(() => {
     const width = window.innerWidth
     if (width >= xlBreakpoint) return sizeLarge
     if (width >= mdBreakpoint) return sizeMedium
+    if (width >= smBreakpoint) return sizeMicro
     return sizeSmall
   })
 
@@ -28,8 +29,10 @@ export const useResponsiveGridSize = (mdBreakpoint = 768, xlBreakpoint = 1280, s
         setGridSize(sizeLarge)
       } else if (width >= mdBreakpoint) {
         setGridSize(sizeMedium)
-      } else {
+      } else if (width >= smBreakpoint) {
         setGridSize(sizeSmall)
+      } else {
+        setGridSize(sizeMicro)
       }
     }
 
@@ -37,7 +40,7 @@ export const useResponsiveGridSize = (mdBreakpoint = 768, xlBreakpoint = 1280, s
     handleResize() // Initial call
 
     return () => window.removeEventListener('resize', handleResize)
-  }, [mdBreakpoint, xlBreakpoint, sizeSmall, sizeMedium, sizeLarge])
+  }, [smBreakpoint, mdBreakpoint, xlBreakpoint, sizeMicro, sizeSmall, sizeMedium, sizeLarge])
 
   return gridSize
 }

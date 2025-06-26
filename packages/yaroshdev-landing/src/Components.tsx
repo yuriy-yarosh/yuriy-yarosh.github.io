@@ -9,7 +9,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
+export * from 'Landing/Components/ContentCard'
 export * from 'Landing/Components/Icons'
 export * from 'Landing/Components/Navigation'
 export * from 'Landing/Components/Scene'
-export * from 'Landing/Components/Text'
+export * from 'Landing/Components/Typography'

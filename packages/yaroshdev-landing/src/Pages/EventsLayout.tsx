@@ -9,6 +9,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-export const Paragraph = ({ text }: { text: string }) => <p className='flex'>{text}</p>
+import { createFileRoute, Outlet } from '@tanstack/react-router'
 
-export default Paragraph
+export const EventsLayout = () => {
+  return <Outlet />
+}
+
+export const Route = createFileRoute('/events')({
+  component: EventsLayout
+})

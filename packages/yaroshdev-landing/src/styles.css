@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: Castoro, sans-serif;
+  --font-display: "IBM Plex Sans", sans-serif;
   --font-title: Monoton, sans-serif;
+  --font-secondary-title: Doto, sans-serif;
 
   --color-primary: var(--color-primary);
   --color-secondary-accent: var(--color-secondary-accent);

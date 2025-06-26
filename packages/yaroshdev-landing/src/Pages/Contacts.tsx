@@ -9,16 +9,53 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { createFileRoute, CatchBoundary } from '@tanstack/react-router'
-import { NavigateBack } from 'Landing/Components'
+import { ContentCard, ContentLink, Heading, Paragraph } from 'Landing/Components'
+import { createFileRoute } from '@tanstack/react-router'
+
+const ContactsLink = (params: { to: string; external?: boolean; children: React.ReactNode }) => ContentLink({ ...params, from: '/contacts' })
 
 export const Contacts = () => {
   return (
-    <CatchBoundary getResetKey={() => 'contacts'} onCatch={(error) => console.error(error)}>
-      <article className='flex p-4 md:p-6 lg:p-8 xl:p-12'>
-        <NavigateBack title='Contacts' />
-      </article>
-    </CatchBoundary>
+    <ContentCard backTitle='Contacts' catchBoundary='contacts' to='/' from='/contacts'>
+      <div className='space-y-2 px-4 md:px-12'>
+        <Heading>Contacts</Heading>
+        <Paragraph className='mt-4 md:mt-8'>
+          📬 Feel free to reach me out via{' '}
+          <ContactsLink to='mailto:yuriy@yarosh.dev' external>
+            Email
+          </ContactsLink>{' '}
+          or{' '}
+          <ContactsLink to='https://www.linkedin.com/in/yuriy-yarosh-171ba3b9/' external>
+            LinkedIn
+          </ContactsLink>
+          , or at{' '}
+          <ContactsLink to='https://discord.gg/gwaynUfu' external>
+            Discord
+          </ContactsLink>
+          .
+        </Paragraph>
+
+        <Paragraph>I'm open to remote contract work, business opportunities, and research collaborations.</Paragraph>
+        <Paragraph>
+          🚫 I <span className='font-bold text-red-600'>do not</span> engage with any russian-affiliated entities—this is a matter of security, safety, and above all, ethics.
+        </Paragraph>
+
+        <Paragraph>
+          ⚠️ I currently <span className='font-bold text-red-600'>do not</span> participate in public events or gatherings.
+        </Paragraph>
+
+        <Paragraph>
+          🔒 I <span className='font-bold text-red-600'>do not</span> Promote nor Endorse any 3rd party products or services.
+        </Paragraph>
+        <Paragraph>
+          🛡️ I <span className='font-bold text-red-600'>do not</span> engage in military-tech R&D unless there are clear safety guarantees and referrals from trusted sources.
+        </Paragraph>
+        <Paragraph>
+          🎓 I <span className='font-bold text-red-600'>do not</span> trade personal freedom for titles or positions.
+        </Paragraph>
+        <Paragraph>🗣️ All opinions are my own.</Paragraph>
+      </div>
+    </ContentCard>
   )
 }
 

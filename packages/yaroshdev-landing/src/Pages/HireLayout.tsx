@@ -9,5 +9,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-export * from 'Landing/Components/Text/Paragraph'
-export * from 'Landing/Components/Text/Title'
+import { createFileRoute, Outlet } from '@tanstack/react-router'
+
+export const HireLayout = () => {
+  return <Outlet />
+}
+
+export const Route = createFileRoute('/hire')({
+  component: HireLayout
+})

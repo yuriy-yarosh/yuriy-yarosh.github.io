@@ -10,14 +10,17 @@
  */
 
 import { FacebookLink, FooterLink, GithubLink, LinkedInLink, NavbarHomeLink, TimeOfDay } from 'Landing/Components'
+import { useColors } from 'Landing/Hooks'
 import { getTitleFor } from 'Landing/Titles'
 import { createRootRoute, Outlet, useRouterState } from '@tanstack/react-router'
 
 export const Route = createRootRoute({
   component: () => {
     const routerState = useRouterState()
+    const { colors } = useColors()
 
     document.title = getTitleFor(routerState.location.pathname)
+    document.body.style.backgroundColor = colors.rgb.primary
 
     const year = new Date().getFullYear()
     return (
@@ -27,7 +30,7 @@ export const Route = createRootRoute({
             <NavbarHomeLink />
           </div>
 
-          <div className='flex flex-1 justify-center'>
+          <div className='flex flex-1 justify-center max-[360px]:justify-end'>
             <TimeOfDay />
           </div>
 
@@ -54,7 +57,7 @@ export const Route = createRootRoute({
             <span>All rights reserved.</span>
           </p>
 
-          <div className='flex flex-1 justify-center'>
+          <div className='flex flex-1 justify-center max-[360px]:justify-end'>
             <FooterLink to='/blog'>Blog</FooterLink>
           </div>
 

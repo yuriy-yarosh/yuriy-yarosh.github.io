@@ -9,6 +9,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-export const Title = ({ title }: { title: string }) => <h3>{title}</h3>
+import { createFileRoute, Outlet } from '@tanstack/react-router'
 
-export default Title
+export const ProjectsLayout = () => {
+  return <Outlet />
+}
+
+export const Route = createFileRoute('/projects')({
+  component: ProjectsLayout
+})

@@ -11,6 +11,7 @@
 
 import useAnimationState from 'Landing/Hooks/useAnimationState'
 import { Link } from '@tanstack/react-router'
+import { twMerge } from 'tailwind-merge'
 
 export const FooterLink = ({ className, to, children }: { className?: string; to: string; children: React.ReactNode }) => {
   const { pauseAnimation } = useAnimationState()
@@ -18,7 +19,10 @@ export const FooterLink = ({ className, to, children }: { className?: string; to
     <Link
       to={to}
       onClick={pauseAnimation}
-      className={`border-transparent border-b-1 p-2 text-xs transition duration-500 ease-in-out hover:animate-pulse hover:border-accent hover:border-b-1 hover:text-accent hover:drop-shadow-[0_1px_2px_var(--color-accent)] md:text-sm [&.active]:border-accent [&.active]:border-b-2 [&.active]:text-accent ${className}`}>
+      className={twMerge(
+        `border-transparent border-b-1 p-2 text-xs transition duration-500 ease-in-out hover:animate-pulse hover:border-accent hover:border-b-1 hover:text-accent hover:drop-shadow-[0_1px_2px_var(--color-accent)] md:text-sm [&.active]:border-accent [&.active]:border-b-2 [&.active]:text-accent`,
+        className
+      )}>
       {children}
     </Link>
   )
