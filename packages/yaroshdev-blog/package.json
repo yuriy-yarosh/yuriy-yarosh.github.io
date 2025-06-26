@@ -35,7 +35,6 @@
     "@tanstack/react-router-devtools": "^1.121.34",
     "@tanstack/router-plugin": "^1.121.34",
     "@tanstack/virtual-file-routes": "^1.121.21",
-    "@yaroshdev/components": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
