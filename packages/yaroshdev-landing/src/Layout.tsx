@@ -9,11 +9,18 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { Outlet, createRootRoute } from '@tanstack/react-router'
+import { Outlet, createRootRoute, useRouterState } from '@tanstack/react-router'
 import { FooterLink, NavbarHomeLink, GithubLink, FacebookLink, LinkedInLink, TimeOfDay } from 'Landing/Components'
+
+import { getTitleFor } from 'Landing/Titles'
+
 
 export const Route = createRootRoute({
   component: () => {
+    const routerState = useRouterState()
+
+    document.title = getTitleFor(routerState.location.pathname)
+
     const year = new Date().getFullYear()
     return (
       <div className='relative z-1 mx-auto flex min-h-screen w-full min-w-[240px] max-w-[1920px] flex-col p-6 font-display text-content transition-all duration-100'>
