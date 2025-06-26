@@ -9,16 +9,14 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { createFileRoute, CatchBoundary } from '@tanstack/react-router'
-import { NavigateBack } from 'Landing/Components'
+import { ContentCard } from 'Landing/Components'
+import { createFileRoute } from '@tanstack/react-router'
 
 export const Blog = () => {
   return (
-    <CatchBoundary getResetKey={() => 'blog'} onCatch={(error) => console.error(error)}>
-      <article className='flex p-4 md:p-6 lg:p-8 xl:p-12'>
-        <NavigateBack title='Blog' />
-      </article>
-    </CatchBoundary>
+    <ContentCard backTitle='Blog' catchBoundary='blog'>
+      <h1>Blog</h1>
+    </ContentCard>
   )
 }
 

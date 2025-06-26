@@ -12,14 +12,14 @@
 import { ContentCard } from 'Landing/Components'
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Projects = () => {
+export const HireArchitecture = () => {
   return (
-    <ContentCard backTitle='Projects' catchBoundary='projects'>
-      <h1>Projects</h1>
+    <ContentCard backTitle='Architecture' catchBoundary='architecture'>
+      <h1>Solution Architecture</h1>
     </ContentCard>
   )
 }
 
-export const Route = createFileRoute('/projects')({
-  component: Projects
+export const Route = createFileRoute('/architecture')({
+  component: HireArchitecture
 })

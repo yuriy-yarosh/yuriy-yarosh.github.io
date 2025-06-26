@@ -11,6 +11,7 @@
 
 import useAnimationState from 'Landing/Hooks/useAnimationState'
 import { Link, useRouterState } from '@tanstack/react-router'
+import { twMerge } from 'tailwind-merge'
 
 export const NavbarHomeLink = ({ className }: { className?: string }) => {
   const { resumeAnimation } = useAnimationState()
@@ -23,7 +24,10 @@ export const NavbarHomeLink = ({ className }: { className?: string }) => {
       onClick={() => {
         resumeAnimation()
       }}
-      className={`border-transparent border-b-3 transition duration-500 ease-in-out hover:animate-pulse ${showUnderLine && 'hover:border-accent'} hover:text-accent hover:drop-shadow-[0_1px_2px_var(--color-accent)] ${className}`}>
+      className={twMerge(
+        `border-transparent border-b-3 transition duration-500 ease-in-out hover:animate-pulse ${showUnderLine && 'hover:border-accent'} hover:text-accent hover:drop-shadow-[0_1px_2px_var(--color-accent)]`,
+        className
+      )}>
       <h1 className='font-title text-xl md:text-nowrap md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl'>Yuriy Yarosh</h1>
     </Link>
   )

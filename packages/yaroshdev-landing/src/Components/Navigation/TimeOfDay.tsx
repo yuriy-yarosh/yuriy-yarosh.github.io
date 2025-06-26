@@ -13,6 +13,7 @@ import { TimeOfDayIcons } from 'Landing/Components'
 import type { TimeOfDay as TimeOfDayType } from 'Landing/Hooks'
 import { useColors } from 'Landing/Hooks'
 import { useEffect, useState } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 // Animation configuration
 const PHASE_TIMINGS = {
@@ -74,7 +75,7 @@ export const TimeOfDay = ({ className }: { className?: string }) => {
       type='button'
       onClick={handleToggle}
       disabled={animationPhase !== 'idle'}
-      className={`group relative h-5 w-5 cursor-pointer hover:text-accent hover:drop-shadow-[0_1px_2px_var(--color-accent)] ${className}`}
+      className={twMerge(`group relative h-5 w-5 cursor-pointer hover:text-accent hover:drop-shadow-[0_1px_2px_var(--color-accent)]`, className)}
       aria-label='Click to cycle to next time of day color theme.'
       title='Toggle time of day color theme'>
       {(animationPhase === 'idle' || animationPhase === 'exiting') && (

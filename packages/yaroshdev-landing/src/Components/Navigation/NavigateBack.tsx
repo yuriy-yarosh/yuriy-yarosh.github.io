@@ -12,6 +12,7 @@
 import { useAnimationState } from 'Landing/Hooks'
 import { useRouter } from '@tanstack/react-router'
 import { useEffect } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 const ArrowIcon = ({ title }: { title: string }) => (
   <svg
@@ -51,9 +52,12 @@ export const NavigateBack = ({ title, className }: { title: string; className?: 
       onClick={() => {
         router.history.back()
       }}
-      className={`flex text-secondary-accent transition delay-100 duration-300 ease-in-out hover:text-accent hover:drop-shadow-[0_1px_2px_var(--color-accent)] ${className}`}>
+      className={twMerge(
+        `flex text-secondary-accent transition delay-100 duration-300 ease-in-out hover:text-accent hover:drop-shadow-[0_1px_2px_var(--color-accent)]`,
+        className
+      )}>
       {title && (
-        <h2 className='group relative flex items-center font-title text-md md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl'>
+        <h2 className='group relative flex min-w-[220px] items-center font-title text-md md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl'>
           <span className='-left-4 md:-left-6 lg:-left-8 xl:-left-10 2xl:-left-12 absolute'>
             <ArrowIcon title={title} />
           </span>

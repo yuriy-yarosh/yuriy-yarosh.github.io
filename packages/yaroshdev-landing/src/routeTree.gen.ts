@@ -9,28 +9,120 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './Layout'
+import { Route as PagesHireDomainTelecomRouteImport } from './Pages/Hire/Domain/Telecom'
+import { Route as PagesHireSimulationRouteImport } from './Pages/Hire/Simulation'
+import { Route as PagesHireDomainSecurityRouteImport } from './Pages/Hire/Domain/Security'
+import { Route as PagesHireActivitiesSalesRouteImport } from './Pages/Hire/Activities/Sales'
+import { Route as PagesHireDomainResearchRouteImport } from './Pages/Hire/Domain/Research'
 import { Route as PagesProjectsRouteImport } from './Pages/Projects'
+import { Route as PagesHireMachineLearningRouteImport } from './Pages/Hire/MachineLearning'
+import { Route as PagesHireDomainMilTechRouteImport } from './Pages/Hire/Domain/MilTech'
+import { Route as PagesHireDomainLogisticsRouteImport } from './Pages/Hire/Domain/Logistics'
 import { Route as PagesLegalRouteImport } from './Pages/Legal'
+import { Route as PagesHireActivitiesKubernetesRouteImport } from './Pages/Hire/Activities/Kubernetes'
 import { Route as PagesHireRouteImport } from './Pages/Hire'
+import { Route as PagesHireHighloadRouteImport } from './Pages/Hire/Highload'
+import { Route as PagesHireActivitiesGCPRouteImport } from './Pages/Hire/Activities/GCP'
+import { Route as PagesHireFrontendRouteImport } from './Pages/Hire/Frontend'
+import { Route as PagesHireDomainFinTechRouteImport } from './Pages/Hire/Domain/FinTech'
 import { Route as PagesEventsRouteImport } from './Pages/Events'
+import { Route as PagesHireEmbeddedRouteImport } from './Pages/Hire/Embedded'
+import { Route as PagesHireDomainEdTechRouteImport } from './Pages/Hire/Domain/EdTech'
+import { Route as PagesHireDeviceDriversRouteImport } from './Pages/Hire/DeviceDrivers'
+import { Route as PagesHireActivitiesDiscoveryRouteImport } from './Pages/Hire/Activities/Discovery'
+import { Route as PagesHireDevopsRouteImport } from './Pages/Hire/Devops'
 import { Route as PagesContactsRouteImport } from './Pages/Contacts'
+import { Route as PagesHireActivitiesCareerRouteImport } from './Pages/Hire/Activities/Career'
 import { Route as PagesBlogRouteImport } from './Pages/Blog'
+import { Route as PagesHireBackendRouteImport } from './Pages/Hire/Backend'
+import { Route as PagesHireActivitiesAzureRouteImport } from './Pages/Hire/Activities/Azure'
+import { Route as PagesHireActivitiesAWSRouteImport } from './Pages/Hire/Activities/AWS'
+import { Route as PagesHireActivitiesArchitectureRouteImport } from './Pages/Hire/Activities/Architecture'
 import { Route as PagesAboutRouteImport } from './Pages/About'
 import { Route as PagesHomeRouteImport } from './Pages/Home'
 
+const PagesHireDomainTelecomRoute = PagesHireDomainTelecomRouteImport.update({
+  id: '/telecom',
+  path: '/telecom',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireSimulationRoute = PagesHireSimulationRouteImport.update({
+  id: '/simulation',
+  path: '/simulation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireDomainSecurityRoute = PagesHireDomainSecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireActivitiesSalesRoute =
+  PagesHireActivitiesSalesRouteImport.update({
+    id: '/sales',
+    path: '/sales',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PagesHireDomainResearchRoute = PagesHireDomainResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PagesProjectsRoute = PagesProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PagesHireMachineLearningRoute =
+  PagesHireMachineLearningRouteImport.update({
+    id: '/ml',
+    path: '/ml',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PagesHireDomainMilTechRoute = PagesHireDomainMilTechRouteImport.update({
+  id: '/miltech',
+  path: '/miltech',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireDomainLogisticsRoute =
+  PagesHireDomainLogisticsRouteImport.update({
+    id: '/logistics',
+    path: '/logistics',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PagesLegalRoute = PagesLegalRouteImport.update({
   id: '/legal',
   path: '/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PagesHireActivitiesKubernetesRoute =
+  PagesHireActivitiesKubernetesRouteImport.update({
+    id: '/kubernetes',
+    path: '/kubernetes',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PagesHireRoute = PagesHireRouteImport.update({
   id: '/hire',
   path: '/hire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireHighloadRoute = PagesHireHighloadRouteImport.update({
+  id: '/highload',
+  path: '/highload',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireActivitiesGCPRoute = PagesHireActivitiesGCPRouteImport.update({
+  id: '/gcp',
+  path: '/gcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireFrontendRoute = PagesHireFrontendRouteImport.update({
+  id: '/frontend',
+  path: '/frontend',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireDomainFinTechRoute = PagesHireDomainFinTechRouteImport.update({
+  id: '/fintech',
+  path: '/fintech',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PagesEventsRoute = PagesEventsRouteImport.update({
@@ -38,16 +130,70 @@ const PagesEventsRoute = PagesEventsRouteImport.update({
   path: '/events',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PagesHireEmbeddedRoute = PagesHireEmbeddedRouteImport.update({
+  id: '/embedded',
+  path: '/embedded',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireDomainEdTechRoute = PagesHireDomainEdTechRouteImport.update({
+  id: '/edtech',
+  path: '/edtech',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireDeviceDriversRoute = PagesHireDeviceDriversRouteImport.update({
+  id: '/drivers',
+  path: '/drivers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireActivitiesDiscoveryRoute =
+  PagesHireActivitiesDiscoveryRouteImport.update({
+    id: '/discovery',
+    path: '/discovery',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PagesHireDevopsRoute = PagesHireDevopsRouteImport.update({
+  id: '/devops',
+  path: '/devops',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PagesContactsRoute = PagesContactsRouteImport.update({
   id: '/contacts',
   path: '/contacts',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PagesHireActivitiesCareerRoute =
+  PagesHireActivitiesCareerRouteImport.update({
+    id: '/career',
+    path: '/career',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PagesBlogRoute = PagesBlogRouteImport.update({
   id: '/blog',
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PagesHireBackendRoute = PagesHireBackendRouteImport.update({
+  id: '/backend',
+  path: '/backend',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireActivitiesAzureRoute =
+  PagesHireActivitiesAzureRouteImport.update({
+    id: '/azure',
+    path: '/azure',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PagesHireActivitiesAWSRoute = PagesHireActivitiesAWSRouteImport.update({
+  id: '/aws',
+  path: '/aws',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesHireActivitiesArchitectureRoute =
+  PagesHireActivitiesArchitectureRouteImport.update({
+    id: '/architecture',
+    path: '/architecture',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PagesAboutRoute = PagesAboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -62,85 +208,302 @@ const PagesHomeRoute = PagesHomeRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof PagesHomeRoute
   '/about': typeof PagesAboutRoute
+  '/architecture': typeof PagesHireActivitiesArchitectureRoute
+  '/aws': typeof PagesHireActivitiesAWSRoute
+  '/azure': typeof PagesHireActivitiesAzureRoute
+  '/backend': typeof PagesHireBackendRoute
   '/blog': typeof PagesBlogRoute
+  '/career': typeof PagesHireActivitiesCareerRoute
   '/contacts': typeof PagesContactsRoute
+  '/devops': typeof PagesHireDevopsRoute
+  '/discovery': typeof PagesHireActivitiesDiscoveryRoute
+  '/drivers': typeof PagesHireDeviceDriversRoute
+  '/edtech': typeof PagesHireDomainEdTechRoute
+  '/embedded': typeof PagesHireEmbeddedRoute
   '/events': typeof PagesEventsRoute
+  '/fintech': typeof PagesHireDomainFinTechRoute
+  '/frontend': typeof PagesHireFrontendRoute
+  '/gcp': typeof PagesHireActivitiesGCPRoute
+  '/highload': typeof PagesHireHighloadRoute
   '/hire': typeof PagesHireRoute
+  '/kubernetes': typeof PagesHireActivitiesKubernetesRoute
   '/legal': typeof PagesLegalRoute
+  '/logistics': typeof PagesHireDomainLogisticsRoute
+  '/miltech': typeof PagesHireDomainMilTechRoute
+  '/ml': typeof PagesHireMachineLearningRoute
   '/projects': typeof PagesProjectsRoute
+  '/research': typeof PagesHireDomainResearchRoute
+  '/sales': typeof PagesHireActivitiesSalesRoute
+  '/security': typeof PagesHireDomainSecurityRoute
+  '/simulation': typeof PagesHireSimulationRoute
+  '/telecom': typeof PagesHireDomainTelecomRoute
 }
 export interface FileRoutesByTo {
   '/': typeof PagesHomeRoute
   '/about': typeof PagesAboutRoute
+  '/architecture': typeof PagesHireActivitiesArchitectureRoute
+  '/aws': typeof PagesHireActivitiesAWSRoute
+  '/azure': typeof PagesHireActivitiesAzureRoute
+  '/backend': typeof PagesHireBackendRoute
   '/blog': typeof PagesBlogRoute
+  '/career': typeof PagesHireActivitiesCareerRoute
   '/contacts': typeof PagesContactsRoute
+  '/devops': typeof PagesHireDevopsRoute
+  '/discovery': typeof PagesHireActivitiesDiscoveryRoute
+  '/drivers': typeof PagesHireDeviceDriversRoute
+  '/edtech': typeof PagesHireDomainEdTechRoute
+  '/embedded': typeof PagesHireEmbeddedRoute
   '/events': typeof PagesEventsRoute
+  '/fintech': typeof PagesHireDomainFinTechRoute
+  '/frontend': typeof PagesHireFrontendRoute
+  '/gcp': typeof PagesHireActivitiesGCPRoute
+  '/highload': typeof PagesHireHighloadRoute
   '/hire': typeof PagesHireRoute
+  '/kubernetes': typeof PagesHireActivitiesKubernetesRoute
   '/legal': typeof PagesLegalRoute
+  '/logistics': typeof PagesHireDomainLogisticsRoute
+  '/miltech': typeof PagesHireDomainMilTechRoute
+  '/ml': typeof PagesHireMachineLearningRoute
   '/projects': typeof PagesProjectsRoute
+  '/research': typeof PagesHireDomainResearchRoute
+  '/sales': typeof PagesHireActivitiesSalesRoute
+  '/security': typeof PagesHireDomainSecurityRoute
+  '/simulation': typeof PagesHireSimulationRoute
+  '/telecom': typeof PagesHireDomainTelecomRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof PagesHomeRoute
   '/about': typeof PagesAboutRoute
+  '/architecture': typeof PagesHireActivitiesArchitectureRoute
+  '/aws': typeof PagesHireActivitiesAWSRoute
+  '/azure': typeof PagesHireActivitiesAzureRoute
+  '/backend': typeof PagesHireBackendRoute
   '/blog': typeof PagesBlogRoute
+  '/career': typeof PagesHireActivitiesCareerRoute
   '/contacts': typeof PagesContactsRoute
+  '/devops': typeof PagesHireDevopsRoute
+  '/discovery': typeof PagesHireActivitiesDiscoveryRoute
+  '/drivers': typeof PagesHireDeviceDriversRoute
+  '/edtech': typeof PagesHireDomainEdTechRoute
+  '/embedded': typeof PagesHireEmbeddedRoute
   '/events': typeof PagesEventsRoute
+  '/fintech': typeof PagesHireDomainFinTechRoute
+  '/frontend': typeof PagesHireFrontendRoute
+  '/gcp': typeof PagesHireActivitiesGCPRoute
+  '/highload': typeof PagesHireHighloadRoute
   '/hire': typeof PagesHireRoute
+  '/kubernetes': typeof PagesHireActivitiesKubernetesRoute
   '/legal': typeof PagesLegalRoute
+  '/logistics': typeof PagesHireDomainLogisticsRoute
+  '/miltech': typeof PagesHireDomainMilTechRoute
+  '/ml': typeof PagesHireMachineLearningRoute
   '/projects': typeof PagesProjectsRoute
+  '/research': typeof PagesHireDomainResearchRoute
+  '/sales': typeof PagesHireActivitiesSalesRoute
+  '/security': typeof PagesHireDomainSecurityRoute
+  '/simulation': typeof PagesHireSimulationRoute
+  '/telecom': typeof PagesHireDomainTelecomRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/architecture'
+    | '/aws'
+    | '/azure'
+    | '/backend'
     | '/blog'
+    | '/career'
     | '/contacts'
+    | '/devops'
+    | '/discovery'
+    | '/drivers'
+    | '/edtech'
+    | '/embedded'
     | '/events'
+    | '/fintech'
+    | '/frontend'
+    | '/gcp'
+    | '/highload'
     | '/hire'
+    | '/kubernetes'
     | '/legal'
+    | '/logistics'
+    | '/miltech'
+    | '/ml'
     | '/projects'
+    | '/research'
+    | '/sales'
+    | '/security'
+    | '/simulation'
+    | '/telecom'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/architecture'
+    | '/aws'
+    | '/azure'
+    | '/backend'
     | '/blog'
+    | '/career'
     | '/contacts'
+    | '/devops'
+    | '/discovery'
+    | '/drivers'
+    | '/edtech'
+    | '/embedded'
     | '/events'
+    | '/fintech'
+    | '/frontend'
+    | '/gcp'
+    | '/highload'
     | '/hire'
+    | '/kubernetes'
     | '/legal'
+    | '/logistics'
+    | '/miltech'
+    | '/ml'
     | '/projects'
+    | '/research'
+    | '/sales'
+    | '/security'
+    | '/simulation'
+    | '/telecom'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/architecture'
+    | '/aws'
+    | '/azure'
+    | '/backend'
     | '/blog'
+    | '/career'
     | '/contacts'
+    | '/devops'
+    | '/discovery'
+    | '/drivers'
+    | '/edtech'
+    | '/embedded'
     | '/events'
+    | '/fintech'
+    | '/frontend'
+    | '/gcp'
+    | '/highload'
     | '/hire'
+    | '/kubernetes'
     | '/legal'
+    | '/logistics'
+    | '/miltech'
+    | '/ml'
     | '/projects'
+    | '/research'
+    | '/sales'
+    | '/security'
+    | '/simulation'
+    | '/telecom'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   PagesHomeRoute: typeof PagesHomeRoute
   PagesAboutRoute: typeof PagesAboutRoute
+  PagesHireActivitiesArchitectureRoute: typeof PagesHireActivitiesArchitectureRoute
+  PagesHireActivitiesAWSRoute: typeof PagesHireActivitiesAWSRoute
+  PagesHireActivitiesAzureRoute: typeof PagesHireActivitiesAzureRoute
+  PagesHireBackendRoute: typeof PagesHireBackendRoute
   PagesBlogRoute: typeof PagesBlogRoute
+  PagesHireActivitiesCareerRoute: typeof PagesHireActivitiesCareerRoute
   PagesContactsRoute: typeof PagesContactsRoute
+  PagesHireDevopsRoute: typeof PagesHireDevopsRoute
+  PagesHireActivitiesDiscoveryRoute: typeof PagesHireActivitiesDiscoveryRoute
+  PagesHireDeviceDriversRoute: typeof PagesHireDeviceDriversRoute
+  PagesHireDomainEdTechRoute: typeof PagesHireDomainEdTechRoute
+  PagesHireEmbeddedRoute: typeof PagesHireEmbeddedRoute
   PagesEventsRoute: typeof PagesEventsRoute
+  PagesHireDomainFinTechRoute: typeof PagesHireDomainFinTechRoute
+  PagesHireFrontendRoute: typeof PagesHireFrontendRoute
+  PagesHireActivitiesGCPRoute: typeof PagesHireActivitiesGCPRoute
+  PagesHireHighloadRoute: typeof PagesHireHighloadRoute
   PagesHireRoute: typeof PagesHireRoute
+  PagesHireActivitiesKubernetesRoute: typeof PagesHireActivitiesKubernetesRoute
   PagesLegalRoute: typeof PagesLegalRoute
+  PagesHireDomainLogisticsRoute: typeof PagesHireDomainLogisticsRoute
+  PagesHireDomainMilTechRoute: typeof PagesHireDomainMilTechRoute
+  PagesHireMachineLearningRoute: typeof PagesHireMachineLearningRoute
   PagesProjectsRoute: typeof PagesProjectsRoute
+  PagesHireDomainResearchRoute: typeof PagesHireDomainResearchRoute
+  PagesHireActivitiesSalesRoute: typeof PagesHireActivitiesSalesRoute
+  PagesHireDomainSecurityRoute: typeof PagesHireDomainSecurityRoute
+  PagesHireSimulationRoute: typeof PagesHireSimulationRoute
+  PagesHireDomainTelecomRoute: typeof PagesHireDomainTelecomRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/telecom': {
+      id: '/telecom'
+      path: '/telecom'
+      fullPath: '/telecom'
+      preLoaderRoute: typeof PagesHireDomainTelecomRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/simulation': {
+      id: '/simulation'
+      path: '/simulation'
+      fullPath: '/simulation'
+      preLoaderRoute: typeof PagesHireSimulationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/security': {
+      id: '/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof PagesHireDomainSecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sales': {
+      id: '/sales'
+      path: '/sales'
+      fullPath: '/sales'
+      preLoaderRoute: typeof PagesHireActivitiesSalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof PagesHireDomainResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects': {
       id: '/projects'
       path: '/projects'
       fullPath: '/projects'
       preLoaderRoute: typeof PagesProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ml': {
+      id: '/ml'
+      path: '/ml'
+      fullPath: '/ml'
+      preLoaderRoute: typeof PagesHireMachineLearningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/miltech': {
+      id: '/miltech'
+      path: '/miltech'
+      fullPath: '/miltech'
+      preLoaderRoute: typeof PagesHireDomainMilTechRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/logistics': {
+      id: '/logistics'
+      path: '/logistics'
+      fullPath: '/logistics'
+      preLoaderRoute: typeof PagesHireDomainLogisticsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/legal': {
@@ -150,11 +513,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PagesLegalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kubernetes': {
+      id: '/kubernetes'
+      path: '/kubernetes'
+      fullPath: '/kubernetes'
+      preLoaderRoute: typeof PagesHireActivitiesKubernetesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/hire': {
       id: '/hire'
       path: '/hire'
       fullPath: '/hire'
       preLoaderRoute: typeof PagesHireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/highload': {
+      id: '/highload'
+      path: '/highload'
+      fullPath: '/highload'
+      preLoaderRoute: typeof PagesHireHighloadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gcp': {
+      id: '/gcp'
+      path: '/gcp'
+      fullPath: '/gcp'
+      preLoaderRoute: typeof PagesHireActivitiesGCPRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/frontend': {
+      id: '/frontend'
+      path: '/frontend'
+      fullPath: '/frontend'
+      preLoaderRoute: typeof PagesHireFrontendRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fintech': {
+      id: '/fintech'
+      path: '/fintech'
+      fullPath: '/fintech'
+      preLoaderRoute: typeof PagesHireDomainFinTechRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/events': {
@@ -164,6 +562,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PagesEventsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/embedded': {
+      id: '/embedded'
+      path: '/embedded'
+      fullPath: '/embedded'
+      preLoaderRoute: typeof PagesHireEmbeddedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/edtech': {
+      id: '/edtech'
+      path: '/edtech'
+      fullPath: '/edtech'
+      preLoaderRoute: typeof PagesHireDomainEdTechRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drivers': {
+      id: '/drivers'
+      path: '/drivers'
+      fullPath: '/drivers'
+      preLoaderRoute: typeof PagesHireDeviceDriversRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/discovery': {
+      id: '/discovery'
+      path: '/discovery'
+      fullPath: '/discovery'
+      preLoaderRoute: typeof PagesHireActivitiesDiscoveryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/devops': {
+      id: '/devops'
+      path: '/devops'
+      fullPath: '/devops'
+      preLoaderRoute: typeof PagesHireDevopsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contacts': {
       id: '/contacts'
       path: '/contacts'
@@ -171,11 +604,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PagesContactsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/career': {
+      id: '/career'
+      path: '/career'
+      fullPath: '/career'
+      preLoaderRoute: typeof PagesHireActivitiesCareerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog': {
       id: '/blog'
       path: '/blog'
       fullPath: '/blog'
       preLoaderRoute: typeof PagesBlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/backend': {
+      id: '/backend'
+      path: '/backend'
+      fullPath: '/backend'
+      preLoaderRoute: typeof PagesHireBackendRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/azure': {
+      id: '/azure'
+      path: '/azure'
+      fullPath: '/azure'
+      preLoaderRoute: typeof PagesHireActivitiesAzureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aws': {
+      id: '/aws'
+      path: '/aws'
+      fullPath: '/aws'
+      preLoaderRoute: typeof PagesHireActivitiesAWSRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/architecture': {
+      id: '/architecture'
+      path: '/architecture'
+      fullPath: '/architecture'
+      preLoaderRoute: typeof PagesHireActivitiesArchitectureRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -198,12 +666,35 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   PagesHomeRoute: PagesHomeRoute,
   PagesAboutRoute: PagesAboutRoute,
+  PagesHireActivitiesArchitectureRoute: PagesHireActivitiesArchitectureRoute,
+  PagesHireActivitiesAWSRoute: PagesHireActivitiesAWSRoute,
+  PagesHireActivitiesAzureRoute: PagesHireActivitiesAzureRoute,
+  PagesHireBackendRoute: PagesHireBackendRoute,
   PagesBlogRoute: PagesBlogRoute,
+  PagesHireActivitiesCareerRoute: PagesHireActivitiesCareerRoute,
   PagesContactsRoute: PagesContactsRoute,
+  PagesHireDevopsRoute: PagesHireDevopsRoute,
+  PagesHireActivitiesDiscoveryRoute: PagesHireActivitiesDiscoveryRoute,
+  PagesHireDeviceDriversRoute: PagesHireDeviceDriversRoute,
+  PagesHireDomainEdTechRoute: PagesHireDomainEdTechRoute,
+  PagesHireEmbeddedRoute: PagesHireEmbeddedRoute,
   PagesEventsRoute: PagesEventsRoute,
+  PagesHireDomainFinTechRoute: PagesHireDomainFinTechRoute,
+  PagesHireFrontendRoute: PagesHireFrontendRoute,
+  PagesHireActivitiesGCPRoute: PagesHireActivitiesGCPRoute,
+  PagesHireHighloadRoute: PagesHireHighloadRoute,
   PagesHireRoute: PagesHireRoute,
+  PagesHireActivitiesKubernetesRoute: PagesHireActivitiesKubernetesRoute,
   PagesLegalRoute: PagesLegalRoute,
+  PagesHireDomainLogisticsRoute: PagesHireDomainLogisticsRoute,
+  PagesHireDomainMilTechRoute: PagesHireDomainMilTechRoute,
+  PagesHireMachineLearningRoute: PagesHireMachineLearningRoute,
   PagesProjectsRoute: PagesProjectsRoute,
+  PagesHireDomainResearchRoute: PagesHireDomainResearchRoute,
+  PagesHireActivitiesSalesRoute: PagesHireActivitiesSalesRoute,
+  PagesHireDomainSecurityRoute: PagesHireDomainSecurityRoute,
+  PagesHireSimulationRoute: PagesHireSimulationRoute,
+  PagesHireDomainTelecomRoute: PagesHireDomainTelecomRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -42,6 +42,121 @@
         "type": "route",
         "file": "Pages/Projects.tsx",
         "path": "/projects"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Backend.tsx",
+        "path": "/backend"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/DeviceDrivers.tsx",
+        "path": "/drivers"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Devops.tsx",
+        "path": "/devops"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Embedded.tsx",
+        "path": "/embedded"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Frontend.tsx",
+        "path": "/frontend"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Highload.tsx",
+        "path": "/highload"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/MachineLearning.tsx",
+        "path": "/ml"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Simulation.tsx",
+        "path": "/simulation"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Domain/EdTech.tsx",
+        "path": "/edtech"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Domain/FinTech.tsx",
+        "path": "/fintech"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Domain/Logistics.tsx",
+        "path": "/logistics"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Domain/MilTech.tsx",
+        "path": "/miltech"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Domain/Research.tsx",
+        "path": "/research"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Domain/Security.tsx",
+        "path": "/security"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Domain/Telecom.tsx",
+        "path": "/telecom"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Activities/Architecture.tsx",
+        "path": "/architecture"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Activities/AWS.tsx",
+        "path": "/aws"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Activities/Azure.tsx",
+        "path": "/azure"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Activities/Career.tsx",
+        "path": "/career"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Activities/Discovery.tsx",
+        "path": "/discovery"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Activities/GCP.tsx",
+        "path": "/gcp"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Activities/Kubernetes.tsx",
+        "path": "/kubernetes"
+      },
+      {
+        "type": "route",
+        "file": "Pages/Hire/Activities/Sales.tsx",
+        "path": "/sales"
       }
     ]
   }

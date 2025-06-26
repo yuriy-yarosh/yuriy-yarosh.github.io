@@ -191,7 +191,7 @@ export const generateSemanticColors = (rgbColor: readonly [number, number, numbe
 
   const border: LabColor = { l: isDark ? 30 : 85, a: primary.a * 0.3, b: primary.b * 0.3, alpha: 1 }
 
-  const cardBackground: LabColor = { l: isDark ? 12 : 95, a: primary.a * 0.05, b: primary.b * 0.05, alpha: 1 }
+  const cardBackground: LabColor = { l: isDark ? 12 : 95, a: neutral.a * 0.05, b: neutral.b * 0.05, alpha: 0.2 }
 
   return {
     primary: formatLab(primary),
