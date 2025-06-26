@@ -11,5 +11,5 @@
 
 export * from 'Landing/Components/Icons'
 export * from 'Landing/Components/Navigation'
-export * from 'Landing/Components/Text'
 export * from 'Landing/Components/Scene'
+export * from 'Landing/Components/Text'

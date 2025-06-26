@@ -9,7 +9,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-export * from 'Landing/Components/Icons/GitHubLink'
 export * from 'Landing/Components/Icons/FacebookLink'
+export * from 'Landing/Components/Icons/GitHubLink'
 export * from 'Landing/Components/Icons/LinkedInLink'
 export * from 'Landing/Components/Icons/TimeOfDayIcons'

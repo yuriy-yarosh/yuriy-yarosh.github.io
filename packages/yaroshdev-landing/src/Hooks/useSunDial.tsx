@@ -9,7 +9,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
 export enum TimeOfDay {
   Night = 'night',
@@ -103,11 +103,20 @@ const getTimeOfDay = (now: Date, sunrise: Date, sunset: Date, solarNoon: Date): 
 
   return (
     [
-      { condition: currentTime < dawnTime || currentTime > duskTime, period: TimeOfDay.Night },
+      {
+        condition: currentTime < dawnTime || currentTime > duskTime,
+        period: TimeOfDay.Night
+      },
       { condition: currentTime < sunriseTime, period: TimeOfDay.Dawn },
-      { condition: currentTime < noonTime - 3600000, period: TimeOfDay.Morning },
+      {
+        condition: currentTime < noonTime - 3600000,
+        period: TimeOfDay.Morning
+      },
       { condition: currentTime < noonTime + 3600000, period: TimeOfDay.Noon },
-      { condition: currentTime < sunsetTime - 3600000, period: TimeOfDay.Afternoon },
+      {
+        condition: currentTime < sunsetTime - 3600000,
+        period: TimeOfDay.Afternoon
+      },
       { condition: currentTime < sunsetTime, period: TimeOfDay.Evening }
     ].find((matcher) => matcher.condition)?.period || TimeOfDay.Dusk
   )

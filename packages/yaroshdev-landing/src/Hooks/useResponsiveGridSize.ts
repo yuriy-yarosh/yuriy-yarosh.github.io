@@ -9,7 +9,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 // Define BoxData interface
 // Custom hook to determine gridSize based on screen width

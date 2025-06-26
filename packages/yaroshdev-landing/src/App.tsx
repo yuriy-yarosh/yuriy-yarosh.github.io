@@ -9,12 +9,11 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RouterProvider, createRouter } from '@tanstack/react-router'
+import { Scene } from 'Landing/Components'
+import { AnimationProvider, ColorsProvider } from 'Landing/Hooks'
+import { createRouter, RouterProvider } from '@tanstack/react-router'
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
-
-import { AnimationProvider, ColorsProvider } from 'Landing/Hooks'
-import { Scene } from 'Landing/Components'
 
 import { routeTree } from './routeTree.gen'
 

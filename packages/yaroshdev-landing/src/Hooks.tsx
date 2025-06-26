@@ -9,11 +9,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
+export * from 'Landing/Hooks/semanticColors'
 export * from 'Landing/Hooks/useAnimationState'
 export * from 'Landing/Hooks/useColors'
 export * from 'Landing/Hooks/usePathname'
 export * from 'Landing/Hooks/usePrefersReducedMotion'
 export * from 'Landing/Hooks/useResponsiveGridSize'
 export * from 'Landing/Hooks/useSunDial'
-
-export * from 'Landing/Hooks/semanticColors'

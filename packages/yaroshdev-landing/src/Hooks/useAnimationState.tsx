@@ -9,9 +9,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { createContext, useContext, useState, useCallback, useMemo, useEffect, useRef } from 'react'
-import * as THREE from 'three'
 import { usePathname } from 'Landing/Hooks'
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import * as THREE from 'three'
 
 enum ScenePage {
   Home = 1,

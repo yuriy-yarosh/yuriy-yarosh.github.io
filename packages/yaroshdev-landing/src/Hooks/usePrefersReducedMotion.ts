@@ -9,25 +9,23 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export const usePrefersReducedMotion = () => {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(
-    () => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  );
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (typeof window === 'undefined') return
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const handleChange = () => {
-      setPrefersReducedMotion(mediaQuery.matches);
-    };
+      setPrefersReducedMotion(mediaQuery.matches)
+    }
 
-    mediaQuery.addEventListener('change', handleChange);
+    mediaQuery.addEventListener('change', handleChange)
     return () => {
-      mediaQuery.removeEventListener('change', handleChange);
-    };
-  }, []);
+      mediaQuery.removeEventListener('change', handleChange)
+    }
+  }, [])
 
-  return prefersReducedMotion;
-};
+  return prefersReducedMotion
+}

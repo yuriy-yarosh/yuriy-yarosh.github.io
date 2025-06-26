@@ -9,8 +9,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { useRouter } from '@tanstack/react-router'
 import { useAnimationState } from 'Landing/Hooks'
+import { useRouter } from '@tanstack/react-router'
 import { useEffect } from 'react'
 
 const ArrowIcon = ({ title }: { title: string }) => (

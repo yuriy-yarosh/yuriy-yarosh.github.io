@@ -21,42 +21,42 @@ import { Route as PagesHomeRouteImport } from './Pages/Home'
 const PagesProjectsRoute = PagesProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRouteImport
 } as any)
 const PagesLegalRoute = PagesLegalRouteImport.update({
   id: '/legal',
   path: '/legal',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRouteImport
 } as any)
 const PagesHireRoute = PagesHireRouteImport.update({
   id: '/hire',
   path: '/hire',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRouteImport
 } as any)
 const PagesEventsRoute = PagesEventsRouteImport.update({
   id: '/events',
   path: '/events',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRouteImport
 } as any)
 const PagesContactsRoute = PagesContactsRouteImport.update({
   id: '/contacts',
   path: '/contacts',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRouteImport
 } as any)
 const PagesBlogRoute = PagesBlogRouteImport.update({
   id: '/blog',
   path: '/blog',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRouteImport
 } as any)
 const PagesAboutRoute = PagesAboutRouteImport.update({
   id: '/about',
   path: '/about',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRouteImport
 } as any)
 const PagesHomeRoute = PagesHomeRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRouteImport
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -92,35 +92,10 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/about'
-    | '/blog'
-    | '/contacts'
-    | '/events'
-    | '/hire'
-    | '/legal'
-    | '/projects'
+  fullPaths: '/' | '/about' | '/blog' | '/contacts' | '/events' | '/hire' | '/legal' | '/projects'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/about'
-    | '/blog'
-    | '/contacts'
-    | '/events'
-    | '/hire'
-    | '/legal'
-    | '/projects'
-  id:
-    | '__root__'
-    | '/'
-    | '/about'
-    | '/blog'
-    | '/contacts'
-    | '/events'
-    | '/hire'
-    | '/legal'
-    | '/projects'
+  to: '/' | '/about' | '/blog' | '/contacts' | '/events' | '/hire' | '/legal' | '/projects'
+  id: '__root__' | '/' | '/about' | '/blog' | '/contacts' | '/events' | '/hire' | '/legal' | '/projects'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -203,8 +178,6 @@ const rootRouteChildren: RootRouteChildren = {
   PagesEventsRoute: PagesEventsRoute,
   PagesHireRoute: PagesHireRoute,
   PagesLegalRoute: PagesLegalRoute,
-  PagesProjectsRoute: PagesProjectsRoute,
+  PagesProjectsRoute: PagesProjectsRoute
 }
-export const routeTree = rootRouteImport
-  ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+export const routeTree = rootRouteImport._addFileChildren(rootRouteChildren)._addFileTypes<FileRouteTypes>()

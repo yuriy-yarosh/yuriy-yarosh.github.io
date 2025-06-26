@@ -9,10 +9,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { useState, useEffect } from 'react'
-import { useColors } from 'Landing/Hooks'
-import type { TimeOfDay as TimeOfDayType } from 'Landing/Hooks'
 import { TimeOfDayIcons } from 'Landing/Components'
+import type { TimeOfDay as TimeOfDayType } from 'Landing/Hooks'
+import { useColors } from 'Landing/Hooks'
+import { useEffect, useState } from 'react'
 
 // Animation configuration
 const PHASE_TIMINGS = {

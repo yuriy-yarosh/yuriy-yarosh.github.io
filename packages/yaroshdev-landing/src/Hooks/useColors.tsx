@@ -9,9 +9,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
+import { type TimeOfDay, useSunDial } from 'Landing/Hooks'
 import { createContext, useContext, useEffect, useState } from 'react'
-import { useSunDial, TimeOfDay } from 'Landing/Hooks'
-import { generateSemanticColors, type Colors, initialBlack } from './semanticColors'
+import { type Colors, generateSemanticColors, initialBlack } from './semanticColors'
 
 type ColorsContextType = {
   isDark: boolean

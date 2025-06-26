@@ -16,15 +16,15 @@
     }
   ],
   "scripts": {
-		"dev": "vite --port 3000",
-		"start": "vite --port 3000",
-		"generate": "tsr generate",
-		"format": "biome format --fix",
-		"lint": "biome lint --fix --unsafe",
-		"test": "vitest run",
-		"build": "vite build && tsc",
-		"watch": "vite preview",
-		"update-snapshots": "vitest run -u"
+    "dev": "vite --port 3000",
+    "start": "vite --port 3000",
+    "generate": "tsr generate",
+    "format": "biome format --fix",
+    "lint": "biome lint --fix --unsafe",
+    "test": "vitest run",
+    "build": "vite build && tsc",
+    "watch": "vite preview",
+    "update-snapshots": "vitest run -u"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -38,7 +38,7 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
-    "rollup": "^4.44.0",
+    "rollup": "^4.44.1",
     "typescript": "~5.8.3",
     "vite": "^7.0.0",
     "vite-tsconfig-paths": "^5.1.4",

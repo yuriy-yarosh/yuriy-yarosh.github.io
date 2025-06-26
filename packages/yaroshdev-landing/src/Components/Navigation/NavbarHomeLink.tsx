@@ -9,9 +9,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { Link } from '@tanstack/react-router'
 import useAnimationState from 'Landing/Hooks/useAnimationState'
-import { useRouterState } from '@tanstack/react-router'
+import { Link, useRouterState } from '@tanstack/react-router'
 
 export const NavbarHomeLink = ({ className }: { className?: string }) => {
   const { resumeAnimation } = useAnimationState()
