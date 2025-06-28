@@ -9,17 +9,21 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { ContentCard } from 'Landing/Components'
+import { ContentCard, Heading, Paragraph } from 'Landing/Components'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const HireEdTech = () => {
   return (
-    <ContentCard backTitle='EdTech' catchBoundary='edtech'>
-      <h1>EdTech</h1>
+    <ContentCard catchBoundary='edtech'>
+      <div className='space-y-2 px-4 md:px-12'>
+        <Heading>EdTech</Heading>
+        <Paragraph>EdTech practices:</Paragraph>
+        <ul className='space-y-2'></ul>
+      </div>
     </ContentCard>
   )
 }
 
-export const Route = createFileRoute('/edtech')({
+export const Route = createFileRoute('/hire/edtech')({
   component: HireEdTech
 })

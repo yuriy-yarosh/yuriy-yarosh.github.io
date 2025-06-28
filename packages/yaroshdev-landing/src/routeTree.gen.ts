@@ -9,62 +9,64 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './Layout'
+import { Route as PagesShiftRouteImport } from './Pages/Shift'
+import { Route as PagesProjectsRouteImport } from './Pages/Projects'
+import { Route as PagesLegalRouteImport } from './Pages/Legal'
+import { Route as PagesHireLayoutRouteImport } from './Pages/HireLayout'
+import { Route as PagesEventsRouteImport } from './Pages/Events'
+import { Route as PagesContactsRouteImport } from './Pages/Contacts'
+import { Route as PagesBlogLayoutRouteImport } from './Pages/BlogLayout'
+import { Route as PagesAboutRouteImport } from './Pages/About'
+import { Route as PagesHomeRouteImport } from './Pages/Home'
 import { Route as PagesHireDomainTelecomRouteImport } from './Pages/Hire/Domain/Telecom'
 import { Route as PagesHireSimulationRouteImport } from './Pages/Hire/Simulation'
 import { Route as PagesHireDomainSecurityRouteImport } from './Pages/Hire/Domain/Security'
 import { Route as PagesHireActivitiesSalesRouteImport } from './Pages/Hire/Activities/Sales'
 import { Route as PagesHireDomainResearchRouteImport } from './Pages/Hire/Domain/Research'
-import { Route as PagesProjectsRouteImport } from './Pages/Projects'
 import { Route as PagesHireMachineLearningRouteImport } from './Pages/Hire/MachineLearning'
 import { Route as PagesHireDomainMilTechRouteImport } from './Pages/Hire/Domain/MilTech'
 import { Route as PagesHireDomainLogisticsRouteImport } from './Pages/Hire/Domain/Logistics'
-import { Route as PagesLegalRouteImport } from './Pages/Legal'
+import { Route as PagesHireLanguagesRouteImport } from './Pages/Hire/Languages'
 import { Route as PagesHireActivitiesKubernetesRouteImport } from './Pages/Hire/Activities/Kubernetes'
-import { Route as PagesHireRouteImport } from './Pages/Hire'
 import { Route as PagesHireHighloadRouteImport } from './Pages/Hire/Highload'
 import { Route as PagesHireActivitiesGCPRouteImport } from './Pages/Hire/Activities/GCP'
 import { Route as PagesHireFrontendRouteImport } from './Pages/Hire/Frontend'
 import { Route as PagesHireDomainFinTechRouteImport } from './Pages/Hire/Domain/FinTech'
-import { Route as PagesEventsRouteImport } from './Pages/Events'
 import { Route as PagesHireEmbeddedRouteImport } from './Pages/Hire/Embedded'
 import { Route as PagesHireDomainEdTechRouteImport } from './Pages/Hire/Domain/EdTech'
 import { Route as PagesHireDeviceDriversRouteImport } from './Pages/Hire/DeviceDrivers'
 import { Route as PagesHireActivitiesDiscoveryRouteImport } from './Pages/Hire/Activities/Discovery'
 import { Route as PagesHireDevopsRouteImport } from './Pages/Hire/Devops'
-import { Route as PagesContactsRouteImport } from './Pages/Contacts'
+import { Route as PagesHireDatabasesRouteImport } from './Pages/Hire/Databases'
+import { Route as PagesHireCompilersRouteImport } from './Pages/Hire/Compilers'
 import { Route as PagesHireActivitiesCareerRouteImport } from './Pages/Hire/Activities/Career'
-import { Route as PagesBlogRouteImport } from './Pages/Blog'
 import { Route as PagesHireBackendRouteImport } from './Pages/Hire/Backend'
 import { Route as PagesHireActivitiesAzureRouteImport } from './Pages/Hire/Activities/Azure'
 import { Route as PagesHireActivitiesAWSRouteImport } from './Pages/Hire/Activities/AWS'
 import { Route as PagesHireActivitiesArchitectureRouteImport } from './Pages/Hire/Activities/Architecture'
-import { Route as PagesAboutRouteImport } from './Pages/About'
-import { Route as PagesHomeRouteImport } from './Pages/Home'
+import { Route as PagesBlog12_MilitarizingTelecomAppsRouteImport } from './Pages/Blog/12_MilitarizingTelecomApps'
+import { Route as PagesBlog9_VisualControlAndSimulationsRouteImport } from './Pages/Blog/9_VisualControlAndSimulations'
+import { Route as PagesBlog8_ModernControlTheoryRouteImport } from './Pages/Blog/8_ModernControlTheory'
+import { Route as PagesBlog13_MLKernelsRouteImport } from './Pages/Blog/13_MLKernels'
+import { Route as PagesBlog7_LogisticsRouteImport } from './Pages/Blog/7_Logistics'
+import { Route as PagesBlog4_GCPRouteImport } from './Pages/Blog/4_GCP'
+import { Route as PagesBlog14_FrontendAPIRouteImport } from './Pages/Blog/14_FrontendAPI'
+import { Route as PagesBlog6_SolutionDiscoveryRouteImport } from './Pages/Blog/6_SolutionDiscovery'
+import { Route as PagesBlog2_CRNARouteImport } from './Pages/Blog/2_CRNA'
+import { Route as PagesBlog15_ModernControlInAdditiveRouteImport } from './Pages/Blog/15_ModernControlInAdditive'
+import { Route as PagesBlog0_CareerFrameworkRouteImport } from './Pages/Blog/0_CareerFramework'
+import { Route as PagesBlog3_AzureRouteImport } from './Pages/Blog/3_Azure'
+import { Route as PagesBlog1_AWSRouteImport } from './Pages/Blog/1_AWS'
+import { Route as PagesBlog16_PredictiveAutoscalingRouteImport } from './Pages/Blog/16_PredictiveAutoscaling'
+import { Route as PagesBlog5_SolutionArchitectureRouteImport } from './Pages/Blog/5_SolutionArchitecture'
+import { Route as PagesBlog11_AIInTelecomRouteImport } from './Pages/Blog/11_AIInTelecom'
+import { Route as PagesBlog10_AgentsInControlSystemsRouteImport } from './Pages/Blog/10_AgentsInControlSystems'
+import { Route as PagesHireRouteImport } from './Pages/Hire'
+import { Route as PagesBlogRouteImport } from './Pages/Blog'
 
-const PagesHireDomainTelecomRoute = PagesHireDomainTelecomRouteImport.update({
-  id: '/telecom',
-  path: '/telecom',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireSimulationRoute = PagesHireSimulationRouteImport.update({
-  id: '/simulation',
-  path: '/simulation',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireDomainSecurityRoute = PagesHireDomainSecurityRouteImport.update({
-  id: '/security',
-  path: '/security',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireActivitiesSalesRoute =
-  PagesHireActivitiesSalesRouteImport.update({
-    id: '/sales',
-    path: '/sales',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PagesHireDomainResearchRoute = PagesHireDomainResearchRouteImport.update({
-  id: '/research',
-  path: '/research',
+const PagesShiftRoute = PagesShiftRouteImport.update({
+  id: '/shift',
+  path: '/shift',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PagesProjectsRoute = PagesProjectsRouteImport.update({
@@ -72,57 +74,14 @@ const PagesProjectsRoute = PagesProjectsRouteImport.update({
   path: '/projects',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PagesHireMachineLearningRoute =
-  PagesHireMachineLearningRouteImport.update({
-    id: '/ml',
-    path: '/ml',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PagesHireDomainMilTechRoute = PagesHireDomainMilTechRouteImport.update({
-  id: '/miltech',
-  path: '/miltech',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireDomainLogisticsRoute =
-  PagesHireDomainLogisticsRouteImport.update({
-    id: '/logistics',
-    path: '/logistics',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const PagesLegalRoute = PagesLegalRouteImport.update({
   id: '/legal',
   path: '/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PagesHireActivitiesKubernetesRoute =
-  PagesHireActivitiesKubernetesRouteImport.update({
-    id: '/kubernetes',
-    path: '/kubernetes',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PagesHireRoute = PagesHireRouteImport.update({
+const PagesHireLayoutRoute = PagesHireLayoutRouteImport.update({
   id: '/hire',
   path: '/hire',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireHighloadRoute = PagesHireHighloadRouteImport.update({
-  id: '/highload',
-  path: '/highload',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireActivitiesGCPRoute = PagesHireActivitiesGCPRouteImport.update({
-  id: '/gcp',
-  path: '/gcp',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireFrontendRoute = PagesHireFrontendRouteImport.update({
-  id: '/frontend',
-  path: '/frontend',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireDomainFinTechRoute = PagesHireDomainFinTechRouteImport.update({
-  id: '/fintech',
-  path: '/fintech',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PagesEventsRoute = PagesEventsRouteImport.update({
@@ -130,70 +89,16 @@ const PagesEventsRoute = PagesEventsRouteImport.update({
   path: '/events',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PagesHireEmbeddedRoute = PagesHireEmbeddedRouteImport.update({
-  id: '/embedded',
-  path: '/embedded',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireDomainEdTechRoute = PagesHireDomainEdTechRouteImport.update({
-  id: '/edtech',
-  path: '/edtech',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireDeviceDriversRoute = PagesHireDeviceDriversRouteImport.update({
-  id: '/drivers',
-  path: '/drivers',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireActivitiesDiscoveryRoute =
-  PagesHireActivitiesDiscoveryRouteImport.update({
-    id: '/discovery',
-    path: '/discovery',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PagesHireDevopsRoute = PagesHireDevopsRouteImport.update({
-  id: '/devops',
-  path: '/devops',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const PagesContactsRoute = PagesContactsRouteImport.update({
   id: '/contacts',
   path: '/contacts',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PagesHireActivitiesCareerRoute =
-  PagesHireActivitiesCareerRouteImport.update({
-    id: '/career',
-    path: '/career',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PagesBlogRoute = PagesBlogRouteImport.update({
+const PagesBlogLayoutRoute = PagesBlogLayoutRouteImport.update({
   id: '/blog',
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PagesHireBackendRoute = PagesHireBackendRouteImport.update({
-  id: '/backend',
-  path: '/backend',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireActivitiesAzureRoute =
-  PagesHireActivitiesAzureRouteImport.update({
-    id: '/azure',
-    path: '/azure',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PagesHireActivitiesAWSRoute = PagesHireActivitiesAWSRouteImport.update({
-  id: '/aws',
-  path: '/aws',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PagesHireActivitiesArchitectureRoute =
-  PagesHireActivitiesArchitectureRouteImport.update({
-    id: '/architecture',
-    path: '/architecture',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const PagesAboutRoute = PagesAboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -204,278 +109,604 @@ const PagesHomeRoute = PagesHomeRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PagesHireDomainTelecomRoute = PagesHireDomainTelecomRouteImport.update({
+  id: '/telecom',
+  path: '/telecom',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireSimulationRoute = PagesHireSimulationRouteImport.update({
+  id: '/simulation',
+  path: '/simulation',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireDomainSecurityRoute = PagesHireDomainSecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireActivitiesSalesRoute =
+  PagesHireActivitiesSalesRouteImport.update({
+    id: '/sales',
+    path: '/sales',
+    getParentRoute: () => PagesHireLayoutRoute,
+  } as any)
+const PagesHireDomainResearchRoute = PagesHireDomainResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireMachineLearningRoute =
+  PagesHireMachineLearningRouteImport.update({
+    id: '/ml',
+    path: '/ml',
+    getParentRoute: () => PagesHireLayoutRoute,
+  } as any)
+const PagesHireDomainMilTechRoute = PagesHireDomainMilTechRouteImport.update({
+  id: '/miltech',
+  path: '/miltech',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireDomainLogisticsRoute =
+  PagesHireDomainLogisticsRouteImport.update({
+    id: '/logistics',
+    path: '/logistics',
+    getParentRoute: () => PagesHireLayoutRoute,
+  } as any)
+const PagesHireLanguagesRoute = PagesHireLanguagesRouteImport.update({
+  id: '/languages',
+  path: '/languages',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireActivitiesKubernetesRoute =
+  PagesHireActivitiesKubernetesRouteImport.update({
+    id: '/kubernetes',
+    path: '/kubernetes',
+    getParentRoute: () => PagesHireLayoutRoute,
+  } as any)
+const PagesHireHighloadRoute = PagesHireHighloadRouteImport.update({
+  id: '/highload',
+  path: '/highload',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireActivitiesGCPRoute = PagesHireActivitiesGCPRouteImport.update({
+  id: '/gcp',
+  path: '/gcp',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireFrontendRoute = PagesHireFrontendRouteImport.update({
+  id: '/frontend',
+  path: '/frontend',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireDomainFinTechRoute = PagesHireDomainFinTechRouteImport.update({
+  id: '/fintech',
+  path: '/fintech',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireEmbeddedRoute = PagesHireEmbeddedRouteImport.update({
+  id: '/embedded',
+  path: '/embedded',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireDomainEdTechRoute = PagesHireDomainEdTechRouteImport.update({
+  id: '/edtech',
+  path: '/edtech',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireDeviceDriversRoute = PagesHireDeviceDriversRouteImport.update({
+  id: '/drivers',
+  path: '/drivers',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireActivitiesDiscoveryRoute =
+  PagesHireActivitiesDiscoveryRouteImport.update({
+    id: '/discovery',
+    path: '/discovery',
+    getParentRoute: () => PagesHireLayoutRoute,
+  } as any)
+const PagesHireDevopsRoute = PagesHireDevopsRouteImport.update({
+  id: '/devops',
+  path: '/devops',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireDatabasesRoute = PagesHireDatabasesRouteImport.update({
+  id: '/databases',
+  path: '/databases',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireCompilersRoute = PagesHireCompilersRouteImport.update({
+  id: '/compilers',
+  path: '/compilers',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireActivitiesCareerRoute =
+  PagesHireActivitiesCareerRouteImport.update({
+    id: '/career',
+    path: '/career',
+    getParentRoute: () => PagesHireLayoutRoute,
+  } as any)
+const PagesHireBackendRoute = PagesHireBackendRouteImport.update({
+  id: '/backend',
+  path: '/backend',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireActivitiesAzureRoute =
+  PagesHireActivitiesAzureRouteImport.update({
+    id: '/azure',
+    path: '/azure',
+    getParentRoute: () => PagesHireLayoutRoute,
+  } as any)
+const PagesHireActivitiesAWSRoute = PagesHireActivitiesAWSRouteImport.update({
+  id: '/aws',
+  path: '/aws',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesHireActivitiesArchitectureRoute =
+  PagesHireActivitiesArchitectureRouteImport.update({
+    id: '/architecture',
+    path: '/architecture',
+    getParentRoute: () => PagesHireLayoutRoute,
+  } as any)
+const PagesBlog12_MilitarizingTelecomAppsRoute =
+  PagesBlog12_MilitarizingTelecomAppsRouteImport.update({
+    id: '/weaponizing-telecom',
+    path: '/weaponizing-telecom',
+    getParentRoute: () => PagesBlogLayoutRoute,
+  } as any)
+const PagesBlog9_VisualControlAndSimulationsRoute =
+  PagesBlog9_VisualControlAndSimulationsRouteImport.update({
+    id: '/simulation',
+    path: '/simulation',
+    getParentRoute: () => PagesBlogLayoutRoute,
+  } as any)
+const PagesBlog8_ModernControlTheoryRoute =
+  PagesBlog8_ModernControlTheoryRouteImport.update({
+    id: '/modern-control-theory',
+    path: '/modern-control-theory',
+    getParentRoute: () => PagesBlogLayoutRoute,
+  } as any)
+const PagesBlog13_MLKernelsRoute = PagesBlog13_MLKernelsRouteImport.update({
+  id: '/ml-kernels',
+  path: '/ml-kernels',
+  getParentRoute: () => PagesBlogLayoutRoute,
+} as any)
+const PagesBlog7_LogisticsRoute = PagesBlog7_LogisticsRouteImport.update({
+  id: '/logistics',
+  path: '/logistics',
+  getParentRoute: () => PagesBlogLayoutRoute,
+} as any)
+const PagesBlog4_GCPRoute = PagesBlog4_GCPRouteImport.update({
+  id: '/gcp',
+  path: '/gcp',
+  getParentRoute: () => PagesBlogLayoutRoute,
+} as any)
+const PagesBlog14_FrontendAPIRoute = PagesBlog14_FrontendAPIRouteImport.update({
+  id: '/frontend-apis',
+  path: '/frontend-apis',
+  getParentRoute: () => PagesBlogLayoutRoute,
+} as any)
+const PagesBlog6_SolutionDiscoveryRoute =
+  PagesBlog6_SolutionDiscoveryRouteImport.update({
+    id: '/discovery',
+    path: '/discovery',
+    getParentRoute: () => PagesBlogLayoutRoute,
+  } as any)
+const PagesBlog2_CRNARoute = PagesBlog2_CRNARouteImport.update({
+  id: '/crna',
+  path: '/crna',
+  getParentRoute: () => PagesBlogLayoutRoute,
+} as any)
+const PagesBlog15_ModernControlInAdditiveRoute =
+  PagesBlog15_ModernControlInAdditiveRouteImport.update({
+    id: '/control-manufacturing',
+    path: '/control-manufacturing',
+    getParentRoute: () => PagesBlogLayoutRoute,
+  } as any)
+const PagesBlog0_CareerFrameworkRoute =
+  PagesBlog0_CareerFrameworkRouteImport.update({
+    id: '/career',
+    path: '/career',
+    getParentRoute: () => PagesBlogLayoutRoute,
+  } as any)
+const PagesBlog3_AzureRoute = PagesBlog3_AzureRouteImport.update({
+  id: '/azure',
+  path: '/azure',
+  getParentRoute: () => PagesBlogLayoutRoute,
+} as any)
+const PagesBlog1_AWSRoute = PagesBlog1_AWSRouteImport.update({
+  id: '/aws',
+  path: '/aws',
+  getParentRoute: () => PagesBlogLayoutRoute,
+} as any)
+const PagesBlog16_PredictiveAutoscalingRoute =
+  PagesBlog16_PredictiveAutoscalingRouteImport.update({
+    id: '/autoscaling',
+    path: '/autoscaling',
+    getParentRoute: () => PagesBlogLayoutRoute,
+  } as any)
+const PagesBlog5_SolutionArchitectureRoute =
+  PagesBlog5_SolutionArchitectureRouteImport.update({
+    id: '/architecture',
+    path: '/architecture',
+    getParentRoute: () => PagesBlogLayoutRoute,
+  } as any)
+const PagesBlog11_AIInTelecomRoute = PagesBlog11_AIInTelecomRouteImport.update({
+  id: '/ai-in-telecom',
+  path: '/ai-in-telecom',
+  getParentRoute: () => PagesBlogLayoutRoute,
+} as any)
+const PagesBlog10_AgentsInControlSystemsRoute =
+  PagesBlog10_AgentsInControlSystemsRouteImport.update({
+    id: '/agents',
+    path: '/agents',
+    getParentRoute: () => PagesBlogLayoutRoute,
+  } as any)
+const PagesHireRoute = PagesHireRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => PagesHireLayoutRoute,
+} as any)
+const PagesBlogRoute = PagesBlogRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => PagesBlogLayoutRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof PagesHomeRoute
   '/about': typeof PagesAboutRoute
-  '/architecture': typeof PagesHireActivitiesArchitectureRoute
-  '/aws': typeof PagesHireActivitiesAWSRoute
-  '/azure': typeof PagesHireActivitiesAzureRoute
-  '/backend': typeof PagesHireBackendRoute
-  '/blog': typeof PagesBlogRoute
-  '/career': typeof PagesHireActivitiesCareerRoute
+  '/blog': typeof PagesBlogLayoutRouteWithChildren
   '/contacts': typeof PagesContactsRoute
-  '/devops': typeof PagesHireDevopsRoute
-  '/discovery': typeof PagesHireActivitiesDiscoveryRoute
-  '/drivers': typeof PagesHireDeviceDriversRoute
-  '/edtech': typeof PagesHireDomainEdTechRoute
-  '/embedded': typeof PagesHireEmbeddedRoute
   '/events': typeof PagesEventsRoute
-  '/fintech': typeof PagesHireDomainFinTechRoute
-  '/frontend': typeof PagesHireFrontendRoute
-  '/gcp': typeof PagesHireActivitiesGCPRoute
-  '/highload': typeof PagesHireHighloadRoute
-  '/hire': typeof PagesHireRoute
-  '/kubernetes': typeof PagesHireActivitiesKubernetesRoute
+  '/hire': typeof PagesHireLayoutRouteWithChildren
   '/legal': typeof PagesLegalRoute
-  '/logistics': typeof PagesHireDomainLogisticsRoute
-  '/miltech': typeof PagesHireDomainMilTechRoute
-  '/ml': typeof PagesHireMachineLearningRoute
   '/projects': typeof PagesProjectsRoute
-  '/research': typeof PagesHireDomainResearchRoute
-  '/sales': typeof PagesHireActivitiesSalesRoute
-  '/security': typeof PagesHireDomainSecurityRoute
-  '/simulation': typeof PagesHireSimulationRoute
-  '/telecom': typeof PagesHireDomainTelecomRoute
+  '/shift': typeof PagesShiftRoute
+  '/blog/': typeof PagesBlogRoute
+  '/hire/': typeof PagesHireRoute
+  '/blog/agents': typeof PagesBlog10_AgentsInControlSystemsRoute
+  '/blog/ai-in-telecom': typeof PagesBlog11_AIInTelecomRoute
+  '/blog/architecture': typeof PagesBlog5_SolutionArchitectureRoute
+  '/blog/autoscaling': typeof PagesBlog16_PredictiveAutoscalingRoute
+  '/blog/aws': typeof PagesBlog1_AWSRoute
+  '/blog/azure': typeof PagesBlog3_AzureRoute
+  '/blog/career': typeof PagesBlog0_CareerFrameworkRoute
+  '/blog/control-manufacturing': typeof PagesBlog15_ModernControlInAdditiveRoute
+  '/blog/crna': typeof PagesBlog2_CRNARoute
+  '/blog/discovery': typeof PagesBlog6_SolutionDiscoveryRoute
+  '/blog/frontend-apis': typeof PagesBlog14_FrontendAPIRoute
+  '/blog/gcp': typeof PagesBlog4_GCPRoute
+  '/blog/logistics': typeof PagesBlog7_LogisticsRoute
+  '/blog/ml-kernels': typeof PagesBlog13_MLKernelsRoute
+  '/blog/modern-control-theory': typeof PagesBlog8_ModernControlTheoryRoute
+  '/blog/simulation': typeof PagesBlog9_VisualControlAndSimulationsRoute
+  '/blog/weaponizing-telecom': typeof PagesBlog12_MilitarizingTelecomAppsRoute
+  '/hire/architecture': typeof PagesHireActivitiesArchitectureRoute
+  '/hire/aws': typeof PagesHireActivitiesAWSRoute
+  '/hire/azure': typeof PagesHireActivitiesAzureRoute
+  '/hire/backend': typeof PagesHireBackendRoute
+  '/hire/career': typeof PagesHireActivitiesCareerRoute
+  '/hire/compilers': typeof PagesHireCompilersRoute
+  '/hire/databases': typeof PagesHireDatabasesRoute
+  '/hire/devops': typeof PagesHireDevopsRoute
+  '/hire/discovery': typeof PagesHireActivitiesDiscoveryRoute
+  '/hire/drivers': typeof PagesHireDeviceDriversRoute
+  '/hire/edtech': typeof PagesHireDomainEdTechRoute
+  '/hire/embedded': typeof PagesHireEmbeddedRoute
+  '/hire/fintech': typeof PagesHireDomainFinTechRoute
+  '/hire/frontend': typeof PagesHireFrontendRoute
+  '/hire/gcp': typeof PagesHireActivitiesGCPRoute
+  '/hire/highload': typeof PagesHireHighloadRoute
+  '/hire/kubernetes': typeof PagesHireActivitiesKubernetesRoute
+  '/hire/languages': typeof PagesHireLanguagesRoute
+  '/hire/logistics': typeof PagesHireDomainLogisticsRoute
+  '/hire/miltech': typeof PagesHireDomainMilTechRoute
+  '/hire/ml': typeof PagesHireMachineLearningRoute
+  '/hire/research': typeof PagesHireDomainResearchRoute
+  '/hire/sales': typeof PagesHireActivitiesSalesRoute
+  '/hire/security': typeof PagesHireDomainSecurityRoute
+  '/hire/simulation': typeof PagesHireSimulationRoute
+  '/hire/telecom': typeof PagesHireDomainTelecomRoute
 }
 export interface FileRoutesByTo {
   '/': typeof PagesHomeRoute
   '/about': typeof PagesAboutRoute
-  '/architecture': typeof PagesHireActivitiesArchitectureRoute
-  '/aws': typeof PagesHireActivitiesAWSRoute
-  '/azure': typeof PagesHireActivitiesAzureRoute
-  '/backend': typeof PagesHireBackendRoute
-  '/blog': typeof PagesBlogRoute
-  '/career': typeof PagesHireActivitiesCareerRoute
   '/contacts': typeof PagesContactsRoute
-  '/devops': typeof PagesHireDevopsRoute
-  '/discovery': typeof PagesHireActivitiesDiscoveryRoute
-  '/drivers': typeof PagesHireDeviceDriversRoute
-  '/edtech': typeof PagesHireDomainEdTechRoute
-  '/embedded': typeof PagesHireEmbeddedRoute
   '/events': typeof PagesEventsRoute
-  '/fintech': typeof PagesHireDomainFinTechRoute
-  '/frontend': typeof PagesHireFrontendRoute
-  '/gcp': typeof PagesHireActivitiesGCPRoute
-  '/highload': typeof PagesHireHighloadRoute
-  '/hire': typeof PagesHireRoute
-  '/kubernetes': typeof PagesHireActivitiesKubernetesRoute
   '/legal': typeof PagesLegalRoute
-  '/logistics': typeof PagesHireDomainLogisticsRoute
-  '/miltech': typeof PagesHireDomainMilTechRoute
-  '/ml': typeof PagesHireMachineLearningRoute
   '/projects': typeof PagesProjectsRoute
-  '/research': typeof PagesHireDomainResearchRoute
-  '/sales': typeof PagesHireActivitiesSalesRoute
-  '/security': typeof PagesHireDomainSecurityRoute
-  '/simulation': typeof PagesHireSimulationRoute
-  '/telecom': typeof PagesHireDomainTelecomRoute
+  '/shift': typeof PagesShiftRoute
+  '/blog': typeof PagesBlogRoute
+  '/hire': typeof PagesHireRoute
+  '/blog/agents': typeof PagesBlog10_AgentsInControlSystemsRoute
+  '/blog/ai-in-telecom': typeof PagesBlog11_AIInTelecomRoute
+  '/blog/architecture': typeof PagesBlog5_SolutionArchitectureRoute
+  '/blog/autoscaling': typeof PagesBlog16_PredictiveAutoscalingRoute
+  '/blog/aws': typeof PagesBlog1_AWSRoute
+  '/blog/azure': typeof PagesBlog3_AzureRoute
+  '/blog/career': typeof PagesBlog0_CareerFrameworkRoute
+  '/blog/control-manufacturing': typeof PagesBlog15_ModernControlInAdditiveRoute
+  '/blog/crna': typeof PagesBlog2_CRNARoute
+  '/blog/discovery': typeof PagesBlog6_SolutionDiscoveryRoute
+  '/blog/frontend-apis': typeof PagesBlog14_FrontendAPIRoute
+  '/blog/gcp': typeof PagesBlog4_GCPRoute
+  '/blog/logistics': typeof PagesBlog7_LogisticsRoute
+  '/blog/ml-kernels': typeof PagesBlog13_MLKernelsRoute
+  '/blog/modern-control-theory': typeof PagesBlog8_ModernControlTheoryRoute
+  '/blog/simulation': typeof PagesBlog9_VisualControlAndSimulationsRoute
+  '/blog/weaponizing-telecom': typeof PagesBlog12_MilitarizingTelecomAppsRoute
+  '/hire/architecture': typeof PagesHireActivitiesArchitectureRoute
+  '/hire/aws': typeof PagesHireActivitiesAWSRoute
+  '/hire/azure': typeof PagesHireActivitiesAzureRoute
+  '/hire/backend': typeof PagesHireBackendRoute
+  '/hire/career': typeof PagesHireActivitiesCareerRoute
+  '/hire/compilers': typeof PagesHireCompilersRoute
+  '/hire/databases': typeof PagesHireDatabasesRoute
+  '/hire/devops': typeof PagesHireDevopsRoute
+  '/hire/discovery': typeof PagesHireActivitiesDiscoveryRoute
+  '/hire/drivers': typeof PagesHireDeviceDriversRoute
+  '/hire/edtech': typeof PagesHireDomainEdTechRoute
+  '/hire/embedded': typeof PagesHireEmbeddedRoute
+  '/hire/fintech': typeof PagesHireDomainFinTechRoute
+  '/hire/frontend': typeof PagesHireFrontendRoute
+  '/hire/gcp': typeof PagesHireActivitiesGCPRoute
+  '/hire/highload': typeof PagesHireHighloadRoute
+  '/hire/kubernetes': typeof PagesHireActivitiesKubernetesRoute
+  '/hire/languages': typeof PagesHireLanguagesRoute
+  '/hire/logistics': typeof PagesHireDomainLogisticsRoute
+  '/hire/miltech': typeof PagesHireDomainMilTechRoute
+  '/hire/ml': typeof PagesHireMachineLearningRoute
+  '/hire/research': typeof PagesHireDomainResearchRoute
+  '/hire/sales': typeof PagesHireActivitiesSalesRoute
+  '/hire/security': typeof PagesHireDomainSecurityRoute
+  '/hire/simulation': typeof PagesHireSimulationRoute
+  '/hire/telecom': typeof PagesHireDomainTelecomRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof PagesHomeRoute
   '/about': typeof PagesAboutRoute
-  '/architecture': typeof PagesHireActivitiesArchitectureRoute
-  '/aws': typeof PagesHireActivitiesAWSRoute
-  '/azure': typeof PagesHireActivitiesAzureRoute
-  '/backend': typeof PagesHireBackendRoute
-  '/blog': typeof PagesBlogRoute
-  '/career': typeof PagesHireActivitiesCareerRoute
+  '/blog': typeof PagesBlogLayoutRouteWithChildren
   '/contacts': typeof PagesContactsRoute
-  '/devops': typeof PagesHireDevopsRoute
-  '/discovery': typeof PagesHireActivitiesDiscoveryRoute
-  '/drivers': typeof PagesHireDeviceDriversRoute
-  '/edtech': typeof PagesHireDomainEdTechRoute
-  '/embedded': typeof PagesHireEmbeddedRoute
   '/events': typeof PagesEventsRoute
-  '/fintech': typeof PagesHireDomainFinTechRoute
-  '/frontend': typeof PagesHireFrontendRoute
-  '/gcp': typeof PagesHireActivitiesGCPRoute
-  '/highload': typeof PagesHireHighloadRoute
-  '/hire': typeof PagesHireRoute
-  '/kubernetes': typeof PagesHireActivitiesKubernetesRoute
+  '/hire': typeof PagesHireLayoutRouteWithChildren
   '/legal': typeof PagesLegalRoute
-  '/logistics': typeof PagesHireDomainLogisticsRoute
-  '/miltech': typeof PagesHireDomainMilTechRoute
-  '/ml': typeof PagesHireMachineLearningRoute
   '/projects': typeof PagesProjectsRoute
-  '/research': typeof PagesHireDomainResearchRoute
-  '/sales': typeof PagesHireActivitiesSalesRoute
-  '/security': typeof PagesHireDomainSecurityRoute
-  '/simulation': typeof PagesHireSimulationRoute
-  '/telecom': typeof PagesHireDomainTelecomRoute
+  '/shift': typeof PagesShiftRoute
+  '/blog/': typeof PagesBlogRoute
+  '/hire/': typeof PagesHireRoute
+  '/blog/agents': typeof PagesBlog10_AgentsInControlSystemsRoute
+  '/blog/ai-in-telecom': typeof PagesBlog11_AIInTelecomRoute
+  '/blog/architecture': typeof PagesBlog5_SolutionArchitectureRoute
+  '/blog/autoscaling': typeof PagesBlog16_PredictiveAutoscalingRoute
+  '/blog/aws': typeof PagesBlog1_AWSRoute
+  '/blog/azure': typeof PagesBlog3_AzureRoute
+  '/blog/career': typeof PagesBlog0_CareerFrameworkRoute
+  '/blog/control-manufacturing': typeof PagesBlog15_ModernControlInAdditiveRoute
+  '/blog/crna': typeof PagesBlog2_CRNARoute
+  '/blog/discovery': typeof PagesBlog6_SolutionDiscoveryRoute
+  '/blog/frontend-apis': typeof PagesBlog14_FrontendAPIRoute
+  '/blog/gcp': typeof PagesBlog4_GCPRoute
+  '/blog/logistics': typeof PagesBlog7_LogisticsRoute
+  '/blog/ml-kernels': typeof PagesBlog13_MLKernelsRoute
+  '/blog/modern-control-theory': typeof PagesBlog8_ModernControlTheoryRoute
+  '/blog/simulation': typeof PagesBlog9_VisualControlAndSimulationsRoute
+  '/blog/weaponizing-telecom': typeof PagesBlog12_MilitarizingTelecomAppsRoute
+  '/hire/architecture': typeof PagesHireActivitiesArchitectureRoute
+  '/hire/aws': typeof PagesHireActivitiesAWSRoute
+  '/hire/azure': typeof PagesHireActivitiesAzureRoute
+  '/hire/backend': typeof PagesHireBackendRoute
+  '/hire/career': typeof PagesHireActivitiesCareerRoute
+  '/hire/compilers': typeof PagesHireCompilersRoute
+  '/hire/databases': typeof PagesHireDatabasesRoute
+  '/hire/devops': typeof PagesHireDevopsRoute
+  '/hire/discovery': typeof PagesHireActivitiesDiscoveryRoute
+  '/hire/drivers': typeof PagesHireDeviceDriversRoute
+  '/hire/edtech': typeof PagesHireDomainEdTechRoute
+  '/hire/embedded': typeof PagesHireEmbeddedRoute
+  '/hire/fintech': typeof PagesHireDomainFinTechRoute
+  '/hire/frontend': typeof PagesHireFrontendRoute
+  '/hire/gcp': typeof PagesHireActivitiesGCPRoute
+  '/hire/highload': typeof PagesHireHighloadRoute
+  '/hire/kubernetes': typeof PagesHireActivitiesKubernetesRoute
+  '/hire/languages': typeof PagesHireLanguagesRoute
+  '/hire/logistics': typeof PagesHireDomainLogisticsRoute
+  '/hire/miltech': typeof PagesHireDomainMilTechRoute
+  '/hire/ml': typeof PagesHireMachineLearningRoute
+  '/hire/research': typeof PagesHireDomainResearchRoute
+  '/hire/sales': typeof PagesHireActivitiesSalesRoute
+  '/hire/security': typeof PagesHireDomainSecurityRoute
+  '/hire/simulation': typeof PagesHireSimulationRoute
+  '/hire/telecom': typeof PagesHireDomainTelecomRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
-    | '/architecture'
-    | '/aws'
-    | '/azure'
-    | '/backend'
     | '/blog'
-    | '/career'
     | '/contacts'
-    | '/devops'
-    | '/discovery'
-    | '/drivers'
-    | '/edtech'
-    | '/embedded'
     | '/events'
-    | '/fintech'
-    | '/frontend'
-    | '/gcp'
-    | '/highload'
     | '/hire'
-    | '/kubernetes'
     | '/legal'
-    | '/logistics'
-    | '/miltech'
-    | '/ml'
     | '/projects'
-    | '/research'
-    | '/sales'
-    | '/security'
-    | '/simulation'
-    | '/telecom'
+    | '/shift'
+    | '/blog/'
+    | '/hire/'
+    | '/blog/agents'
+    | '/blog/ai-in-telecom'
+    | '/blog/architecture'
+    | '/blog/autoscaling'
+    | '/blog/aws'
+    | '/blog/azure'
+    | '/blog/career'
+    | '/blog/control-manufacturing'
+    | '/blog/crna'
+    | '/blog/discovery'
+    | '/blog/frontend-apis'
+    | '/blog/gcp'
+    | '/blog/logistics'
+    | '/blog/ml-kernels'
+    | '/blog/modern-control-theory'
+    | '/blog/simulation'
+    | '/blog/weaponizing-telecom'
+    | '/hire/architecture'
+    | '/hire/aws'
+    | '/hire/azure'
+    | '/hire/backend'
+    | '/hire/career'
+    | '/hire/compilers'
+    | '/hire/databases'
+    | '/hire/devops'
+    | '/hire/discovery'
+    | '/hire/drivers'
+    | '/hire/edtech'
+    | '/hire/embedded'
+    | '/hire/fintech'
+    | '/hire/frontend'
+    | '/hire/gcp'
+    | '/hire/highload'
+    | '/hire/kubernetes'
+    | '/hire/languages'
+    | '/hire/logistics'
+    | '/hire/miltech'
+    | '/hire/ml'
+    | '/hire/research'
+    | '/hire/sales'
+    | '/hire/security'
+    | '/hire/simulation'
+    | '/hire/telecom'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
-    | '/architecture'
-    | '/aws'
-    | '/azure'
-    | '/backend'
-    | '/blog'
-    | '/career'
     | '/contacts'
-    | '/devops'
-    | '/discovery'
-    | '/drivers'
-    | '/edtech'
-    | '/embedded'
     | '/events'
-    | '/fintech'
-    | '/frontend'
-    | '/gcp'
-    | '/highload'
-    | '/hire'
-    | '/kubernetes'
     | '/legal'
-    | '/logistics'
-    | '/miltech'
-    | '/ml'
     | '/projects'
-    | '/research'
-    | '/sales'
-    | '/security'
-    | '/simulation'
-    | '/telecom'
+    | '/shift'
+    | '/blog'
+    | '/hire'
+    | '/blog/agents'
+    | '/blog/ai-in-telecom'
+    | '/blog/architecture'
+    | '/blog/autoscaling'
+    | '/blog/aws'
+    | '/blog/azure'
+    | '/blog/career'
+    | '/blog/control-manufacturing'
+    | '/blog/crna'
+    | '/blog/discovery'
+    | '/blog/frontend-apis'
+    | '/blog/gcp'
+    | '/blog/logistics'
+    | '/blog/ml-kernels'
+    | '/blog/modern-control-theory'
+    | '/blog/simulation'
+    | '/blog/weaponizing-telecom'
+    | '/hire/architecture'
+    | '/hire/aws'
+    | '/hire/azure'
+    | '/hire/backend'
+    | '/hire/career'
+    | '/hire/compilers'
+    | '/hire/databases'
+    | '/hire/devops'
+    | '/hire/discovery'
+    | '/hire/drivers'
+    | '/hire/edtech'
+    | '/hire/embedded'
+    | '/hire/fintech'
+    | '/hire/frontend'
+    | '/hire/gcp'
+    | '/hire/highload'
+    | '/hire/kubernetes'
+    | '/hire/languages'
+    | '/hire/logistics'
+    | '/hire/miltech'
+    | '/hire/ml'
+    | '/hire/research'
+    | '/hire/sales'
+    | '/hire/security'
+    | '/hire/simulation'
+    | '/hire/telecom'
   id:
     | '__root__'
     | '/'
     | '/about'
-    | '/architecture'
-    | '/aws'
-    | '/azure'
-    | '/backend'
     | '/blog'
-    | '/career'
     | '/contacts'
-    | '/devops'
-    | '/discovery'
-    | '/drivers'
-    | '/edtech'
-    | '/embedded'
     | '/events'
-    | '/fintech'
-    | '/frontend'
-    | '/gcp'
-    | '/highload'
     | '/hire'
-    | '/kubernetes'
     | '/legal'
-    | '/logistics'
-    | '/miltech'
-    | '/ml'
     | '/projects'
-    | '/research'
-    | '/sales'
-    | '/security'
-    | '/simulation'
-    | '/telecom'
+    | '/shift'
+    | '/blog/'
+    | '/hire/'
+    | '/blog/agents'
+    | '/blog/ai-in-telecom'
+    | '/blog/architecture'
+    | '/blog/autoscaling'
+    | '/blog/aws'
+    | '/blog/azure'
+    | '/blog/career'
+    | '/blog/control-manufacturing'
+    | '/blog/crna'
+    | '/blog/discovery'
+    | '/blog/frontend-apis'
+    | '/blog/gcp'
+    | '/blog/logistics'
+    | '/blog/ml-kernels'
+    | '/blog/modern-control-theory'
+    | '/blog/simulation'
+    | '/blog/weaponizing-telecom'
+    | '/hire/architecture'
+    | '/hire/aws'
+    | '/hire/azure'
+    | '/hire/backend'
+    | '/hire/career'
+    | '/hire/compilers'
+    | '/hire/databases'
+    | '/hire/devops'
+    | '/hire/discovery'
+    | '/hire/drivers'
+    | '/hire/edtech'
+    | '/hire/embedded'
+    | '/hire/fintech'
+    | '/hire/frontend'
+    | '/hire/gcp'
+    | '/hire/highload'
+    | '/hire/kubernetes'
+    | '/hire/languages'
+    | '/hire/logistics'
+    | '/hire/miltech'
+    | '/hire/ml'
+    | '/hire/research'
+    | '/hire/sales'
+    | '/hire/security'
+    | '/hire/simulation'
+    | '/hire/telecom'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   PagesHomeRoute: typeof PagesHomeRoute
   PagesAboutRoute: typeof PagesAboutRoute
-  PagesHireActivitiesArchitectureRoute: typeof PagesHireActivitiesArchitectureRoute
-  PagesHireActivitiesAWSRoute: typeof PagesHireActivitiesAWSRoute
-  PagesHireActivitiesAzureRoute: typeof PagesHireActivitiesAzureRoute
-  PagesHireBackendRoute: typeof PagesHireBackendRoute
-  PagesBlogRoute: typeof PagesBlogRoute
-  PagesHireActivitiesCareerRoute: typeof PagesHireActivitiesCareerRoute
+  PagesBlogLayoutRoute: typeof PagesBlogLayoutRouteWithChildren
   PagesContactsRoute: typeof PagesContactsRoute
-  PagesHireDevopsRoute: typeof PagesHireDevopsRoute
-  PagesHireActivitiesDiscoveryRoute: typeof PagesHireActivitiesDiscoveryRoute
-  PagesHireDeviceDriversRoute: typeof PagesHireDeviceDriversRoute
-  PagesHireDomainEdTechRoute: typeof PagesHireDomainEdTechRoute
-  PagesHireEmbeddedRoute: typeof PagesHireEmbeddedRoute
   PagesEventsRoute: typeof PagesEventsRoute
-  PagesHireDomainFinTechRoute: typeof PagesHireDomainFinTechRoute
-  PagesHireFrontendRoute: typeof PagesHireFrontendRoute
-  PagesHireActivitiesGCPRoute: typeof PagesHireActivitiesGCPRoute
-  PagesHireHighloadRoute: typeof PagesHireHighloadRoute
-  PagesHireRoute: typeof PagesHireRoute
-  PagesHireActivitiesKubernetesRoute: typeof PagesHireActivitiesKubernetesRoute
+  PagesHireLayoutRoute: typeof PagesHireLayoutRouteWithChildren
   PagesLegalRoute: typeof PagesLegalRoute
-  PagesHireDomainLogisticsRoute: typeof PagesHireDomainLogisticsRoute
-  PagesHireDomainMilTechRoute: typeof PagesHireDomainMilTechRoute
-  PagesHireMachineLearningRoute: typeof PagesHireMachineLearningRoute
   PagesProjectsRoute: typeof PagesProjectsRoute
-  PagesHireDomainResearchRoute: typeof PagesHireDomainResearchRoute
-  PagesHireActivitiesSalesRoute: typeof PagesHireActivitiesSalesRoute
-  PagesHireDomainSecurityRoute: typeof PagesHireDomainSecurityRoute
-  PagesHireSimulationRoute: typeof PagesHireSimulationRoute
-  PagesHireDomainTelecomRoute: typeof PagesHireDomainTelecomRoute
+  PagesShiftRoute: typeof PagesShiftRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/telecom': {
-      id: '/telecom'
-      path: '/telecom'
-      fullPath: '/telecom'
-      preLoaderRoute: typeof PagesHireDomainTelecomRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/simulation': {
-      id: '/simulation'
-      path: '/simulation'
-      fullPath: '/simulation'
-      preLoaderRoute: typeof PagesHireSimulationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/security': {
-      id: '/security'
-      path: '/security'
-      fullPath: '/security'
-      preLoaderRoute: typeof PagesHireDomainSecurityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sales': {
-      id: '/sales'
-      path: '/sales'
-      fullPath: '/sales'
-      preLoaderRoute: typeof PagesHireActivitiesSalesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/research': {
-      id: '/research'
-      path: '/research'
-      fullPath: '/research'
-      preLoaderRoute: typeof PagesHireDomainResearchRouteImport
+    '/shift': {
+      id: '/shift'
+      path: '/shift'
+      fullPath: '/shift'
+      preLoaderRoute: typeof PagesShiftRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects': {
@@ -485,27 +716,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PagesProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ml': {
-      id: '/ml'
-      path: '/ml'
-      fullPath: '/ml'
-      preLoaderRoute: typeof PagesHireMachineLearningRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/miltech': {
-      id: '/miltech'
-      path: '/miltech'
-      fullPath: '/miltech'
-      preLoaderRoute: typeof PagesHireDomainMilTechRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/logistics': {
-      id: '/logistics'
-      path: '/logistics'
-      fullPath: '/logistics'
-      preLoaderRoute: typeof PagesHireDomainLogisticsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/legal': {
       id: '/legal'
       path: '/legal'
@@ -513,46 +723,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PagesLegalRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/kubernetes': {
-      id: '/kubernetes'
-      path: '/kubernetes'
-      fullPath: '/kubernetes'
-      preLoaderRoute: typeof PagesHireActivitiesKubernetesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/hire': {
       id: '/hire'
       path: '/hire'
       fullPath: '/hire'
-      preLoaderRoute: typeof PagesHireRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/highload': {
-      id: '/highload'
-      path: '/highload'
-      fullPath: '/highload'
-      preLoaderRoute: typeof PagesHireHighloadRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gcp': {
-      id: '/gcp'
-      path: '/gcp'
-      fullPath: '/gcp'
-      preLoaderRoute: typeof PagesHireActivitiesGCPRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/frontend': {
-      id: '/frontend'
-      path: '/frontend'
-      fullPath: '/frontend'
-      preLoaderRoute: typeof PagesHireFrontendRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fintech': {
-      id: '/fintech'
-      path: '/fintech'
-      fullPath: '/fintech'
-      preLoaderRoute: typeof PagesHireDomainFinTechRouteImport
+      preLoaderRoute: typeof PagesHireLayoutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/events': {
@@ -562,41 +737,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PagesEventsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/embedded': {
-      id: '/embedded'
-      path: '/embedded'
-      fullPath: '/embedded'
-      preLoaderRoute: typeof PagesHireEmbeddedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/edtech': {
-      id: '/edtech'
-      path: '/edtech'
-      fullPath: '/edtech'
-      preLoaderRoute: typeof PagesHireDomainEdTechRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/drivers': {
-      id: '/drivers'
-      path: '/drivers'
-      fullPath: '/drivers'
-      preLoaderRoute: typeof PagesHireDeviceDriversRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/discovery': {
-      id: '/discovery'
-      path: '/discovery'
-      fullPath: '/discovery'
-      preLoaderRoute: typeof PagesHireActivitiesDiscoveryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/devops': {
-      id: '/devops'
-      path: '/devops'
-      fullPath: '/devops'
-      preLoaderRoute: typeof PagesHireDevopsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/contacts': {
       id: '/contacts'
       path: '/contacts'
@@ -604,46 +744,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PagesContactsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/career': {
-      id: '/career'
-      path: '/career'
-      fullPath: '/career'
-      preLoaderRoute: typeof PagesHireActivitiesCareerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/blog': {
       id: '/blog'
       path: '/blog'
       fullPath: '/blog'
-      preLoaderRoute: typeof PagesBlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/backend': {
-      id: '/backend'
-      path: '/backend'
-      fullPath: '/backend'
-      preLoaderRoute: typeof PagesHireBackendRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/azure': {
-      id: '/azure'
-      path: '/azure'
-      fullPath: '/azure'
-      preLoaderRoute: typeof PagesHireActivitiesAzureRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/aws': {
-      id: '/aws'
-      path: '/aws'
-      fullPath: '/aws'
-      preLoaderRoute: typeof PagesHireActivitiesAWSRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/architecture': {
-      id: '/architecture'
-      path: '/architecture'
-      fullPath: '/architecture'
-      preLoaderRoute: typeof PagesHireActivitiesArchitectureRouteImport
+      preLoaderRoute: typeof PagesBlogLayoutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -660,41 +765,449 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PagesHomeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hire/telecom': {
+      id: '/hire/telecom'
+      path: '/telecom'
+      fullPath: '/hire/telecom'
+      preLoaderRoute: typeof PagesHireDomainTelecomRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/simulation': {
+      id: '/hire/simulation'
+      path: '/simulation'
+      fullPath: '/hire/simulation'
+      preLoaderRoute: typeof PagesHireSimulationRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/security': {
+      id: '/hire/security'
+      path: '/security'
+      fullPath: '/hire/security'
+      preLoaderRoute: typeof PagesHireDomainSecurityRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/sales': {
+      id: '/hire/sales'
+      path: '/sales'
+      fullPath: '/hire/sales'
+      preLoaderRoute: typeof PagesHireActivitiesSalesRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/research': {
+      id: '/hire/research'
+      path: '/research'
+      fullPath: '/hire/research'
+      preLoaderRoute: typeof PagesHireDomainResearchRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/ml': {
+      id: '/hire/ml'
+      path: '/ml'
+      fullPath: '/hire/ml'
+      preLoaderRoute: typeof PagesHireMachineLearningRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/miltech': {
+      id: '/hire/miltech'
+      path: '/miltech'
+      fullPath: '/hire/miltech'
+      preLoaderRoute: typeof PagesHireDomainMilTechRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/logistics': {
+      id: '/hire/logistics'
+      path: '/logistics'
+      fullPath: '/hire/logistics'
+      preLoaderRoute: typeof PagesHireDomainLogisticsRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/languages': {
+      id: '/hire/languages'
+      path: '/languages'
+      fullPath: '/hire/languages'
+      preLoaderRoute: typeof PagesHireLanguagesRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/kubernetes': {
+      id: '/hire/kubernetes'
+      path: '/kubernetes'
+      fullPath: '/hire/kubernetes'
+      preLoaderRoute: typeof PagesHireActivitiesKubernetesRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/highload': {
+      id: '/hire/highload'
+      path: '/highload'
+      fullPath: '/hire/highload'
+      preLoaderRoute: typeof PagesHireHighloadRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/gcp': {
+      id: '/hire/gcp'
+      path: '/gcp'
+      fullPath: '/hire/gcp'
+      preLoaderRoute: typeof PagesHireActivitiesGCPRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/frontend': {
+      id: '/hire/frontend'
+      path: '/frontend'
+      fullPath: '/hire/frontend'
+      preLoaderRoute: typeof PagesHireFrontendRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/fintech': {
+      id: '/hire/fintech'
+      path: '/fintech'
+      fullPath: '/hire/fintech'
+      preLoaderRoute: typeof PagesHireDomainFinTechRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/embedded': {
+      id: '/hire/embedded'
+      path: '/embedded'
+      fullPath: '/hire/embedded'
+      preLoaderRoute: typeof PagesHireEmbeddedRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/edtech': {
+      id: '/hire/edtech'
+      path: '/edtech'
+      fullPath: '/hire/edtech'
+      preLoaderRoute: typeof PagesHireDomainEdTechRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/drivers': {
+      id: '/hire/drivers'
+      path: '/drivers'
+      fullPath: '/hire/drivers'
+      preLoaderRoute: typeof PagesHireDeviceDriversRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/discovery': {
+      id: '/hire/discovery'
+      path: '/discovery'
+      fullPath: '/hire/discovery'
+      preLoaderRoute: typeof PagesHireActivitiesDiscoveryRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/devops': {
+      id: '/hire/devops'
+      path: '/devops'
+      fullPath: '/hire/devops'
+      preLoaderRoute: typeof PagesHireDevopsRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/databases': {
+      id: '/hire/databases'
+      path: '/databases'
+      fullPath: '/hire/databases'
+      preLoaderRoute: typeof PagesHireDatabasesRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/compilers': {
+      id: '/hire/compilers'
+      path: '/compilers'
+      fullPath: '/hire/compilers'
+      preLoaderRoute: typeof PagesHireCompilersRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/career': {
+      id: '/hire/career'
+      path: '/career'
+      fullPath: '/hire/career'
+      preLoaderRoute: typeof PagesHireActivitiesCareerRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/backend': {
+      id: '/hire/backend'
+      path: '/backend'
+      fullPath: '/hire/backend'
+      preLoaderRoute: typeof PagesHireBackendRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/azure': {
+      id: '/hire/azure'
+      path: '/azure'
+      fullPath: '/hire/azure'
+      preLoaderRoute: typeof PagesHireActivitiesAzureRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/aws': {
+      id: '/hire/aws'
+      path: '/aws'
+      fullPath: '/hire/aws'
+      preLoaderRoute: typeof PagesHireActivitiesAWSRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/hire/architecture': {
+      id: '/hire/architecture'
+      path: '/architecture'
+      fullPath: '/hire/architecture'
+      preLoaderRoute: typeof PagesHireActivitiesArchitectureRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/blog/weaponizing-telecom': {
+      id: '/blog/weaponizing-telecom'
+      path: '/weaponizing-telecom'
+      fullPath: '/blog/weaponizing-telecom'
+      preLoaderRoute: typeof PagesBlog12_MilitarizingTelecomAppsRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/simulation': {
+      id: '/blog/simulation'
+      path: '/simulation'
+      fullPath: '/blog/simulation'
+      preLoaderRoute: typeof PagesBlog9_VisualControlAndSimulationsRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/modern-control-theory': {
+      id: '/blog/modern-control-theory'
+      path: '/modern-control-theory'
+      fullPath: '/blog/modern-control-theory'
+      preLoaderRoute: typeof PagesBlog8_ModernControlTheoryRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/ml-kernels': {
+      id: '/blog/ml-kernels'
+      path: '/ml-kernels'
+      fullPath: '/blog/ml-kernels'
+      preLoaderRoute: typeof PagesBlog13_MLKernelsRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/logistics': {
+      id: '/blog/logistics'
+      path: '/logistics'
+      fullPath: '/blog/logistics'
+      preLoaderRoute: typeof PagesBlog7_LogisticsRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/gcp': {
+      id: '/blog/gcp'
+      path: '/gcp'
+      fullPath: '/blog/gcp'
+      preLoaderRoute: typeof PagesBlog4_GCPRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/frontend-apis': {
+      id: '/blog/frontend-apis'
+      path: '/frontend-apis'
+      fullPath: '/blog/frontend-apis'
+      preLoaderRoute: typeof PagesBlog14_FrontendAPIRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/discovery': {
+      id: '/blog/discovery'
+      path: '/discovery'
+      fullPath: '/blog/discovery'
+      preLoaderRoute: typeof PagesBlog6_SolutionDiscoveryRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/crna': {
+      id: '/blog/crna'
+      path: '/crna'
+      fullPath: '/blog/crna'
+      preLoaderRoute: typeof PagesBlog2_CRNARouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/control-manufacturing': {
+      id: '/blog/control-manufacturing'
+      path: '/control-manufacturing'
+      fullPath: '/blog/control-manufacturing'
+      preLoaderRoute: typeof PagesBlog15_ModernControlInAdditiveRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/career': {
+      id: '/blog/career'
+      path: '/career'
+      fullPath: '/blog/career'
+      preLoaderRoute: typeof PagesBlog0_CareerFrameworkRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/azure': {
+      id: '/blog/azure'
+      path: '/azure'
+      fullPath: '/blog/azure'
+      preLoaderRoute: typeof PagesBlog3_AzureRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/aws': {
+      id: '/blog/aws'
+      path: '/aws'
+      fullPath: '/blog/aws'
+      preLoaderRoute: typeof PagesBlog1_AWSRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/autoscaling': {
+      id: '/blog/autoscaling'
+      path: '/autoscaling'
+      fullPath: '/blog/autoscaling'
+      preLoaderRoute: typeof PagesBlog16_PredictiveAutoscalingRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/architecture': {
+      id: '/blog/architecture'
+      path: '/architecture'
+      fullPath: '/blog/architecture'
+      preLoaderRoute: typeof PagesBlog5_SolutionArchitectureRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/ai-in-telecom': {
+      id: '/blog/ai-in-telecom'
+      path: '/ai-in-telecom'
+      fullPath: '/blog/ai-in-telecom'
+      preLoaderRoute: typeof PagesBlog11_AIInTelecomRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/blog/agents': {
+      id: '/blog/agents'
+      path: '/agents'
+      fullPath: '/blog/agents'
+      preLoaderRoute: typeof PagesBlog10_AgentsInControlSystemsRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
+    '/hire/': {
+      id: '/hire/'
+      path: '/'
+      fullPath: '/hire/'
+      preLoaderRoute: typeof PagesHireRouteImport
+      parentRoute: typeof PagesHireLayoutRoute
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof PagesBlogRouteImport
+      parentRoute: typeof PagesBlogLayoutRoute
+    }
   }
 }
 
-const rootRouteChildren: RootRouteChildren = {
-  PagesHomeRoute: PagesHomeRoute,
-  PagesAboutRoute: PagesAboutRoute,
+interface PagesBlogLayoutRouteChildren {
+  PagesBlogRoute: typeof PagesBlogRoute
+  PagesBlog10_AgentsInControlSystemsRoute: typeof PagesBlog10_AgentsInControlSystemsRoute
+  PagesBlog11_AIInTelecomRoute: typeof PagesBlog11_AIInTelecomRoute
+  PagesBlog5_SolutionArchitectureRoute: typeof PagesBlog5_SolutionArchitectureRoute
+  PagesBlog16_PredictiveAutoscalingRoute: typeof PagesBlog16_PredictiveAutoscalingRoute
+  PagesBlog1_AWSRoute: typeof PagesBlog1_AWSRoute
+  PagesBlog3_AzureRoute: typeof PagesBlog3_AzureRoute
+  PagesBlog0_CareerFrameworkRoute: typeof PagesBlog0_CareerFrameworkRoute
+  PagesBlog15_ModernControlInAdditiveRoute: typeof PagesBlog15_ModernControlInAdditiveRoute
+  PagesBlog2_CRNARoute: typeof PagesBlog2_CRNARoute
+  PagesBlog6_SolutionDiscoveryRoute: typeof PagesBlog6_SolutionDiscoveryRoute
+  PagesBlog14_FrontendAPIRoute: typeof PagesBlog14_FrontendAPIRoute
+  PagesBlog4_GCPRoute: typeof PagesBlog4_GCPRoute
+  PagesBlog7_LogisticsRoute: typeof PagesBlog7_LogisticsRoute
+  PagesBlog13_MLKernelsRoute: typeof PagesBlog13_MLKernelsRoute
+  PagesBlog8_ModernControlTheoryRoute: typeof PagesBlog8_ModernControlTheoryRoute
+  PagesBlog9_VisualControlAndSimulationsRoute: typeof PagesBlog9_VisualControlAndSimulationsRoute
+  PagesBlog12_MilitarizingTelecomAppsRoute: typeof PagesBlog12_MilitarizingTelecomAppsRoute
+}
+
+const PagesBlogLayoutRouteChildren: PagesBlogLayoutRouteChildren = {
+  PagesBlogRoute: PagesBlogRoute,
+  PagesBlog10_AgentsInControlSystemsRoute:
+    PagesBlog10_AgentsInControlSystemsRoute,
+  PagesBlog11_AIInTelecomRoute: PagesBlog11_AIInTelecomRoute,
+  PagesBlog5_SolutionArchitectureRoute: PagesBlog5_SolutionArchitectureRoute,
+  PagesBlog16_PredictiveAutoscalingRoute:
+    PagesBlog16_PredictiveAutoscalingRoute,
+  PagesBlog1_AWSRoute: PagesBlog1_AWSRoute,
+  PagesBlog3_AzureRoute: PagesBlog3_AzureRoute,
+  PagesBlog0_CareerFrameworkRoute: PagesBlog0_CareerFrameworkRoute,
+  PagesBlog15_ModernControlInAdditiveRoute:
+    PagesBlog15_ModernControlInAdditiveRoute,
+  PagesBlog2_CRNARoute: PagesBlog2_CRNARoute,
+  PagesBlog6_SolutionDiscoveryRoute: PagesBlog6_SolutionDiscoveryRoute,
+  PagesBlog14_FrontendAPIRoute: PagesBlog14_FrontendAPIRoute,
+  PagesBlog4_GCPRoute: PagesBlog4_GCPRoute,
+  PagesBlog7_LogisticsRoute: PagesBlog7_LogisticsRoute,
+  PagesBlog13_MLKernelsRoute: PagesBlog13_MLKernelsRoute,
+  PagesBlog8_ModernControlTheoryRoute: PagesBlog8_ModernControlTheoryRoute,
+  PagesBlog9_VisualControlAndSimulationsRoute:
+    PagesBlog9_VisualControlAndSimulationsRoute,
+  PagesBlog12_MilitarizingTelecomAppsRoute:
+    PagesBlog12_MilitarizingTelecomAppsRoute,
+}
+
+const PagesBlogLayoutRouteWithChildren = PagesBlogLayoutRoute._addFileChildren(
+  PagesBlogLayoutRouteChildren,
+)
+
+interface PagesHireLayoutRouteChildren {
+  PagesHireRoute: typeof PagesHireRoute
+  PagesHireActivitiesArchitectureRoute: typeof PagesHireActivitiesArchitectureRoute
+  PagesHireActivitiesAWSRoute: typeof PagesHireActivitiesAWSRoute
+  PagesHireActivitiesAzureRoute: typeof PagesHireActivitiesAzureRoute
+  PagesHireBackendRoute: typeof PagesHireBackendRoute
+  PagesHireActivitiesCareerRoute: typeof PagesHireActivitiesCareerRoute
+  PagesHireCompilersRoute: typeof PagesHireCompilersRoute
+  PagesHireDatabasesRoute: typeof PagesHireDatabasesRoute
+  PagesHireDevopsRoute: typeof PagesHireDevopsRoute
+  PagesHireActivitiesDiscoveryRoute: typeof PagesHireActivitiesDiscoveryRoute
+  PagesHireDeviceDriversRoute: typeof PagesHireDeviceDriversRoute
+  PagesHireDomainEdTechRoute: typeof PagesHireDomainEdTechRoute
+  PagesHireEmbeddedRoute: typeof PagesHireEmbeddedRoute
+  PagesHireDomainFinTechRoute: typeof PagesHireDomainFinTechRoute
+  PagesHireFrontendRoute: typeof PagesHireFrontendRoute
+  PagesHireActivitiesGCPRoute: typeof PagesHireActivitiesGCPRoute
+  PagesHireHighloadRoute: typeof PagesHireHighloadRoute
+  PagesHireActivitiesKubernetesRoute: typeof PagesHireActivitiesKubernetesRoute
+  PagesHireLanguagesRoute: typeof PagesHireLanguagesRoute
+  PagesHireDomainLogisticsRoute: typeof PagesHireDomainLogisticsRoute
+  PagesHireDomainMilTechRoute: typeof PagesHireDomainMilTechRoute
+  PagesHireMachineLearningRoute: typeof PagesHireMachineLearningRoute
+  PagesHireDomainResearchRoute: typeof PagesHireDomainResearchRoute
+  PagesHireActivitiesSalesRoute: typeof PagesHireActivitiesSalesRoute
+  PagesHireDomainSecurityRoute: typeof PagesHireDomainSecurityRoute
+  PagesHireSimulationRoute: typeof PagesHireSimulationRoute
+  PagesHireDomainTelecomRoute: typeof PagesHireDomainTelecomRoute
+}
+
+const PagesHireLayoutRouteChildren: PagesHireLayoutRouteChildren = {
+  PagesHireRoute: PagesHireRoute,
   PagesHireActivitiesArchitectureRoute: PagesHireActivitiesArchitectureRoute,
   PagesHireActivitiesAWSRoute: PagesHireActivitiesAWSRoute,
   PagesHireActivitiesAzureRoute: PagesHireActivitiesAzureRoute,
   PagesHireBackendRoute: PagesHireBackendRoute,
-  PagesBlogRoute: PagesBlogRoute,
   PagesHireActivitiesCareerRoute: PagesHireActivitiesCareerRoute,
-  PagesContactsRoute: PagesContactsRoute,
+  PagesHireCompilersRoute: PagesHireCompilersRoute,
+  PagesHireDatabasesRoute: PagesHireDatabasesRoute,
   PagesHireDevopsRoute: PagesHireDevopsRoute,
   PagesHireActivitiesDiscoveryRoute: PagesHireActivitiesDiscoveryRoute,
   PagesHireDeviceDriversRoute: PagesHireDeviceDriversRoute,
   PagesHireDomainEdTechRoute: PagesHireDomainEdTechRoute,
   PagesHireEmbeddedRoute: PagesHireEmbeddedRoute,
-  PagesEventsRoute: PagesEventsRoute,
   PagesHireDomainFinTechRoute: PagesHireDomainFinTechRoute,
   PagesHireFrontendRoute: PagesHireFrontendRoute,
   PagesHireActivitiesGCPRoute: PagesHireActivitiesGCPRoute,
   PagesHireHighloadRoute: PagesHireHighloadRoute,
-  PagesHireRoute: PagesHireRoute,
   PagesHireActivitiesKubernetesRoute: PagesHireActivitiesKubernetesRoute,
-  PagesLegalRoute: PagesLegalRoute,
+  PagesHireLanguagesRoute: PagesHireLanguagesRoute,
   PagesHireDomainLogisticsRoute: PagesHireDomainLogisticsRoute,
   PagesHireDomainMilTechRoute: PagesHireDomainMilTechRoute,
   PagesHireMachineLearningRoute: PagesHireMachineLearningRoute,
-  PagesProjectsRoute: PagesProjectsRoute,
   PagesHireDomainResearchRoute: PagesHireDomainResearchRoute,
   PagesHireActivitiesSalesRoute: PagesHireActivitiesSalesRoute,
   PagesHireDomainSecurityRoute: PagesHireDomainSecurityRoute,
   PagesHireSimulationRoute: PagesHireSimulationRoute,
   PagesHireDomainTelecomRoute: PagesHireDomainTelecomRoute,
+}
+
+const PagesHireLayoutRouteWithChildren = PagesHireLayoutRoute._addFileChildren(
+  PagesHireLayoutRouteChildren,
+)
+
+const rootRouteChildren: RootRouteChildren = {
+  PagesHomeRoute: PagesHomeRoute,
+  PagesAboutRoute: PagesAboutRoute,
+  PagesBlogLayoutRoute: PagesBlogLayoutRouteWithChildren,
+  PagesContactsRoute: PagesContactsRoute,
+  PagesEventsRoute: PagesEventsRoute,
+  PagesHireLayoutRoute: PagesHireLayoutRouteWithChildren,
+  PagesLegalRoute: PagesLegalRoute,
+  PagesProjectsRoute: PagesProjectsRoute,
+  PagesShiftRoute: PagesShiftRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

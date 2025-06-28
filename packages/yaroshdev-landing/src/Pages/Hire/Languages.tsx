@@ -12,18 +12,18 @@
 import { ContentCard, Heading, Paragraph } from 'Landing/Components'
 import { createFileRoute } from '@tanstack/react-router'
 
-export const HireAzure = () => {
+export const HireLanguages = () => {
   return (
-    <ContentCard catchBoundary='azure'>
+    <ContentCard catchBoundary='languages'>
       <div className='space-y-2 px-4 md:px-12'>
-        <Heading>Azure Consulting and Training</Heading>
-        <Paragraph>Azure Consulting and Training practices:</Paragraph>
+        <Heading>Languages</Heading>
+        <Paragraph>Languages practices:</Paragraph>
         <ul className='space-y-2'></ul>
       </div>
     </ContentCard>
   )
 }
 
-export const Route = createFileRoute('/hire/azure')({
-  component: HireAzure
+export const Route = createFileRoute('/hire/languages')({
+  component: HireLanguages
 })

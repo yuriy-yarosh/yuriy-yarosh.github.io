@@ -9,17 +9,20 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { ContentCard } from 'Landing/Components'
+import { ContentCard, Heading, Paragraph } from 'Landing/Components'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Blog = () => {
   return (
     <ContentCard backTitle='Blog' catchBoundary='blog'>
-      <h1>Blog</h1>
+      <div className='space-y-2 px-4 md:px-12'>
+        <Heading>Blog</Heading>
+        <Paragraph>My research findings and thoughts on various topics.</Paragraph>
+      </div>
     </ContentCard>
   )
 }
 
-export const Route = createFileRoute('/blog')({
+export const Route = createFileRoute('/blog/')({
   component: Blog
 })

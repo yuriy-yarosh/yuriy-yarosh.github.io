@@ -9,7 +9,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { ContentCard } from 'Landing/Components'
+import { ContentCard, Heading, Paragraph } from 'Landing/Components'
 import { default as EventsSchedule, type Event as ScheduledEvent } from 'Landing/Events'
 import { createFileRoute } from '@tanstack/react-router'
 
@@ -30,7 +30,7 @@ export const Events = () => {
   return (
     <ContentCard backTitle='Events' catchBoundary='events'>
       <nav className='flex flex-col'>
-        <h3 className='pb-3 font-bold text-lg'>Upcoming Events</h3>
+        <Heading>Upcoming Events</Heading>
         {planned.length > 0 && (
           <ul className='space-y-4'>
             {planned.map((e) => (
@@ -39,11 +39,11 @@ export const Events = () => {
           </ul>
         )}
 
-        {planned.length > 0 || <p>None scheduled</p>}
+        {planned.length > 0 || <Paragraph>None scheduled</Paragraph>}
       </nav>
 
       <nav>
-        {past.length > 0 || <h3 className='mb-3 font-bold text-xl'>Past Events</h3>}
+        {past.length > 0 || <Heading>Past Events</Heading>}
         {past.length > 0 && (
           <ul className='space-y-2'>
             <li></li>

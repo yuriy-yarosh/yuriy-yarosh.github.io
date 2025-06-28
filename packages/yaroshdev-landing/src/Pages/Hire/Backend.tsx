@@ -9,17 +9,28 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { ContentCard } from 'Landing/Components'
+import { ContentCard, Heading, Paragraph } from 'Landing/Components'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const HireBackend = () => {
   return (
-    <ContentCard backTitle='Backend' catchBoundary='backend'>
-      <h1>Backend</h1>
+    <ContentCard catchBoundary='backend'>
+      <div className='space-y-2 px-4 md:px-12'>
+        <Heading>Backend</Heading>
+        <Paragraph>Backend practices:</Paragraph>
+        <ul className='space-y-2'>
+          <li>Microservices architecture</li>
+          <li>Containerization with Docker</li>
+          <li>CI/CD pipelines</li>
+          <li>Monitoring and logging</li>
+          <li>Database design and optimization</li>
+          <li>Security</li>
+        </ul>
+      </div>
     </ContentCard>
   )
 }
 
-export const Route = createFileRoute('/backend')({
+export const Route = createFileRoute('/hire/backend')({
   component: HireBackend
 })

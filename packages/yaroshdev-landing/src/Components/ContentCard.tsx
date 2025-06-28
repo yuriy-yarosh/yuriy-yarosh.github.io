@@ -20,7 +20,7 @@ export const ContentCard = ({
   catchBoundary = 'content',
   children
 }: {
-  backTitle: string
+  backTitle?: string
   catchBoundary: string
   children: React.ReactNode[] | React.ReactNode
 }) => {
@@ -40,12 +40,12 @@ export const ContentCard = ({
 
   return (
     <CatchBoundary getResetKey={() => catchBoundary} onCatch={(error) => console.error(error)}>
-      <article className='flex min-h-[calc(100vh-190px)] cursor-default flex-col p-4 md:p-6 lg:p-8 xl:flex-row xl:p-12 '>
+      <article className='flex min-h-[calc(100vh-190px)] cursor-default flex-col p-2 sm:p-4 md:p-6 lg:p-8 xl:flex-row xl:p-12 '>
         <div className='flex h-full lg:pr-4 2xl:pr-8'>
           <NavigateBack title={backTitle} />
         </div>
         <div
-          className={`xl:-mt-5 mt-8 flex min-h-[calc(100vh-250px)] w-full flex-col rounded-3xl bg-card-background p-8 text-content transition-opacity duration-1000 md:min-h-[calc(100vh-280px)] lg:min-h-[calc(100vh-280px)] xl:w-[calc(8/12*100%+16px)] 2xl:w-[calc(9/12*100%-50px)] ${
+          className={`xl:-mt-5 mt-8 flex min-h-[calc(100vh-250px)] w-full flex-col rounded-3xl bg-card-background p-2 py-6 text-content transition-opacity duration-1000 md:min-h-[calc(100vh-280px)] md:p-4 lg:min-h-[calc(100vh-280px)] lg:p-8 lg:py-12 xl:w-[calc(8/12*100%+16px)] 2xl:w-[calc(9/12*100%-50px)] ${
             isDark ? 'backdrop-blur-2xl' : 'backdrop-blur-xl'
           } ${visible ? 'opacity-100' : 'opacity-0'}`}>
           {children}

@@ -20,7 +20,7 @@ export const Route = createRootRoute({
     const { colors } = useColors()
 
     document.title = getTitleFor(routerState.location.pathname)
-    document.body.style = `background-color: ${colors.rgb.primary}`
+    document.body.style.backgroundColor = colors.rgb.primary
 
     const year = new Date().getFullYear()
     return (

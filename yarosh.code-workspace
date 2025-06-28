@@ -9,10 +9,6 @@
       "path": "packages/yaroshdev-architecture"
     },
     {
-      "name": "✍️ Blog",
-      "path": "packages/yaroshdev-blog"
-    },
-    {
       "name": "🛬 Landing",
       "path": "packages/yaroshdev-landing"
     }
@@ -63,6 +59,7 @@
       "CHRM",
       "Chrom",
       "CIELAB",
+      "CRNA",
       "cyclonedx",
       "dependi",
       "edtech",
@@ -82,6 +79,7 @@
       "tsrouter",
       "TTFB",
       "yarosh",
+      "Yarosh",
       "yaroshdev",
       "Yuriy"
     ],
