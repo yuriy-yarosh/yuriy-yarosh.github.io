@@ -66,7 +66,7 @@ export const HireResearch = () => {
                 <ResearchLink to='https://www.intel.com/content/www/us/en/develop/tools/vtune-profiler.html' external>
                   VTune
                 </ResearchLink>
-                ,
+                ,{' '}
                 <ResearchLink to='https://www.amd.com/en/developer/uprof.html' external>
                   uProf
                 </ResearchLink>
@@ -160,17 +160,6 @@ export const HireResearch = () => {
                   JAX
                 </ResearchLink>
                 , and distributed training infrastructure
-              </li>
-              <li>
-                📶 <strong>MLOps for Research</strong> with{' '}
-                <ResearchLink to='https://mlflow.org/' external>
-                  MLflow
-                </ResearchLink>
-                ,{' '}
-                <ResearchLink to='https://wandb.ai/' external>
-                  Weights & Biases
-                </ResearchLink>
-                , experiment tracking, and model versioning
               </li>
               <li>
                 📚 <strong>Natural Language Processing</strong> with{' '}

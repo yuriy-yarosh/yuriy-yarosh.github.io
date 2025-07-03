@@ -19,7 +19,7 @@ export const HireEmbedded = () => {
     <ContentCard catchBoundary='embedded' to='/hire' from='/hire/embedded'>
       <div className='space-y-2 px-4 md:px-12'>
         <Heading>Embedded</Heading>
-        <Paragraph className='mt-4 lg:mt-8'>I specialize in modern embedded systems development with Rust, real-time operating systems, and IoT protocols:</Paragraph>
+        <Paragraph className='mt-4 lg:mt-8'>I develop modern embedded systems with Rust, real-time operating systems, and energy-efficient IoT protocols:</Paragraph>
 
         <div className='mt-4 space-y-4 lg:mt-8'>
           <div>
@@ -100,11 +100,11 @@ export const HireEmbedded = () => {
                 for device management and service enablement
               </li>
               <li>
-                📊 Prefer modern protocols over traditional{' '}
+                📊 Prefer MQTT-SN and CoAP over traditional{' '}
                 <EmbeddedLink to='https://en.wikipedia.org/wiki/MQTT' external>
                   MQTT
                 </EmbeddedLink>{' '}
-                for better performance and security
+                for better performance and energy efficiency
               </li>
             </ul>
           </div>
@@ -114,9 +114,9 @@ export const HireEmbedded = () => {
             <ul className='m-2 space-y-2 text-sm md:m-4 md:text-base'>
               <li>💻 ARM Cortex-M and Cortex-A series microcontrollers and processors</li>
               <li>⚡ RISC-V architecture for open-source hardware platforms</li>
-              <li>📶 ESP32/ESP8266 for WiFi and Bluetooth connectivity</li>
-              <li>🔌 STM32, Nordic nRF, and Raspberry Pi Pico development</li>
-              <li>📊 FPGA integration with soft-core processors</li>
+              <li>📶 Nordic nRF series for NB-IoT, LTE-M, NTN, WiFi and Bluetooth connectivity</li>
+              <li>🔌 STM32 for cost-effective development</li>
+              <li>📊 AMD/Intel and Lattice FPGA integration for custom hardware acceleration</li>
             </ul>
           </div>
 
@@ -136,16 +136,11 @@ export const HireEmbedded = () => {
             <ul className='m-2 space-y-2 text-sm md:m-4 md:text-base'>
               <li>🔒 Secure boot, cryptographic hardware acceleration, and TrustZone</li>
               <li>🛡️ Memory protection units (MPU) and privilege separation</li>
-              <li>🔐 Over-the-air (OTA) updates with cryptographic verification</li>
-              <li>⚠️ Functional safety standards (ISO 26262, IEC 61508) compliance</li>
+              <li>🔐 Over-the-air (OTA) updates with cryptographic verification via TUF framework</li>
+              <li>⚠️ Functional safety standards (ISO 26262, ISO 13849, IEC 61508) compliance</li>
             </ul>
           </div>
         </div>
-
-        <Paragraph className='mt-6 text-secondary-accent text-sm'>
-          Also check out my expertise in <EmbeddedLink to='/hire/drivers'>Device Drivers</EmbeddedLink>, <EmbeddedLink to='/hire/highload'>Highload Applications</EmbeddedLink>, and{' '}
-          <EmbeddedLink to='/hire/simulation'>Simulation & Modeling</EmbeddedLink>.
-        </Paragraph>
       </div>
     </ContentCard>
   )

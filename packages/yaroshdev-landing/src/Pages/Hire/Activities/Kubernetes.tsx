@@ -20,15 +20,15 @@ export const HireKubernetes = () => {
       <div className='space-y-2 px-4 md:px-12'>
         <Heading>Kubernetes Consulting and Training</Heading>
         <Paragraph className='mt-4 lg:mt-8'>
-          Comprehensive Kubernetes consulting services delivering cloud-native architecture, container orchestration, and production-ready cluster management. Solutions are built
-          on proven{' '}
-          <KubernetesLink to='https://github.com/yuriy-yarosh/reference-cloud-native-architecture' external>
+          I provide comprehensive Kubernetes consulting and development services, delivering cloud-native architecture, container orchestration, and production-ready cluster
+          management. Solutions are built on proven{' '}
+          <KubernetesLink to='https://github.com/yuriy-yarosh/architecture' external>
             Reference Cloud Native Architecture (RCNA)
           </KubernetesLink>{' '}
           framework that standardizes enterprise-grade Kubernetes deployments across multi-cloud environments.
         </Paragraph>
 
-        <div className='space-y-4'>
+        <div className='mt-4 space-y-4 lg:mt-8'>
           <div>
             <Paragraph className='font-semibold text-lg'>Reference Cloud Native Architecture (RCNA)</Paragraph>
             <ul className='m-2 space-y-2 text-sm md:m-4 md:text-base'>

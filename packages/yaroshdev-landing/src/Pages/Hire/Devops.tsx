@@ -20,9 +20,9 @@ export const HireDevOps = () => {
       <div className='space-y-2 px-4 md:px-12'>
         <Heading>DevOps</Heading>
         <Paragraph className='mt-4 lg:mt-8'>
-          Comprehensive DevOps solutions delivering automated infrastructure management, cloud-native deployments, and continuous integration pipelines. This approach combines
-          Infrastructure as Code principles, container orchestration, and observability practices to build scalable, reliable, and secure development workflows that accelerate
-          delivery while maintaining operational excellence.
+          Provide comprehensive DevOps solutions, delivering automated infrastructure management, cloud-native deployments, and continuous integration pipelines. My approach
+          combines Infrastructure as Code principles, container orchestration, and observability practices to build scalable, reliable, and secure development workflows
+          accelerating delivery while maintaining operational excellence.
         </Paragraph>
       </div>
     </ContentCard>

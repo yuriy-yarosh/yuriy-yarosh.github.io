@@ -104,8 +104,16 @@ export const HireHighload = () => {
                   perf
                 </HighloadLink>
                 ,{' '}
-                <HighloadLink to='https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler.html' external>
-                  Intel VTune
+                <HighloadLink to='https://www.intel.com/content/www/us/en/develop/tools/vtune-profiler.html' external>
+                  VTune
+                </HighloadLink>
+                ,{' '}
+                <HighloadLink to='https://www.amd.com/en/developer/uprof.html' external>
+                  uProf
+                </HighloadLink>
+                ,{' '}
+                <HighloadLink to='https://developer.nvidia.com/nsight-systems' external>
+                  Nsight
                 </HighloadLink>
                 , and{' '}
                 <HighloadLink to='https://github.com/KDAB/hotspot' external>
@@ -146,11 +154,6 @@ export const HireHighload = () => {
             </ul>
           </div>
         </div>
-
-        <Paragraph className='mt-6 text-secondary-accent text-sm'>
-          Also check out my expertise in <HighloadLink to='/hire/backend'>Backend Development</HighloadLink>, <HighloadLink to='/hire/embedded'>Embedded Systems</HighloadLink>, and{' '}
-          <HighloadLink to='/hire/devops'>DevOps practices</HighloadLink>.
-        </Paragraph>
       </div>
     </ContentCard>
   )

@@ -65,21 +65,7 @@ export const HireDatabases = () => {
                 <DatabasesLink to='https://www.scylladb.com/' external>
                   ScyllaDB
                 </DatabasesLink>{' '}
-                for ultra-low latency and high-performance NoSQL operations
-              </li>
-              <li>
-                📊 <strong>DynamoDB</strong> with{' '}
-                <DatabasesLink to='https://aws.amazon.com/dynamodb/' external>
-                  AWS DynamoDB
-                </DatabasesLink>{' '}
-                for serverless, fully managed NoSQL at scale
-              </li>
-              <li>
-                🔍 <strong>Elasticsearch</strong> with{' '}
-                <DatabasesLink to='https://www.elastic.co/' external>
-                  Elasticsearch
-                </DatabasesLink>{' '}
-                for full-text search, analytics, and observability
+                for ultra-low latency and high-performance NoSQL operations, as a cost-effective replacement for DynamoDB
               </li>
             </ul>
           </div>
@@ -105,14 +91,7 @@ export const HireDatabases = () => {
                 </DatabasesLink>{' '}
                 as a high-performance Kafka-compatible streaming platform
               </li>
-              <li>
-                ☁️ <strong>AWS Kinesis</strong> with{' '}
-                <DatabasesLink to='https://aws.amazon.com/kinesis/' external>
-                  AWS Kinesis
-                </DatabasesLink>{' '}
-                for real-time data streaming and analytics
-              </li>
-              <li>📊 Stream processing with Kafka Streams, Apache Flink, and ksqlDB</li>
+              <li>📊 Stream processing with Apache Flink and Apache Datafusion</li>
             </ul>
           </div>
 
@@ -120,27 +99,22 @@ export const HireDatabases = () => {
             <Paragraph className='font-semibold text-lg'>Time Series & Analytics</Paragraph>
             <ul className='m-2 space-y-2 text-sm md:m-4 md:text-base'>
               <li>
-                📈 <strong>InfluxDB</strong> with{' '}
-                <DatabasesLink to='https://www.influxdata.com/' external>
-                  InfluxDB
-                </DatabasesLink>{' '}
-                for high-performance time series data storage
+                📈 <strong>CitusDB</strong> - PostgreSQL-based distributed time series analytics and horizontal scaling
               </li>
               <li>
-                📊 <strong>TimescaleDB</strong> with{' '}
-                <DatabasesLink to='https://www.timescale.com/' external>
-                  TimescaleDB
+                ⚡ <strong>Stream Processing</strong> - Custom analytics pipelines with{' '}
+                <DatabasesLink to='https://flink.apache.org/' external>
+                  Apache Flink
                 </DatabasesLink>{' '}
-                for PostgreSQL-based time series analytics
+                and{' '}
+                <DatabasesLink to='https://arrow.apache.org/datafusion/' external>
+                  Apache DataFusion
+                </DatabasesLink>{' '}
+                for real-time data processing
               </li>
               <li>
-                🔍 <strong>ClickHouse</strong> with{' '}
-                <DatabasesLink to='https://clickhouse.com/' external>
-                  ClickHouse
-                </DatabasesLink>{' '}
-                for real-time analytical data processing
+                📊 <strong>Data Warehousing</strong> - OLAP cubes, dimensional modeling, and business intelligence pipelines
               </li>
-              <li>📊 OLAP cubes, data warehousing, and business intelligence pipelines</li>
             </ul>
           </div>
 
@@ -148,22 +122,7 @@ export const HireDatabases = () => {
             <Paragraph className='font-semibold text-lg'>Graph & Vector Databases</Paragraph>
             <ul className='m-2 space-y-2 text-sm md:m-4 md:text-base'>
               <li>
-                🔗 <strong>Neo4j</strong> with{' '}
-                <DatabasesLink to='https://neo4j.com/' external>
-                  Neo4j
-                </DatabasesLink>{' '}
-                for complex relationship modeling and graph analytics
-              </li>
-              <li>
-                🤖 <strong>Vector Databases</strong> with{' '}
-                <DatabasesLink to='https://www.pinecone.io/' external>
-                  Pinecone
-                </DatabasesLink>
-                ,{' '}
-                <DatabasesLink to='https://weaviate.io/' external>
-                  Weaviate
-                </DatabasesLink>
-                , or{' '}
+                🤖 <strong>Custom Vector Databases</strong> or just{' '}
                 <DatabasesLink to='https://github.com/pgvector/pgvector' external>
                   pgvector
                 </DatabasesLink>{' '}
@@ -184,7 +143,6 @@ export const HireDatabases = () => {
                 and Event Sourcing patterns
               </li>
               <li>🔄 Database per service pattern for microservices architectures</li>
-              <li>📊 Polyglot persistence: choosing the right database for each use case</li>
               <li>⚡ Read replicas, sharding, and horizontal scaling strategies</li>
             </ul>
           </div>
@@ -208,15 +166,11 @@ export const HireDatabases = () => {
               <li>🔍 Query optimization, execution plan analysis, and index tuning</li>
               <li>📊 Connection pooling, caching strategies, and read/write splitting</li>
               <li>⚡ Database profiling, slow query analysis, and performance benchmarking</li>
-              <li>🔧 Schema design, normalization vs. denormalization trade-offs</li>
+              <li>🔧 Scalable schema designs with managed denormalization</li>
+              <li>🚀 Custom High-performance database engines with custom storage engines and FPGA acceleration</li>
             </ul>
           </div>
         </div>
-
-        <Paragraph className='mt-6 text-secondary-accent text-sm'>
-          Also check out my expertise in <DatabasesLink to='/hire/backend'>Backend Development</DatabasesLink>, <DatabasesLink to='/hire/devops'>DevOps practices</DatabasesLink>,
-          and <DatabasesLink to='/hire/highload'>Highload Systems</DatabasesLink>.
-        </Paragraph>
       </div>
     </ContentCard>
   )

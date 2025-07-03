@@ -9,13 +9,17 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { ContentCard } from 'Landing/Components'
+import { ContentCard, Heading, Paragraph } from 'Landing/Components'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const HireShift = () => {
   return (
     <ContentCard backTitle='Shift' catchBoundary='shift' to='/' from='/shift'>
-      <h1>Shift</h1>
+      <div className='space-y-2 px-4 md:px-12 lg:space-y-4'>
+        <Heading>Shift</Heading>
+        <Paragraph className='font-secondary-title text-xl md:text-4xl'>TBD</Paragraph>
+        <Paragraph>We'll see when I'll be able to share more details...</Paragraph>
+      </div>
     </ContentCard>
   )
 }

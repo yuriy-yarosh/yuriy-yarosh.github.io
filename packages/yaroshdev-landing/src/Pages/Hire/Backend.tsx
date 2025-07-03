@@ -20,8 +20,8 @@ export const HireBackend = () => {
       <div className='space-y-2 px-4 md:px-12'>
         <Heading>Backend</Heading>
         <Paragraph className='mt-4 lg:mt-8'>
-          Comprehensive backend development solutions, delivering robust and scalable systems. Built with modern languages and frameworks to handle complex business logic, data
-          processing, and API integrations with reliability and performance.
+          Provide comprehensive backend development solutions, and consulting services, delivering robust and scalable systems. Built with modern languages and frameworks to handle
+          complex business logic, data processing, and API integrations with reliability and performance.
         </Paragraph>
 
         <div className='mt-4 space-y-4 lg:mt-8'>
