@@ -43,7 +43,7 @@ export const HireAzure = () => {
                 , and{' '}
                 <AzureLink to='https://docs.microsoft.com/azure/templates/' external>
                   ARM Templates
-                </AzureLink>
+                </AzureLink>{' '}
                 for declarative infrastructure
               </li>
               <li>
