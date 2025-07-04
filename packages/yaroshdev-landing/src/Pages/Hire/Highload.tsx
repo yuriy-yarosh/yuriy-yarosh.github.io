@@ -12,7 +12,8 @@
 import { ContentCard, ContentLink, Heading, Paragraph } from 'Landing/Components'
 import { createFileRoute } from '@tanstack/react-router'
 
-export const HighloadLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) => ContentLink({ ...params, from: '/hire/highload' })
+export const HighloadLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) =>
+  ContentLink({ ...params, from: '/hire/highload', underline: true })
 
 export const HireHighload = () => {
   return (

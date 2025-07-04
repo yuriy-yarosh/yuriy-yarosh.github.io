@@ -12,7 +12,8 @@
 import { ContentCard, ContentLink, Heading, Paragraph } from 'Landing/Components'
 import { createFileRoute } from '@tanstack/react-router'
 
-const SecurityLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) => ContentLink({ ...params, from: '/hire/security' })
+const SecurityLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) =>
+  ContentLink({ ...params, from: '/hire/security', underline: true })
 
 export const HireSecurity = () => {
   return (

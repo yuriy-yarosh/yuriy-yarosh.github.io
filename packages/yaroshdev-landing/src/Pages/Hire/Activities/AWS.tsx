@@ -12,7 +12,7 @@
 import { ContentCard, ContentLink, Heading, Paragraph } from 'Landing/Components'
 import { createFileRoute } from '@tanstack/react-router'
 
-const AWSLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) => ContentLink({ ...params, from: '/hire/aws' })
+const AWSLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) => ContentLink({ ...params, from: '/hire/aws', underline: true })
 
 export const HireAWS = () => {
   return (

@@ -12,7 +12,8 @@
 import { ContentCard, ContentLink, Heading, Paragraph } from 'Landing/Components'
 import { createFileRoute } from '@tanstack/react-router'
 
-const ArchitectureLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) => ContentLink({ ...params, from: '/hire/architecture' })
+const ArchitectureLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) =>
+  ContentLink({ ...params, from: '/hire/architecture', underline: true })
 
 export const HireArchitecture = () => {
   return (

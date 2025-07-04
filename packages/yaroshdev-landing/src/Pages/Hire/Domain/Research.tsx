@@ -12,7 +12,8 @@
 import { ContentCard, ContentLink, Heading, Paragraph } from 'Landing/Components'
 import { createFileRoute } from '@tanstack/react-router'
 
-const ResearchLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) => ContentLink({ ...params, from: '/hire/research' })
+const ResearchLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) =>
+  ContentLink({ ...params, from: '/hire/research', underline: true })
 
 export const HireResearch = () => {
   return (

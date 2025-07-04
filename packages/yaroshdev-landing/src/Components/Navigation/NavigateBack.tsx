@@ -31,7 +31,6 @@ const ArrowIcon = ({ title = 'Back' }: { title?: string }) => (
   </svg>
 )
 
-
 const Arrow = ({ title }: { title?: string }) => (
   <span className='-left-4 md:-left-6 lg:-left-8 xl:-left-10 2xl:-left-12 absolute'>
     <ArrowIcon title={title || 'Back'} />

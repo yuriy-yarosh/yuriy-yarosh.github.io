@@ -36,7 +36,7 @@ jobs:
         run: |
           cd packages/yaroshdev-landing
           corepack enable
-          corepack yarn build
+          NODE_ENV=production corepack yarn build
 
       - name: Upload artifact
         id: upload

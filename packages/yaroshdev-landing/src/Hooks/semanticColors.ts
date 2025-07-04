@@ -161,7 +161,7 @@ export const generateSemanticColors = (rgbColor: readonly [number, number, numbe
 
   // Calculate accent first
   const accent: LabColor = {
-    l: isDark ? Math.min(85, textL + 20) : Math.max(40, textL - 25),
+    l: isDark ? Math.min(85, textL + 20) : Math.max(30, textL - 25),
     a: primary.a * (isDark ? 0.8 : 0.4),
     b: primary.b * (isDark ? 0.8 : 0.4),
     alpha: isDark ? 0.9 : 1.0

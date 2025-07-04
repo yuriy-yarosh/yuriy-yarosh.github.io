@@ -18,7 +18,7 @@ import { twMerge } from 'tailwind-merge'
 export const HiringLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) => ContentLink({ ...params, from: '/hire' })
 
 export const TechStackLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) =>
-  HiringLink({ ...params, className: twMerge(`text-secondary-accent underline hover:border-transparent hover:no-underline`, params.className) })
+  HiringLink({ ...params, className: twMerge(`text-accent underline hover:border-transparent hover:no-underline`, params.className) })
 
 const ElaboratePolitics = ({ full, onClick }: { full?: boolean; onClick?: () => void }) => {
   if (!full)
@@ -83,24 +83,24 @@ export const Hire = () => {
               🎨 <HiringLink to='frontend'>Frontend</HiringLink>{' '}
               {techDetailsVisible && (
                 <>
-                  <span className='text-secondary-accent md:text-lg'>(duh) in </span>
+                  <span className='text-accent md:text-lg'>(duh) in </span>
                   <span className='md:text-lg'>
                     <TechStackLink to='https://react.dev/' external>
                       React
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'>, </span>
+                    <span className='text-accent md:text-lg'>, </span>
                     <TechStackLink to='https://tailwindcss.com/' external>
                       TailwindCSS
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'>, </span>
+                    <span className='text-accent md:text-lg'>, </span>
                     <TechStackLink to='https://trpc.io/' external>
                       tRPC
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'> and </span>
+                    <span className='text-accent md:text-lg'> and </span>
                     <TechStackLink to='https://tanstack.com/' external>
                       TanStack
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'> libraries.</span>
+                    <span className='text-accent md:text-lg'> libraries.</span>
                   </span>
                   <p className='mt-2 text-sm'>Well versed in Angular, Vue, Svelte, Astro and other frameworks, as well, but prefer React</p>
                   <p className='mt-2 text-sm'>
@@ -116,17 +116,17 @@ export const Hire = () => {
               🏗️ <HiringLink to='backend'>Backend</HiringLink>
               {techDetailsVisible && (
                 <>
-                  <span className='text-secondary-accent md:text-lg'> in </span>
+                  <span className='text-accent md:text-lg'> in </span>
                   <span className='md:text-lg'>
-                    <span className='text-secondary-accent md:text-lg'>Go </span>
+                    <span className='text-accent md:text-lg'>Go </span>
                     <TechStackLink to='https://gofiber.io/' external>
                       Fiber
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'>, Rust </span>
+                    <span className='text-accent md:text-lg'>, Rust </span>
                     <TechStackLink to='https://github.com/tokio-rs/axum' external>
                       Axum
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'>
+                    <span className='text-accent md:text-lg'>
                       ,{' '}
                       <TechStackLink to='https://typelevel.org/' external>
                         Typelevel
@@ -136,19 +136,19 @@ export const Hire = () => {
                     <TechStackLink to='https://http4s.org/' external>
                       Http4S
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'>, Python </span>
+                    <span className='text-accent md:text-lg'>, Python </span>
                     <TechStackLink to='https://fastapi.tiangolo.com/' external>
                       FastAPI
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'> and TypeScript </span>
+                    <span className='text-accent md:text-lg'> and TypeScript </span>
                     <TechStackLink to='https://hono.dev/' external>
                       Hono
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'>, </span>
+                    <span className='text-accent md:text-lg'>, </span>
                     <TechStackLink to='https://nitro.build/' external>
                       Nitro
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'>.</span>
+                    <span className='text-accent md:text-lg'>.</span>
                   </span>
                   <p className='mt-2 text-sm'>Had some XP with almost every popular language, stack and framework.</p>
                   <p className='mt-1 text-sm'>Prefer TypeScript Node.js and Bun, Rust and Go, occasional Python for ML inference.</p>
@@ -171,27 +171,27 @@ export const Hire = () => {
               ⚙️ <HiringLink to='devops'>DevOps</HiringLink>
               {techDetailsVisible && (
                 <>
-                  <span className='text-secondary-accent md:text-lg'> with </span>
+                  <span className='text-accent md:text-lg'> with </span>
                   <TechStackLink to='https://www.terraform.io/' className='text-sm md:text-lg' external>
                     Terraform
                   </TechStackLink>
-                  <span className='text-secondary-accent md:text-lg'> / </span>
+                  <span className='text-accent md:text-lg'> / </span>
                   <TechStackLink to='https://opentofu.org/' className='text-sm md:text-lg' external>
                     OpenTofu
                   </TechStackLink>
-                  <span className='text-secondary-accent md:text-lg'>, </span>
+                  <span className='text-accent md:text-lg'>, </span>
                   <TechStackLink to='https://github.com/Azure/bicep' className='text-sm md:text-lg' external>
                     Azure Bicep
                   </TechStackLink>
-                  <span className='text-secondary-accent md:text-lg'>, </span>
+                  <span className='text-accent md:text-lg'>, </span>
                   <TechStackLink to='https://github.com/aws/aws-cdk' className='text-sm md:text-lg' external>
                     AWS CDK
                   </TechStackLink>
-                  <span className='text-secondary-accent md:text-lg'>, </span>
+                  <span className='text-accent md:text-lg'>, </span>
                   <TechStackLink to='https://cdk8s.io/' className='text-sm md:text-lg' external>
                     CDK8S
                   </TechStackLink>
-                  <span className='text-secondary-accent md:text-lg'>, </span>
+                  <span className='text-accent md:text-lg'>, </span>
                   <TechStackLink to='https://github.com/hashicorp/terraform-cdk' className='text-sm md:text-lg' external>
                     CDKTF
                   </TechStackLink>
@@ -204,20 +204,20 @@ export const Hire = () => {
               🤖 <HiringLink to='ml'>Machine Learning</HiringLink>
               {techDetailsVisible && (
                 <>
-                  <span className='text-secondary-accent md:text-lg'> in </span>
+                  <span className='text-accent md:text-lg'> in </span>
                   <span className='md:text-lg'>
                     <TechStackLink to='https://www.ray.io/' external>
                       Ray
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'>, </span>
+                    <span className='text-accent md:text-lg'>, </span>
                     <TechStackLink to='https://jax.readthedocs.io/en/latest/' external>
                       Google Jax
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'>, </span>
+                    <span className='text-accent md:text-lg'>, </span>
                     <TechStackLink to='https://pytorch.org/' external>
                       PyTorch
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'> and </span>
+                    <span className='text-accent md:text-lg'> and </span>
                     <TechStackLink to='https://developer.nvidia.com/warp-python' external>
                       Nvidia Warp
                     </TechStackLink>
@@ -232,23 +232,23 @@ export const Hire = () => {
               {techDetailsVisible && (
                 <>
                   <span className='md:text-lg'>
-                    <span className='text-secondary-accent md:text-lg'> in </span>
+                    <span className='text-accent md:text-lg'> in </span>
                     <TechStackLink to='https://prototype-kernel.readthedocs.io/en/latest/networking/XDP/' external>
                       XDP
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'> or </span>
+                    <span className='text-accent md:text-lg'> or </span>
                     <TechStackLink to='https://www.dpdk.org/' external>
                       DPDK
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'>/</span>
+                    <span className='text-accent md:text-lg'>/</span>
                     <TechStackLink to='https://www.spdk.io/' external>
                       SPDK
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'>, C++17 </span>
+                    <span className='text-accent md:text-lg'>, C++17 </span>
                     <TechStackLink to='https://seastar.io/' external>
                       Seastar
                     </TechStackLink>
-                    <span className='text-secondary-accent md:text-lg'> or Rust </span>
+                    <span className='text-accent md:text-lg'> or Rust </span>
                     <TechStackLink to='https://libos-nuse.github.io/' external>
                       libos
                     </TechStackLink>
@@ -278,7 +278,7 @@ export const Hire = () => {
             </li>
             <li>
               🧩 <HiringLink to='embedded'>Embedded</HiringLink>
-              <span className='text-lg text-secondary-accent'> and </span>
+              <span className='text-accent text-lg'> and </span>
               <HiringLink to='drivers'>Device Drivers</HiringLink>
               {techDetailsVisible && (
                 <>
@@ -339,9 +339,9 @@ export const Hire = () => {
               🧪 <HiringLink to='simulation'>Simulation Intelligence</HiringLink>
               {techDetailsVisible && (
                 <>
-                  <span className='text-lg text-secondary-accent'> in </span>
+                  <span className='text-accent text-lg'> in </span>
                   <HiringLink to='cae'>Computer Aided Engineering</HiringLink>
-                  <span className='text-lg text-secondary-accent'> (CAE)</span>
+                  <span className='text-accent text-lg'> (CAE)</span>
                   <p className='mt-2 text-sm'>Have some basic understanding in statistical physics and thermodynamics.</p>
                   <p className='mt-2 text-sm'>
                     Applied trendy methods, like{' '}
@@ -443,7 +443,7 @@ export const Hire = () => {
             <HiringLink to='kubernetes'>Kubernetes</HiringLink> application development and operations.
           </Paragraph>
           <Paragraph>
-            <span className='text-secondary-accent'>⚡ In short:</span> I&#39;m significantly overqualified for most positions currently advertised in the market.
+            <span className='text-accent'>⚡ In short:</span> I&#39;m significantly overqualified for most positions currently advertised in the market.
           </Paragraph>
           <Paragraph>
             {' ❌ '}

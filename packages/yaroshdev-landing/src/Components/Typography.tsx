@@ -13,10 +13,24 @@ import { useAnimationState } from 'Landing/Hooks'
 import { Link } from '@tanstack/react-router'
 import { twMerge } from 'tailwind-merge'
 
-export const ContentLink = ({ className, to, from, children, external }: { className?: string; to: string; from: string; external?: boolean; children: React.ReactNode }) => {
+export const ContentLink = ({
+  className,
+  to,
+  from,
+  children,
+  external,
+  underline
+}: {
+  className?: string
+  to: string
+  from: string
+  external?: boolean
+  children: React.ReactNode
+  underline?: boolean
+}) => {
   const { pauseAnimation } = useAnimationState()
   const mergedClassName = twMerge(
-    `text-nowrap border-transparent border-b-1 text-accent transition duration-500 ease-in-out hover:animate-pulse hover:border-accent hover:drop-shadow-[0_1px_2px_var(--color-accent)] `,
+    `text-nowrap border-transparent border-b-1 text-accent transition duration-500 ease-in-out hover:animate-pulse hover:border-accent hover:drop-shadow-[0_1px_2px_var(--color-accent)] ${underline ? 'underline hover:border-transparent hover:no-underline' : ''}`,
     className
   )
 

@@ -44,8 +44,11 @@ const ssgPlugin = (): Plugin => {
 export default defineConfig({
   plugins: [tsconfigPaths(), tanstackRouter({ target: 'react', autoCodeSplitting: true }), viteReact(), tailwindcss(), ssgPlugin()],
   build: {
+    sourcemap: true,
     rollupOptions: {
       output: {
+        sourcemapBaseUrl: 'https://yarosh.dev',
+        sourcemapDebugIds: true,
         manualChunks: {
           react: ['react', 'react-dom'],
           'three-core': ['three'],

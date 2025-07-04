@@ -49,7 +49,13 @@ const App = () => {
 const rootElement = document.getElementById('app')!
 
 if (rootElement.hasChildNodes()) {
-  ReactDOM.hydrateRoot(rootElement, <App />)
+  try {
+    ReactDOM.hydrateRoot(rootElement, <App />)
+  } catch (err) {
+    console.warn("There's a known var font STAT table issue: https://github.com/google/fonts/issues/2391")
+    console.warn("There's a drei react regression, so we're currently skipping hydration")
+    console.warn('Hydration error:', err)
+  }
 } else {
   const root = ReactDOM.createRoot(rootElement)
   root.render(<App />)

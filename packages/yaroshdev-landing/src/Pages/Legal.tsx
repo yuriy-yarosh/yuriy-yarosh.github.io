@@ -42,6 +42,3 @@ export const Legal = () => {
 export const Route = createFileRoute('/legal')({
   component: Legal
 })
-
-
-

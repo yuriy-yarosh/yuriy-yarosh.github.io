@@ -49,8 +49,8 @@ const AnimationContext = createContext<AnimationContextType>({
   currentScene: ScenePage.Home,
   pauseAnimation: () => console.warn('AnimationProvider not found'),
   resumeAnimation: () => console.warn('AnimationProvider not found'),
-  animationClock: new THREE.Clock(),
-  continuousClock: new THREE.Clock(true)
+  animationClock: new THREE.Clock(false),
+  continuousClock: new THREE.Clock(false)
 })
 
 export const useAnimationState = () => useContext(AnimationContext)
@@ -60,10 +60,22 @@ export const AnimationProvider = ({ children }: { children: React.ReactNode }) =
   const [manualOverride, setManualOverride] = useState<boolean | null>(null)
   const prevPathnameRef = useRef(pathname)
 
-  const [clocks] = useState(() => ({
-    animation: new THREE.Clock(false),
-    continuous: new THREE.Clock(true)
-  }))
+  const [clocks] = useState(() => {
+    const isSSR = typeof window === 'undefined'
+    return {
+      animation: new THREE.Clock(false), // Always start paused
+      continuous: new THREE.Clock(!isSSR) // Paused during SSR, auto-start on client
+    }
+  })
+
+  // Start continuous clock on client-side after hydration
+  useEffect(() => {
+    const { continuous } = clocks
+    if (typeof window !== 'undefined' && !continuous.running) {
+      continuous.oldTime = performance.now()
+      continuous.running = true
+    }
+  }, [clocks])
 
   // Reset manual override on route change
   useEffect(() => {
