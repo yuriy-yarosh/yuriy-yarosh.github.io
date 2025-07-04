@@ -10,12 +10,13 @@
  */
 
 import { ContentCard, ContentLink, Heading, Paragraph } from 'Landing/Components'
+import { getCurrentTime } from 'Landing/Hooks'
 import { createFileRoute } from '@tanstack/react-router'
 
 const AboutLink = (params: { to: string; external?: boolean; className?: string; children: React.ReactNode }) => ContentLink({ ...params, from: '/about' })
 
 export const About = () => {
-  const yearNow = new Date().getFullYear()
+  const yearNow = getCurrentTime().getFullYear()
   const age = yearNow - 1991
   const xp = yearNow - 2008
 

@@ -142,12 +142,15 @@ const calculateSunDialResult = (now: Date): SunDialResult => {
   }
 }
 
+// SSG fix
+export const getCurrentTime = () => (typeof document !== 'undefined' ? new Date() : new Date('2025-07-04T12:00:00'))
+
 export const useSunDial = (): SunDialResult => {
-  const [currentTime, setCurrentTime] = useState(() => new Date())
+  const [currentTime, setCurrentTime] = useState(() => getCurrentTime())
 
   const result = useMemo(() => calculateSunDialResult(currentTime), [currentTime])
 
-  const updateTime = useCallback(() => setCurrentTime(new Date()), [])
+  const updateTime = useCallback(() => setCurrentTime(getCurrentTime()), [])
 
   useEffect(() => {
     // Update every 10 seconds for more responsive real-time updates

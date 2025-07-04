@@ -10,6 +10,7 @@
  */
 
 import { ContentCard, ContentLink, Heading, Paragraph } from 'Landing/Components'
+import { getCurrentTime } from 'Landing/Hooks'
 import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
@@ -36,10 +37,9 @@ const ElaboratePolitics = ({ full, onClick }: { full?: boolean; onClick?: () => 
 }
 
 export const Hire = () => {
-  const yearNow = new Date().getFullYear()
+  const yearNow = getCurrentTime().getFullYear()
   const age = yearNow - 1991
   const xp = yearNow - 2008
-
 
   const [techDetailsVisible, setTechDetailsVisible] = useState(false)
   const [politicsVisible, setPoliticsVisible] = useState(false)

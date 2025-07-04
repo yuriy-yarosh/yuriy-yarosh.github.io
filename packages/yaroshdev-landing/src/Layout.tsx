@@ -10,7 +10,7 @@
  */
 
 import { FacebookLink, FooterLink, GithubLink, LinkedInLink, NavbarHomeLink, TimeOfDay } from 'Landing/Components'
-import { useColors } from 'Landing/Hooks'
+import { getCurrentTime, useColors } from 'Landing/Hooks'
 import { getTitleFor } from 'Landing/Titles'
 import { createRootRoute, Outlet, useRouterState } from '@tanstack/react-router'
 
@@ -24,7 +24,7 @@ export const Route = createRootRoute({
       document.body.style.backgroundColor = colors.rgb.primary
     }
 
-    const year = new Date().getFullYear()
+    const year = getCurrentTime().getFullYear()
     return (
       <div className='relative z-1 mx-auto flex min-h-screen w-full min-w-[240px] max-w-[1920px] flex-col p-6 font-display text-content transition-all duration-100'>
         <header className='flex items-center justify-between pb-2 lg:pb-4'>
