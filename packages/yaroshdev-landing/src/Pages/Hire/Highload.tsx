@@ -19,7 +19,10 @@ export const HireHighload = () => {
     <ContentCard catchBoundary='highload' to='/hire' from='/hire/highload'>
       <div className='space-y-2 px-4 md:px-12'>
         <Heading>Highload</Heading>
-        <Paragraph className='mt-4 lg:mt-8'>I specialize in high-performance systems with kernel bypass, hardware acceleration, and ultra-low latency architectures:</Paragraph>
+        <Paragraph className='mt-4 lg:mt-8'>
+          Expert in high-performance systems development focused on building extremely fast applications that handle massive traffic and data processing. I optimize systems to
+          achieve microsecond response times using specialized hardware and advanced networking techniques.
+        </Paragraph>
 
         <div className='mt-4 space-y-4 lg:mt-8'>
           <div>

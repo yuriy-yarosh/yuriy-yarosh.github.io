@@ -21,8 +21,8 @@ export const HireFrontend = () => {
       <div className='space-y-2 px-4 md:px-12'>
         <Heading>Frontend</Heading>
         <Paragraph className='mt-4 lg:mt-8'>
-          Provide professional frontend development delivering modern and responsive user interfaces. Built with component-driven development approach, cutting-edge frameworks and
-          tools to create engaging user experiences with performance, accessibility, and maintainability in mind.
+          Expert frontend development services focused on building modern, responsive web applications. I create engaging user interfaces using the latest frameworks and best
+          practices to deliver fast, accessible, and maintainable solutions.
         </Paragraph>
 
         <div className='mt-4 space-y-4 lg:mt-8'>
