@@ -85,41 +85,41 @@ const posts: BlogPost[] = [
     href: '/blog/logistics',
     description: 'My experience with Embedded Logistics devices, demand tracking and demand prediction, governance and compliance automation.'
   },
-  {
-    id: '8',
-    title: 'Modern Control Theory',
-    href: '/blog/modern-control-theory',
-    status: 'Censored',
-    description: 'Applied Modern Control Theory for various Industrial applications.'
-  },
-  {
-    id: '9',
-    title: 'Simulation-Based System Optimization',
-    href: '/blog/simulation',
-    status: 'Censored',
-    description: 'Simulation intelligence in System Design, Modeling and Optimization.'
-  },
-  {
-    id: '10',
-    title: 'Self-Organizing Industrial Systems',
-    href: '/blog/self-organizing-control',
-    status: 'Censored',
-    description: 'Applied Self-Organizing Systems in Industrial Automation.'
-  },
-  {
-    id: '11',
-    title: 'AI in 5G and 6G Networks',
-    href: '/blog/ai-in-telecom',
-    status: 'Censored',
-    description: 'Applied AI in the current 5G Advanced and the next generation 6G Telecom applications.'
-  },
-  {
-    id: '12',
-    title: 'Advanced Telecom Technologies',
-    href: '/blog/telecom',
-    status: 'Censored',
-    description: '4G-Evo 5G-Advanced Telecom Applications and next-generation network capabilities.'
-  },
+  // {
+  //   id: '8',
+  //   title: 'Modern Control Theory',
+  //   href: '/blog/modern-control-theory',
+  //   status: 'Censored',
+  //   description: 'Applied Modern Control Theory for various Industrial applications.'
+  // },
+  // {
+  //   id: '9',
+  //   title: 'Simulation-Based System Optimization',
+  //   href: '/blog/simulation',
+  //   status: 'Censored',
+  //   description: 'Simulation intelligence in System Design, Modeling and Optimization.'
+  // },
+  // {
+  //   id: '10',
+  //   title: 'Self-Organizing Industrial Systems',
+  //   href: '/blog/self-organizing-control',
+  //   status: 'Censored',
+  //   description: 'Applied Self-Organizing Systems in Industrial Automation.'
+  // },
+  // {
+  //   id: '11',
+  //   title: 'AI in 5G and 6G Networks',
+  //   href: '/blog/ai-in-telecom',
+  //   status: 'Censored',
+  //   description: 'Applied AI in the current 5G Advanced and the next generation 6G Telecom applications.'
+  // },
+  // {
+  //   id: '12',
+  //   title: 'Advanced Telecom Technologies',
+  //   href: '/blog/telecom',
+  //   status: 'Censored',
+  //   description: '4G-Evo 5G-Advanced Telecom Applications and next-generation network capabilities.'
+  // },
   {
     id: '13',
     title: 'ML Model Code Generation',

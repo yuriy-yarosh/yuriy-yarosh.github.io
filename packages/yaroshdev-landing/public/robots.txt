@@ -1,11 +1,3 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Allow: /contacts
-Allow: /legal
-Disallow: /
-Disallow: /blog
-Disallow: /projects
-Disallow: /legal
-Disallow: /events
-Disallow: /hire
-Disallow: /about
+Allow: /

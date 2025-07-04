@@ -1,4 +1,5 @@
 #!/usr/bin/env tsx
+
 /*
  * Copyright (C) 2016-2025 Yuriy Yarosh
  * All rights reserved.
@@ -12,7 +13,52 @@
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
+import { createRouter as createTanstackRouter } from '@tanstack/react-router'
+import { createRequestHandler, RouterServer, renderRouterToString } from '@tanstack/react-router/ssr/server'
+import { StrictMode, useEffect, useState } from 'react'
+import { Scene } from './src/Components'
+import { AnimationProvider, ColorsProvider } from './src/Hooks'
+import { routeTree } from './src/routeTree.gen'
 import { getTitleFor } from './src/Titles'
+
+export function createRouter() {
+  return createTanstackRouter({ routeTree })
+}
+
+declare module '@tanstack/react-router' {
+  interface Register {
+    router: ReturnType<typeof createRouter>
+  }
+}
+
+const render = ({ request }: { request: Request }) =>
+  createRequestHandler({ request, createRouter })(({ responseHeaders, router }) => {
+    const App = () => {
+      const [isClient, setIsClient] = useState(false)
+
+      useEffect(() => {
+        setIsClient(true)
+      }, [])
+
+      return (
+        <StrictMode>
+          <AnimationProvider>
+            <ColorsProvider>
+              <div className='fixed inset-0 z-0 h-screen w-screen'>{isClient && <Scene />}</div>
+
+              <RouterServer router={router} />
+            </ColorsProvider>
+          </AnimationProvider>
+        </StrictMode>
+      )
+    }
+
+    return renderRouterToString({
+      responseHeaders,
+      router,
+      children: <App />
+    })
+  })
 
 interface RouteConfig {
   type: 'root' | 'route' | 'index'
@@ -71,8 +117,9 @@ const readTSRConfig = (configPath: string): TSRouterConfig => {
 }
 
 // Function to generate a single HTML file
-const generateHtmlFile = async (path: string, indexHtml: string, distPath: string): Promise<void> => {
-  const html = indexHtml.replace(/<title>.*<\/title>/g, `<title>${getTitleFor(path)}</title>`)
+const writeHtmlFile = async (path: string, indexHtml: string, htmlContent: string, distPath: string): Promise<void> => {
+  const html = indexHtml.replace(/<title>.*<\/title>/g, `<title>${getTitleFor(path)}</title>`).replace(/<div id="app">.*<\/div>/g, `<div id="app">${htmlContent}</div>`)
+
   const outputPath = path === '/' ? join(distPath, 'index.html') : join(distPath, path, 'index.html')
 
   if (!existsSync(dirname(outputPath))) {
@@ -88,17 +135,20 @@ const generateSSG = async (options: SSGOptions): Promise<void> => {
 
   const normalizeAndDeduplicatePaths = (paths: string[]): string[] => [...new Set(paths.map((p) => p.replace(/\/+/g, '/').replace(/\/$/, '') || '/'))].sort()
 
-  // Functional pipeline: read config -> extract paths -> normalize -> generate files
   const tsrConfig = readTSRConfig(configPath)
   const paths = normalizeAndDeduplicatePaths(extractRoutePaths(tsrConfig.virtualRouteConfig))
 
   const distPath = resolve(outputDir)
   const indexHtml = readFileSync(join(distPath, 'index.html'), 'utf-8')
 
-  // Parallel file generation with error handling
-  const results = await Promise.allSettled(paths.map((path) => generateHtmlFile(path, indexHtml, distPath)))
+  const results = await Promise.allSettled(
+    paths.map(async (p) => {
+      const resp = await render({ request: new Request(`http://localhost/${p}`) })
+      const htmlContent = (await resp.text()).replace(`<!DOCTYPE html>`, '')
+      writeHtmlFile(p, indexHtml, htmlContent, distPath)
+    })
+  )
 
-  // Log any failures
   results.forEach((result, index) => {
     if (result.status === 'rejected') {
       const path = paths[index]

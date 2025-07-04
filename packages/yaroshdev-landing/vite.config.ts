@@ -8,32 +8,32 @@ import type { Plugin } from 'vite'
 import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
-// Plugin to run SSG CLI after build
+// Plugin to run SSG after build
 const ssgPlugin = (): Plugin => {
   return {
-    name: 'ssg-cli',
+    name: 'ssg',
     apply: 'build',
     async closeBundle() {
-      console.log('🚀 Running SSG CLI...')
+      console.log('🚀 Running SSG...')
 
       return new Promise((resolve, reject) => {
-        const child = spawn('tsx', ['SSG.ts'], {
+        const child = spawn('tsx', ['SSG.tsx'], {
           stdio: 'inherit',
           cwd: process.cwd()
         })
 
         child.on('close', (code) => {
           if (code === 0) {
-            console.log('✅ SSG CLI completed successfully')
+            console.log('✅ SSG completed successfully')
             resolve()
           } else {
-            console.error(`❌ SSG CLI failed with code ${code}`)
-            reject(new Error(`SSG CLI process exited with code ${code}`))
+            console.error(`❌ SSG failed with code ${code}`)
+            reject(new Error(`SSG process exited with code ${code}`))
           }
         })
 
         child.on('error', (error) => {
-          console.error('❌ Failed to start SSG CLI:', error)
+          console.error('❌ Failed to start SSG:', error)
           reject(error)
         })
       })

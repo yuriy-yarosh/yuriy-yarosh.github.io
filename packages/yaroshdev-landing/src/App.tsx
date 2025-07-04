@@ -12,7 +12,7 @@
 import { Scene } from 'Landing/Components'
 import { AnimationProvider, ColorsProvider } from 'Landing/Hooks'
 import { createRouter, RouterProvider } from '@tanstack/react-router'
-import { StrictMode } from 'react'
+import { StrictMode, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 
 import { routeTree } from './routeTree.gen'
@@ -25,21 +25,32 @@ declare module '@tanstack/react-router' {
   }
 }
 
-// biome-ignore lint/style/noNonNullAssertion: <explanation>
-const rootElement = document.getElementById('app')!
-if (!rootElement.innerHTML) {
-  const root = ReactDOM.createRoot(rootElement)
-  root.render(
+const App = () => {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  return (
     <StrictMode>
       <AnimationProvider>
         <ColorsProvider>
-          <div className='fixed inset-0 z-0 h-screen w-screen'>
-            <Scene />
-          </div>
+          <div className='fixed inset-0 z-0 h-screen w-screen'>{isClient && <Scene />}</div>
 
           <RouterProvider router={router} />
         </ColorsProvider>
       </AnimationProvider>
     </StrictMode>
   )
+}
+
+// biome-ignore lint/style/noNonNullAssertion: doesn't really matter
+const rootElement = document.getElementById('app')!
+
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrateRoot(rootElement, <App />)
+} else {
+  const root = ReactDOM.createRoot(rootElement)
+  root.render(<App />)
 }
