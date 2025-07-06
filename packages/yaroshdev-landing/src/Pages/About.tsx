@@ -53,7 +53,9 @@ export const About = () => {
           <Paragraph>Terminating engineers for raising valid State Security and Corruption concerns is dysfunctional criminal negligence 🧹.</Paragraph>
           <Paragraph>Covering up system failures kills people.</Paragraph>
         </div>
-        <Paragraph className='mt-6 mb-4 md:mb-8'>I do not engage in any collaborations with russian-affiliated entities under any circumstances.</Paragraph>
+        <Paragraph className='mt-6 mb-4 md:mb-8'>
+          I <span className='font-bold text-red-600'>do not</span> engage in any collaborations with russian-affiliated entities under any circumstances.
+        </Paragraph>
       </div>
     </ContentCard>
   )

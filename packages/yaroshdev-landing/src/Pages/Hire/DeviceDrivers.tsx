@@ -20,7 +20,7 @@ export const HireDrivers = () => {
     <ContentCard catchBoundary='drivers' to='/hire' from='/hire/drivers'>
       <div className='space-y-2 px-4 md:px-12'>
         <Heading>Drivers</Heading>
-        <Paragraph className='mt-4 lg:mt-8'>I specialize in modern device driver development with Rust, Linux kernel modules, and cross-platform driver architectures:</Paragraph>
+        <Paragraph className='mt-4 lg:mt-8'>Occasionally I do modern device driver development in Rust, Linux kernel modules, and cross-platform driver architectures</Paragraph>
 
         <div className='mt-4 space-y-4 lg:mt-8'>
           <div>
@@ -34,11 +34,7 @@ export const HireDrivers = () => {
                 kernel modules for memory-safe driver development
               </li>
               <li>
-                🐧 <strong>Linux Kernel</strong> with{' '}
-                <DriversLink to='https://www.kernel.org/' external>
-                  Linux kernel
-                </DriversLink>{' '}
-                modules, character/block devices, and network drivers
+                🐧 <strong>Linux Kernel</strong> with Linux kernel modules, character/block devices, and network drivers
               </li>
               <li>
                 🔧 User-space drivers with{' '}
@@ -51,7 +47,7 @@ export const HireDrivers = () => {
                 </DriversLink>{' '}
                 frameworks
               </li>
-              <li>⚡ eBPF programs for network and system monitoring drivers</li>
+              <li>⚡ eBPF for network and system monitoring drivers</li>
             </ul>
           </div>
 
@@ -71,7 +67,7 @@ export const HireDrivers = () => {
                 ⚡ <strong>GPIO/PWM</strong> drivers for embedded system control
               </li>
               <li>
-                💻 <strong>DMA</strong> and interrupt handling for high-performance I/O
+                💻 <strong>xDMA</strong> for high-performance and low-latency data transfer
               </li>
             </ul>
           </div>
@@ -80,11 +76,7 @@ export const HireDrivers = () => {
             <Paragraph className='font-semibold text-lg'>Cross-Platform Development</Paragraph>
             <ul className='m-2 space-y-2 text-sm md:m-4 md:text-base'>
               <li>
-                🎯 <strong>Windows</strong> with{' '}
-                <DriversLink to='https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/' external>
-                  WDF (Windows Driver Framework)
-                </DriversLink>{' '}
-                and KMDF/UMDF development
+                🎯 <strong>Windows</strong> with WDF and KMDF/UMDF development, prefer Rust windows driver development
               </li>
               <li>
                 🍎 <strong>macOS</strong> with{' '}
@@ -94,9 +86,9 @@ export const HireDrivers = () => {
                 for modern macOS driver development
               </li>
               <li>
-                🦀 <strong>Rust</strong> abstractions for cross-platform driver code
+                🦀 <strong>Rust</strong> abstractions for cross-platform drivers
               </li>
-              <li>🔧 RTOS drivers for embedded systems (Zephyr, NuttX)</li>
+              <li>🔧 RTOS drivers for embedded systems (Embassy, Zephyr, NuttX, FreeRTOS)</li>
             </ul>
           </div>
 
@@ -104,19 +96,16 @@ export const HireDrivers = () => {
             <Paragraph className='font-semibold text-lg'>Specialized Driver Types</Paragraph>
             <ul className='m-2 space-y-2 text-sm md:m-4 md:text-base'>
               <li>
-                📶 <strong>Network Drivers</strong> with NAPI, XDP, and AF_XDP integration
+                📶 <strong>Network Drivers</strong> with NAPI, XDP, and AF_XDP integration, DPDK drivers development
               </li>
               <li>
-                💾 <strong>Storage Drivers</strong> with NVMe, SCSI, and block layer optimization
+                💾 <strong>Storage Drivers</strong> with NVMe, SCSI, and block layer optimization, SPDK drivers development
               </li>
               <li>
-                💻 <strong>GPU Drivers</strong> with DRM/KMS and compute acceleration
+                💻 <strong>GPU Drivers</strong> with DRM/KMS and compute acceleration, occasional GPU drivers reverse engineering
               </li>
               <li>
-                🎥 <strong>V4L2 Drivers</strong> for video capture and processing devices
-              </li>
-              <li>
-                🔊 <strong>ALSA Drivers</strong> for audio devices and DSP integration
+                🎥 <strong>V4L2 Drivers</strong> for video capture and in-kernel stream processing
               </li>
             </ul>
           </div>
@@ -154,11 +143,6 @@ export const HireDrivers = () => {
             </ul>
           </div>
         </div>
-
-        <Paragraph className='mt-6 text-secondary-accent text-sm'>
-          Also check out my expertise in <DriversLink to='/hire/embedded'>Embedded Systems</DriversLink>, <DriversLink to='/hire/highload'>Highload Applications</DriversLink>, and{' '}
-          <DriversLink to='/hire/compilers'>Compiler Development</DriversLink>.
-        </Paragraph>
       </div>
     </ContentCard>
   )
