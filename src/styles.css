@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+	--font-display: "IBM Plex Sans", sans-serif;
+	--font-title: Monoton, sans-serif;
+	--font-secondary-title: Doto, sans-serif;
+}
+
+:root {
+	--color-primary: lab(30% 0 0);
+	--color-secondary-accent: lab(60% 0 0);
+	--color-content: lab(90% 0 0);
+	--color-accent: lab(70% 0 0);
+	--color-neutral: lab(50% 0 0);
+	--color-border: lab(80% 0 0);
+	--color-card-background: lab(20% 0 0 / 0.2);
+}
+
+.dark {
+	--color-primary: lab(10% 0 0);
+	--color-secondary-accent: lab(70% 0 0);
+	--color-content: lab(85% 0 0);
+	--color-accent: lab(75% 0 0);
+	--color-neutral: lab(60% 0 0);
+	--color-border: lab(30% 0 0);
+	--color-card-background: lab(12% 0 0 / 0.2);
+}
+
+@theme inline {
+	--color-primary: var(--color-primary);
+	--color-secondary-accent: var(--color-secondary-accent);
+	--color-content: var(--color-content);
+	--color-accent: var(--color-accent);
+	--color-neutral: var(--color-neutral);
+	--color-border: var(--color-border);
+	--color-card-background: var(--color-card-background);
+}
+
+body {
+	@apply m-0;
+	font-family: "IBM Plex Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+}
+
+:lang(uk) {
+	--font-title: "Play", sans-serif;
+	--font-secondary-title: "Play", sans-serif;
+}

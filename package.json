@@ -1,0 +1,56 @@
+{
+	"name": "yarosh",
+	"private": true,
+	"type": "module",
+	"imports": {
+		"#/*": "./src/*"
+	},
+	"scripts": {
+		"dev": "vite dev --port 3000",
+		"generate-routes": "tsr generate",
+		"build": "vite build",
+		"preview": "vite preview",
+		"format": "biome format",
+		"lint": "biome lint",
+		"check": "biome check"
+	},
+	"dependencies": {
+		"@content-collections/mdx": "^0.2.2",
+		"@react-three/drei": "10.7.7",
+		"@react-three/fiber": "9.6.1",
+		"@react-three/postprocessing": "3.0.4",
+		"@tailwindcss/vite": "^4.3.2",
+		"@tanstack/react-devtools": "^0.10.8",
+		"@tanstack/react-router": "^1.170.17",
+		"@tanstack/react-router-devtools": "^1.167.0",
+		"@tanstack/react-start": "^1.168.27",
+		"@tanstack/router-core": "^1.171.14",
+		"nitro": "^3.0.260610-beta",
+		"react": "^19.2.7",
+		"react-dom": "^19.2.7",
+		"tailwind-merge": "^3.6.0",
+		"tailwindcss": "^4.3.2",
+		"tailwindcss-animate": "^1.0.7",
+		"three": "^0.185.1",
+		"zod": "^4.4.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.2",
+		"@content-collections/core": "^0.15.2",
+		"@content-collections/vite": "^0.3.0",
+		"@inlang/paraglide-js": "^2.20.2",
+		"@tanstack/devtools-vite": "^0.8.1",
+		"@types/node": "^26.1.0",
+		"@types/react": "^19.2.17",
+		"@types/react-dom": "^19.2.3",
+		"@types/three": "^0.185.0",
+		"@vitejs/plugin-react": "^6.0.3",
+		"csstype": "^3.1.3",
+		"typescript": "^6.0.3",
+		"vite": "^8.1.3"
+	},
+	"resolutions": {
+		"valibot": "^1.4.0"
+	},
+	"packageManager": "yarn@4.17.0"
+}
